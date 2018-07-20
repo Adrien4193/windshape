@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+"""Follows a target called "target"."""
+
+# ROS main library
+import rospy
+
+# Package
+import windshape
+
+# Initializes node (mendatory)
+rospy.init_node('test_drone', anonymous=True, log_level=rospy.DEBUG)
+rospy.sleep(1.0)
+
+# Main instance
+commander = windshape.Commander()
+
+# Drone
+drone = commander.getDrone()
+
+# Fans array
+fansArray = commander.getFansArray()
+
+# Press Ctrl+C to quit
+rospy.spin()

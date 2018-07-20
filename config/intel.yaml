@@ -1,0 +1,62 @@
+# windshape configuration file
+
+# Number of log files
+max_files: 10
+
+# Fans array
+fansarray:
+  db_update_rate: 20
+  broadcast_port: 58084
+  auto_wind: False
+
+# Drone tracking using mocap system
+tracking:
+  timeout: 0.1
+  tracker_drone: "drone"
+  tracker_target: "target"
+
+# Drone real time management
+update:
+  control_rate: 60.0
+  mocap_sending_rate: 120.0
+  record_rate: 20.0
+  service_wait_timeout: 2.0
+  update_rate: 10.0
+
+# Drone default control mode
+control:
+  task: "follow_target"
+  mode: "offboard"
+  mask: [False, False, False, False]
+  shift: [0, -1.0, 0, 0, 0, 0]
+
+# Drone offboard PID attitude control
+  pid:
+    x:
+      kp: 0.8
+      ki: 0.1
+      kd: 0.2
+      min: deg(-30)
+      max: deg(30)
+      ff: deg(0)
+    y:
+      kp: 0.8
+      ki: 0.1
+      kd: 0.2
+      min: deg(-30)
+      max: deg(30)
+      ff: deg(0)
+    z:
+      kp: 1.0
+      ki: 0.1
+      kd: 0.1
+      min: 0.0
+      max: 0.8
+      ff: 0.3
+    yaw:
+      kp: 1.0
+      ki: 0.1
+      kd: 0.05
+      min: deg(-180)
+      max: deg(180)
+      ff: deg(0)
