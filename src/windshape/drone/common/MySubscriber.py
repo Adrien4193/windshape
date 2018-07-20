@@ -16,9 +16,10 @@ class MySubscriber(rospy.Subscriber):
 		__init__, __del__.
 	"""
 	
-	##################### INITIALIZER, DESTRUCTOR ######################
+	# INITIALIZER AND DESTRUCTOR
+	####################################################################
 	
-	def __init__(self, topic, message_type):
+	def __init__(self, topic, messageType):
 		"""Calls parent constructor and init attributes. 
 		
 		Args:
@@ -32,39 +33,34 @@ class MySubscriber(rospy.Subscriber):
 		
 		# Safety
 		if not isinstance(topic, str):
-			message = str(topic)+'is not a string'
-			rospy.logfatal(message)
-			raise TypeError(message)
+			rospy.logfatal('%s is not a string', message)
 		
-		# ROS topic to listen
+		# Attributes
 		self.__topic = topic
+		self.__buffer = messageType()
 		
 		# Call parent constructor
-		super(MySubscriber, self).__init__(topic, message_type,
+		super(MySubscriber, self).__init__(topic, messageType,
 											self.__data_cb)
-		# Initialize buffer
-		self.__buffer = message_type()
 		
 	def __del__(self):
 		"""Just logs debug message."""
 		rospy.logdebug('Unregister from %s', self.__topic)
 		
-	######################## ATTRIBUTES GETTERS ########################
+	# ATTRIBUTES GETTERS
+	####################################################################
 	
 	def getData(self):
-		"""Returns the last message received."""
+		"""Returns the last message received (ROS message)."""
 		return self.__buffer
 		
 	def getTopic(self):
 		"""Returns the topic subscribed (str)."""
 		return self.__topic
 		
-	######################### PRIVATE METHODS ##########################
+	# PRIVATE CALLBACK
+	####################################################################
 	
 	def __data_cb(self, data):
-		"""Callback when a new message is published.
-		
-		Called each time a message is published on the topic given to
-		the contructor with the message as argument.
-		"""
+		"""Callback each time a new message is published."""
 		self.__buffer = data

@@ -1,0 +1,1004 @@
+Date: 2018-07-20 14:17
+
+
+time: 0
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.0524380207062
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.10011100769
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.150898933411
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.200367927551
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.250438928604
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.299572944641
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.354082107544
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.399435043335
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.449689149857
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.500605106354
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.549957990646
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.599830150604
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.650331020355
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.699526071548
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.749680042267
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.799932956696
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.854594945908
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.899589061737
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 0.952688932419
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.00176095963
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.05159306526
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.09977197647
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.14947509766
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.19979310036
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.25135493279
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.29942393303
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.35341310501
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.40209794044
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.44959497452
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.50056409836
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.54961109161
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.59962701797
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.65030193329
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.7001979351
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.75090003014
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.7998239994
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.85016894341
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.89972615242
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.95244812965
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 1.99964594841
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.04952502251
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.09959697723
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.15055799484
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.19991803169
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.24987411499
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.29962611198
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.35069513321
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.39983510971
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.44962406158
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.49984693527
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.54962301254
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.59955096245
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.64981412888
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.70010113716
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.75195097923
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.79969000816
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.8495631218
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.90073394775
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.9499361515
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 2.99949812889
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.04976797104
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.09972715378
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.15003800392
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.20066308975
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.25369405746
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.29971408844
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.34918999672
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.40016698837
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.44960904121
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.49978804588
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.54980492592
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.60235095024
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.6512169838
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.70200610161
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.74960708618
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+
+time: 3.79987597466
+    control input:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+    
+    error:
+        roll: 0.00 deg
+        pitch: 0.00 deg
+        yaw: 0.00 deg
+        thrust: 0.00 %
+

@@ -13,8 +13,8 @@
 	
 	<!-- ======================== ARGUMENTS ======================== -->
 	
-	<!-- File to execute in windshape_node -->
-	<arg name="executable" default="gui" />
+	<!-- File to execute as windshape_node -->
+	<arg name="node" default="gui" />
 	
 	<!-- Connection to VRPN server (Motive)
 		- IP of the server (default = VirtualBox host)
@@ -47,7 +47,7 @@
 	</node>
 	
 	<!-- windshape node -->
-	<node pkg="windshape" type="$(arg executable)" name="windshape_node" required="true" clear_params="true" output="screen">
+	<node pkg="windshape" type="$(arg node)" name="windshape_node" required="true" clear_params="true" output="screen">
 		<rosparam command="load" file="$(find windshape)/config/intel.yaml" />
 	</node>
 	

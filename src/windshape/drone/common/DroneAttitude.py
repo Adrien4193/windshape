@@ -1,5 +1,5 @@
 import math
-import numpy as np
+import numpy
 
 # ROS transformations
 from tf.transformations import (euler_from_quaternion,
@@ -22,19 +22,19 @@ class DroneAttitude(object):
 	Overrides __init__, __del__, __iter__, __str__
 	"""
 	
-	########################## CLASS METHODS ###########################
+	# STATIC METHODS
+	####################################################################
 	
-	@classmethod
-	def fromPoseStamped(cls, poseStamped):
+	@staticmethod
+	def fromPoseStamped(poseStamped):
 		"""Returns DroneAttitude from a PoseStamped message."""
-		
-		# Orientation
 		q = poseStamped.pose.orientation
 		roll, pitch, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
 		
 		return DroneAttitude(roll, pitch, yaw, 0)
 	
-	###################### INITIALIZER, DESTRUCTOR #####################
+	# INITIALIZER AND DESTRUCTOR
+	####################################################################
 	
 	def __init__(self, roll=0, pitch=0, yaw=0, thrust=0):
 		""" Initializes x, y, z, roll, pitch, yaw (m, rad).
@@ -49,9 +49,11 @@ class DroneAttitude(object):
 		self.__thrust = thrust
 		
 	def __del__(self):
+		"""Does nothing special."""
 		pass
 		
-	############################# GETTERS ##############################
+	# ATTRIBUTES GETTERS
+	####################################################################
 		
 	def getRoll(self):
 		"""Returns the Roll float) of the attitude in [rad]."""
@@ -69,7 +71,8 @@ class DroneAttitude(object):
 		"""Returns the Thrust in [0-1]."""
 		return self.__thrust
 		
-	############################# SETTERS ##############################
+	# ATTRIBUTES SETTERS
+	####################################################################
 		
 	def setRoll(self):
 		"""Changes the Roll float) of the attitude in [rad]."""
@@ -87,11 +90,12 @@ class DroneAttitude(object):
 		"""Changes the Thrust value (float) in [0-1]."""
 		self.__thrust = float(value)
 		
-	############################ CONVERSION ############################
+	# CONVERSION
+	####################################################################
 		
 	def toArray(self):
 		"""Returns a numpy.array representing the attitude."""
-		return np.array(list(self))
+		return numpy.array(list(self))
 		
 	def toPoseStamped(self):
 		"""Returns the attitude as a PoseStamped message.
@@ -109,7 +113,8 @@ class DroneAttitude(object):
 		
 		return poseStamped
 		
-	######################### SPECIAL METHODS ##########################
+	# SPECIAL METHODS
+	####################################################################
 		
 	def __iter__(self):
 		"""Used to convert the attitude as a list."""

@@ -1,0 +1,1697 @@
+Date: 2018-07-20 14:17
+
+
+time: 0
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.0495419502258
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.100190877914
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.151015996933
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.200463056564
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.250506877899
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.299701929092
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.354152917862
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.399512052536
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.449724912643
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.500658988953
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.550040960312
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.599943876266
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.650282859802
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.699569940567
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.749784946442
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.800060033798
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.85026884079
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.899713993073
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 0.952638864517
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.00188088417
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.05167102814
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.09990000725
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.14960002899
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.19989991188
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.249781847
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.29951405525
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.35345196724
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.40187883377
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.44972300529
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.50066399574
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.54974603653
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.59967803955
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.65021085739
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.70030593872
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.75093889236
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.79994702339
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.85029482841
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.89983391762
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.95257091522
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 1.99977397919
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.04961490631
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.09972596169
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.15065193176
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.20001006126
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.25000596046
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.29973697662
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.35080599785
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.39994883537
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.4497089386
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.4999859333
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.54975390434
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.59967184067
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.64991593361
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.7001888752
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.75206804276
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.79981184006
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.84969902039
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.90085887909
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.95001101494
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 2.99960184097
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.04983401299
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.099848032
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.1499710083
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.20078206062
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.25377082825
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.29980587959
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.34930300713
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.40022802353
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.44974899292
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.49988889694
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.54989886284
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.60186386108
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.65133595467
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.7021279335
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.74972701073
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+
+time: 3.79993891716
+    FCU:
+        Connected: False
+        Armed: False
+        Mode: 
+    
+    Mocap:
+        Stream: []
+        Drone: drone
+        Tracked: True
+        Target: target
+        Tracked: True
+    
+    Control:
+        Task: follow_target
+        Mode: offboard
+        Mask: [False, False, False, False]
+    
+    Host: None
+    Powered: False
+    PWM: 0
+

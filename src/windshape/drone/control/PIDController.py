@@ -54,6 +54,9 @@ class PIDController(object):
 		# Time step computation
 		self.__previousCall = None
 		
+		# Separated outputs for display
+		self.__separatedOutputs = [0, 0, 0]
+		
 	def __del__(self):
 		"""Does nothing special."""
 		pass
@@ -94,9 +97,12 @@ class PIDController(object):
 		# Saturation and anti-windup
 		output = self.__checkSaturation(output)
 		
+		# Display
+		self.__record(error, derivative)
+		
 		return output
 		
-	# COMMANDS
+	# MEASUREMENTS
 	####################################################################
 	
 	def getError(self):
@@ -109,7 +115,10 @@ class PIDController(object):
 		
 	def getLastOutput(self):
 		"""Returns the last output computed (P, I, D)."""
-		return self.__lastOutput
+		return self.__separatedOutputs
+		
+	# COMMANDS
+	####################################################################
 	
 	def reset(self):
 		"""Resets the controller's parameters."""
@@ -138,7 +147,7 @@ class PIDController(object):
 			# Anti-windup
 			if self.__gainI != 0:
 				self.__integral -= delta2 / self.__gainI
-				
+		
 		return output
 		
 	def __getTimeStep(self):
@@ -151,8 +160,14 @@ class PIDController(object):
 			
 		return dt
 		
+	def __record(self, error, derivative):
+		"""Records control input in class attribute."""
+		self.__separatedOutputs = [self.__gainP * error,
+									self.__gainI * self.__integral,
+									self.__gainD * derivative]
+		
 	def __reset(self, error):
-		"""Initializes controller at first call."""
+		"""Initializes controller for first call."""
 		self.__previousCall = rospy.get_time()
 		self.__integral = 0.0
 		self.__previousError = error

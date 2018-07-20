@@ -1,0 +1,2703 @@
+Date: 2018-07-20 11:39
+
+
+time: 0
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.0481910705566
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.0980808734894
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.147964954376
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.198346853256
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.248627901077
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.298266887665
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.348320960999
+    setpoint:
+        x: 479.04 mm
+        y: -178.23 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.398323059082
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.63 mm
+        roll: 0.12 deg
+        pitch: 0.09 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.34 mm
+        z: 139.14 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.448411941528
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.15 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.498261928558
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.548008918762
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.601969003677
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.648650884628
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.701816082001
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.748585939407
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.807947874069
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.848545074463
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.90357208252
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.948337078094
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 0.999178886414
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.04855585098
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.0985789299
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.14791798592
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.2021188736
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.24892091751
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.29819393158
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.09 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.3479809761
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.39828300476
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.35 mm
+        z: 139.18 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.44871687889
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.4980700016
+    setpoint:
+        x: 479.01 mm
+        y: -178.21 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.54840302467
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.59832692146
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.34 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.64796900749
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.14 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.69845485687
+    setpoint:
+        x: 479.04 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.36 mm
+        z: 139.14 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.74825191498
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.80273795128
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.84851789474
+    setpoint:
+        x: 479.01 mm
+        y: -178.21 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.89811491966
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 1.94837188721
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.18 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.00079393387
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.0503718853
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.15 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.09801292419
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.14852499962
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.19806694984
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.24833297729
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.18 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.30196404457
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.34860897064
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.37 mm
+        z: 139.18 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.39802098274
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.44840097427
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.49846601486
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.65 mm
+        roll: 0.12 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.54806494713
+    setpoint:
+        x: 479.04 mm
+        y: -178.23 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.59870004654
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.64792394638
+    setpoint:
+        x: 479.02 mm
+        y: -178.23 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.698127985
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.74821186066
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.19 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.80338096619
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.85332608223
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.65 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.15 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.89996886253
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.95084786415
+    setpoint:
+        x: 479.02 mm
+        y: -178.23 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 2.99919700623
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.64 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.04863190651
+    setpoint:
+        x: 479.04 mm
+        y: -178.23 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.09801697731
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.15258407593
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.52 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.19819092751
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.2488348484
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.29810190201
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.34861707687
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.39817094803
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.44970202446
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.15 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.97 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.49829506874
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.54829597473
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.59830188751
+    setpoint:
+        x: 479.02 mm
+        y: -178.20 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.64829492569
+    setpoint:
+        x: 479.01 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.37 mm
+        z: 139.18 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.69815397263
+    setpoint:
+        x: 479.01 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.7491850853
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.69 mm
+        roll: 0.14 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.79887604713
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.84808707237
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.90077185631
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.94786000252
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 3.9980700016
+    setpoint:
+        x: 479.04 mm
+        y: -178.23 mm
+        z: 22.67 mm
+        roll: 0.14 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.34 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.04823493958
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.09860086441
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.09 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.14796590805
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.18 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.19810199738
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.24801707268
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.29878807068
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.19 mm
+        roll: -0.49 deg
+        pitch: -0.06 deg
+        yaw: 5.97 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.34817385674
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.39841198921
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.18 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.44823288918
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.49784398079
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.54826498032
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.12 deg
+        pitch: 0.11 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.52 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.59791707993
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.64886307716
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.69902300835
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.14 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.74908995628
+    setpoint:
+        x: 479.04 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.7979528904
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.67 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.84858798981
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.35 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.89838385582
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.69 mm
+        roll: 0.14 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.94793200493
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.67 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.17 mm
+        roll: -0.50 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 4.99797987938
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.68 mm
+        roll: 0.14 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.37 mm
+        z: 139.17 mm
+        roll: -0.52 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.04830789566
+    setpoint:
+        x: 479.02 mm
+        y: -178.21 mm
+        z: 22.69 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.09802007675
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.67 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.14811491966
+    setpoint:
+        x: 479.03 mm
+        y: -178.21 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.31 mm
+        y: 213.34 mm
+        z: 139.16 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.19835805893
+    setpoint:
+        x: 479.03 mm
+        y: -178.22 mm
+        z: 22.66 mm
+        roll: 0.13 deg
+        pitch: 0.10 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.24869298935
+    setpoint:
+        x: 479.03 mm
+        y: -178.23 mm
+        z: 22.67 mm
+        roll: 0.12 deg
+        pitch: 0.10 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.32 mm
+        y: 213.35 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.07 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.29784107208
+    setpoint:
+        x: 479.02 mm
+        y: -178.22 mm
+        z: 22.68 mm
+        roll: 0.13 deg
+        pitch: 0.11 deg
+        yaw: 0.97 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.15 mm
+        roll: -0.51 deg
+        pitch: -0.06 deg
+        yaw: 5.98 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+
+time: 5.34796285629
+    setpoint:
+        x: 479.01 mm
+        y: -178.22 mm
+        z: 22.65 mm
+        roll: 0.12 deg
+        pitch: 0.09 deg
+        yaw: 0.98 deg
+    
+    mocap:
+        x: 628.30 mm
+        y: 213.36 mm
+        z: 139.16 mm
+        roll: -0.50 deg
+        pitch: -0.06 deg
+        yaw: 5.99 deg
+    
+    estimate:
+        x: 0.00 mm
+        y: 0.00 mm
+        z: 0.00 mm
+        roll: 0.00 deg
+        pitch: -0.00 deg
+        yaw: 0.00 deg
+

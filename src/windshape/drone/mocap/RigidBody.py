@@ -12,24 +12,22 @@ from ..common.DronePose import DronePose
 class RigidBody(object):
 	"""6DOF rigid body associated to a VRPN Tracker.
 	
-	Stores the pose of a Tracker published by vrpn_client_ros. Uses
-	Tracker's label to find the corresponding topic name.
-	
-	Its attributes are the tracker's label, its pose and its tracking
-	status (based on heartbeats).
+	Used to get the pose of a streamed VRPN Tracker with vrpn_client_ros
+	(see: http://wiki.ros.org/vrpn_client_ros). Uses Tracker's label to
+	find the corresponding topic name.
 	
 	Attributes:
 		count (int): Number of instances of RigidBody.
 	
-	Inherits from object.
+	Inherits from: object.
 	
-	Overrides __init__, __del__, __str__.
+	Overrides: __init__, __del__, __str__.
 	"""
 	
 	# CLASS ATTRIBUTES
 	####################################################################
 	
-	# Total number of active class instances.
+	# Total number of class instances.
 	__count = 0
 	
 	# STATIC METHODS
@@ -37,28 +35,28 @@ class RigidBody(object):
 	
 	@staticmethod
 	def getCount():
-		"""Returns the number of active instances."""
+		"""Returns the number of instances."""
 		return RigidBody.__count
 		
 	@staticmethod
 	def getTrackersList():
-		"""Returns the labels of the VRPN streamed Trackers (str list).
+		"""Returns the labels of the streamed VRPN Trackers (str list).
 		
-		The labels are extracted from the published topics names.
+		The labels are extracted from the names of the topics published
+		by vrpn_client_ros.
 		
-		Topic name: /vrpn_client_node/<label>/pose
+		Structure of topic name: "/vrpn_client_node/<label>/pose"
 		"""
 		labels = []
 
-		# Get all topics published by ROS VRPN driver
+		# Gets all topics published by ROS VRPN driver
 		topics = rospy.get_published_topics('/vrpn_client_node')
 		
-		# Extract names of the rigid bodies from topic names
+		# Extracts names of the rigid bodies from topic names
 		for topic in topics:
-			label = topic[0].split('/')[-2]
-			labels.append(label)
-		
-		# Sort for display
+			if 'pose' in topic:
+				label = topic[0].split('/')[-2]
+				labels.append(label)
 		labels.sort()
 		
 		return labels
@@ -71,9 +69,6 @@ class RigidBody(object):
 		
 		Args:
 			label (str): Label of the rigid body Tracker (from Motive).
-			
-		Raises:
-			TypeError: The label is not a string.
 		"""
 		rospy.logdebug('New RigidBody created: %s', label)
 		
@@ -89,7 +84,7 @@ class RigidBody(object):
 		self.__topic = '/vrpn_client_node/'+label+'/pose'
 		self.__sub = MySubscriber(self.__topic, PoseStamped)
 		
-		# Heartbeat timeout
+		# Heartbeat timeout (lost if no publication since...)
 		self.__timeout = rospy.get_param('~tracking/timeout')
 		
 		rospy.logdebug('RigidBody count: %d', RigidBody.__count)
@@ -98,10 +93,10 @@ class RigidBody(object):
 		"""Closes subscriber at destruction."""
 		rospy.logdebug('RigidBody destroyed: %s', self.__label)
 		
-		# Close ROS subscriber properly
+		# Destroys subscriber
 		self.__sub.unregister()
 		
-		# Update instances count
+		# Updates instances count
 		RigidBody.__count -= 1
 		
 		rospy.logdebug('RigidBody count %d', RigidBody.__count)
@@ -118,17 +113,16 @@ class RigidBody(object):
 		return DronePose.fromPoseStamped(self.getPoseStamped())
 		
 	def getPoseStamped(self):
-		"""Returns the message from ROS VRPN client (PoseStamped)."""
+		"""Returns the raw pose message from client (PoseStamped)."""
 		return self.__sub.getData()
 		
 	def getTopic(self):
-		"""Returns the topic (str) publishing body pose."""
+		"""Returns the topic (str) publishing the body's pose."""
 		return self.__topic
 	
 	def isTracked(self):
 		"""Returns True if the RB is tracked (based on timeout)."""
 		timestamp = self.getPoseStamped().header.stamp.to_sec()
-		
 		dt = rospy.get_time() - timestamp
 		
 		if dt < self.__timeout:
@@ -146,9 +140,10 @@ class RigidBody(object):
 		
 			<label>: (<"tracked" or "lost">)
 				x: <value> mm
-				
-				...
-				
+				y: <value> mm
+				z: <value> mm
+				roll: <value> deg
+				pitch: <value> deg
 				yaw: <value> deg
 		"""
 		tracked = 'tracked' if self.isTracked() else 'lost'

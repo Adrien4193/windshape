@@ -57,6 +57,6 @@ control:
       kp: 1.0
       ki: 0.1
       kd: 0.05
-      min: deg(-180)
-      max: deg(180)
+      min: deg(-10)
+      max: deg(10)
       ff: deg(0)
