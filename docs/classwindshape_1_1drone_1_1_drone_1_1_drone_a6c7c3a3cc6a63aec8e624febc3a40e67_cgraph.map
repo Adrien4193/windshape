@@ -1,0 +1,13 @@
+<map id="windshape.drone.Drone.Drone.__str__" name="windshape.drone.Drone.Drone.__str__">
+<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a255d2634547c1cd613108951b968ed6f" title="windshape.drone.Drone.Drone.get\lControlParameters" alt="" coords="265,5,485,47"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a0d6c9c56fd735733f4a2268896c30d37" title="windshape.drone.Drone.Drone.is\lConnected" alt="" coords="269,71,481,112"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a161d7774319e5de5dd7f13f5c66b64a3" title="windshape.drone.Drone.Drone.is\lArmed" alt="" coords="269,136,481,177"/>
+<area shape="rect" id="node5" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a05934a953a52558fd19b18435c52cc40" title="windshape.drone.Drone.Drone.get\lFlightMode" alt="" coords="265,201,485,243"/>
+<area shape="rect" id="node6" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a7e7eced60d10a8b1eb38b7ebf6a02f0f" title="windshape.drone.Drone.Drone.get\lTrackersList" alt="" coords="265,267,485,308"/>
+<area shape="rect" id="node7" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#ac29dae974ab7bb13d250dbb752e20853" title="windshape.drone.Drone.Drone.get\lMocapLabel" alt="" coords="265,332,485,373"/>
+<area shape="rect" id="node8" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a8e5d50aa9df5f17650570e60ac809477" title="windshape.drone.Drone.Drone.is\lTracked" alt="" coords="269,397,481,439"/>
+<area shape="rect" id="node9" href="$classwindshape_1_1_commander_1_1_commander.html#a137ca2dadfe75ed6aeaebb6e0363cb70" title="windshape.Commander.Commander.\l__startTimer" alt="" coords="256,463,495,504"/>
+<area shape="rect" id="node10" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a1c64f6b71ac532529f51a69419468d2f" title="windshape.drone.Drone.Drone.\l__startTimer" alt="" coords="274,528,477,569"/>
+<area shape="rect" id="node11" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#aff00e3bde6aa9347331f92135644edd2" title="windshape.drone.Drone.Drone.get\lMocapPose" alt="" coords="265,593,485,635"/>
+<area shape="rect" id="node12" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#ab4435f13cb1e062137c822f7b0be778a" title="windshape.drone.Drone.Drone.get\lEstimatedPose" alt="" coords="265,659,485,700"/>
+</map>

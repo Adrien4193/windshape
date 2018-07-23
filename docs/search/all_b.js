@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['offboard',['offboard',['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_settings_widget_1_1_settings_widget.html#a629598843d7ab0157d47036e2a4d9eb2',1,'windshape::gui::widgets::tabs::SettingsWidget::SettingsWidget']]],
   ['onactivated',['onActivated',['../classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a3e65ce3d2fcd5e51ee91a0ce953f6749',1,'windshape::gui::widgets::plots::PlotWidget::PlotWidget']]],
   ['onarm',['onArm',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#aa1efa5b7a6485835efc4f4d7fa846648',1,'windshape::gui::UserInterface::UserInterface']]],
   ['onconnect',['onConnect',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ab63acb414500fcc98a4ac3447b0f44af',1,'windshape::gui::UserInterface::UserInterface']]],

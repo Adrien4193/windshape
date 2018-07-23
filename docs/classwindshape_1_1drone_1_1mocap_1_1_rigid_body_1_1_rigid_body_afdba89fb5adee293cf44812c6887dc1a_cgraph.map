@@ -1,0 +1,7 @@
+<map id="windshape.drone.mocap.RigidBody.RigidBody.__str__" name="windshape.drone.mocap.RigidBody.RigidBody.__str__">
+<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a8e5d50aa9df5f17650570e60ac809477" title="windshape.drone.Drone.Drone.is\lTracked" alt="" coords="272,5,484,47"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#ad094c24d63255feeb6280825e7731596" title="windshape.drone.mocap.Rigid\lBody.RigidBody.isTracked" alt="" coords="279,71,477,112"/>
+<area shape="rect" id="node5" href="$classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html#a7ded0f686fc683775ed94a7481bacea4" title="windshape.drone.fcu.MAVROSListener.\lMAVROSListener.getPose" alt="" coords="251,136,505,177"/>
+<area shape="rect" id="node6" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#a253804cb7092d4e5084ba1312dc7219a" title="windshape.drone.mocap.Rigid\lBody.RigidBody.getPose" alt="" coords="279,201,477,243"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#ab4db6bb3a66110c7c23370df9eed7a70" title="windshape.drone.mocap.Rigid\lBody.RigidBody.getPoseStamped" alt="" coords="553,136,773,177"/>
+</map>

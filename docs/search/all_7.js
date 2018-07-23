@@ -1,6 +1,21 @@
 var searchData=
 [
+  ['icon_5fa',['icon_A',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a8ad3dfc31f64d0e93a0d754699bb865f',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fbottom_5farrow',['icon_bottom_arrow',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a52ff42f0e25cce1f9cabc04124726218',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fclosed_5feye',['icon_closed_eye',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a71212cc42c6b4dee9df5ea9d4efba147',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fd',['icon_D',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a6fd39387e304715b21ce36fe2815f51e',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fdrone_5fgreen',['icon_drone_green',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ab2ff0ac429f7d5bd8cdfc9990f360984',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fdrone_5fred',['icon_drone_red',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a420858896a26322eaf4bb756cc3538f0',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fgreen',['icon_green',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a3a936248ab00f1de5b596224df6c5a82',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fm',['icon_M',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a4ace075ae20d74652b42b2ed4eae08b7',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fopened_5feye',['icon_opened_eye',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a1df1017e5c30b17a15c339badb75af36',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fred',['icon_red',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a2e6d105d2376037734e4df8ff035d94d',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fstart',['icon_start',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#aa98bf68d13ee7fd9837d4c4fd24128e4',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5ftop_5farrow',['icon_top_arrow',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a81dd5c6f0eab539e4d6869388b232a24',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['icon_5fws',['icon_ws',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ace0f817e8f7e8369eefb65506eecdc8e',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['info',['info',['../classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#ac6c099bf1e755523f6895b843126cf6f',1,'windshape::gui::widgets::ControlPanel::ControlPanel']]],
   ['infowidget',['InfoWidget',['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_info_widget_1_1_info_widget.html',1,'windshape::gui::widgets::tabs::InfoWidget']]],
+  ['infowidget_2epy',['InfoWidget.py',['../_info_widget_8py.html',1,'']]],
   ['inittimer',['initTimer',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#aab0faeeb75c1efe046255209aff5663c',1,'windshape::gui::UserInterface::UserInterface']]],
   ['inittoolbar',['initToolBar',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a1d173d3e8dbe52a8774c9049602eebca',1,'windshape::gui::UserInterface::UserInterface']]],
   ['initui',['initUI',['../classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a802c62de1cf00313fb8cac28b298ef89',1,'windshape::gui::widgets::plots::PlotWidget::PlotWidget']]],
@@ -11,5 +26,6 @@ var searchData=
   ['ispowered',['isPowered',['../classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#ae9e1608f5d5faf5602a036983dec76ea',1,'windshape::fansarray::FansArray::FansArray']]],
   ['istracked',['isTracked',['../classwindshape_1_1drone_1_1_drone_1_1_drone.html#a8e5d50aa9df5f17650570e60ac809477',1,'windshape.drone.Drone.Drone.isTracked()'],['../classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#ad094c24d63255feeb6280825e7731596',1,'windshape.drone.mocap.RigidBody.RigidBody.isTracked()']]],
   ['isusingoffboardcontrol',['isUsingOffboardControl',['../classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#ad0c3480f094c11340f97e24245ec539d',1,'windshape::drone::control::ControlParameters::ControlParameters']]],
-  ['isvalid',['isValid',['../classwindshape_1_1gui_1_1widgets_1_1inputs_1_1_edit_input_1_1_edit_input.html#acfcf54ed01630429e6ba3f238b04557d',1,'windshape.gui.widgets.inputs.EditInput.EditInput.isValid()'],['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_setpoint_widget_1_1_setpoint_widget.html#a0131b6f0bc2dcdba88c8b0b6053d7489',1,'windshape.gui.widgets.tabs.SetpointWidget.SetpointWidget.isValid()'],['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_wind_widget_1_1_wind_widget.html#a0d1cda4b6be95b96fddf4e0b6938c974',1,'windshape.gui.widgets.tabs.WindWidget.WindWidget.isValid()']]]
+  ['isvalid',['isValid',['../classwindshape_1_1gui_1_1widgets_1_1inputs_1_1_edit_input_1_1_edit_input.html#acfcf54ed01630429e6ba3f238b04557d',1,'windshape.gui.widgets.inputs.EditInput.EditInput.isValid()'],['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_setpoint_widget_1_1_setpoint_widget.html#a0131b6f0bc2dcdba88c8b0b6053d7489',1,'windshape.gui.widgets.tabs.SetpointWidget.SetpointWidget.isValid()'],['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_wind_widget_1_1_wind_widget.html#a0d1cda4b6be95b96fddf4e0b6938c974',1,'windshape.gui.widgets.tabs.WindWidget.WindWidget.isValid()']]],
+  ['items',['items',['../classwindshape_1_1gui_1_1widgets_1_1inputs_1_1_combo_input_1_1_combo_input.html#acfe703a6377349666851aaea941c50fc',1,'windshape::gui::widgets::inputs::ComboInput::ComboInput']]]
 ];
