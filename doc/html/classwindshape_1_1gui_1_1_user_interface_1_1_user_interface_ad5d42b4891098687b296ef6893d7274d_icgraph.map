@@ -1,7 +1,0 @@
-<map id="windshape.gui.UserInterface.UserInterface.updateToggleAction" name="windshape.gui.UserInterface.UserInterface.updateToggleAction">
-<area shape="rect" id="node2" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a0c543aa08f2f27a8c65a3c6de8963f85" title="windshape.gui.UserInterface.\lUserInterface.updateToolBar" alt="" coords="273,104,465,145"/>
-<area shape="rect" id="node3" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#aa1efa5b7a6485835efc4f4d7fa846648" title="windshape.gui.UserInterface.\lUserInterface.onArm" alt="" coords="513,5,705,47"/>
-<area shape="rect" id="node4" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a470abbe9bce9b3102124b68e11b46e99" title="windshape.gui.UserInterface.\lUserInterface.onTakeoff" alt="" coords="513,71,705,112"/>
-<area shape="rect" id="node5" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a53a63252e00a919480b45dec74cffc5e" title="windshape.gui.UserInterface.\lUserInterface.onLand" alt="" coords="513,136,705,177"/>
-<area shape="rect" id="node6" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a65ae15262d2becb2093acd7e54b92fb3" title="windshape.gui.UserInterface.\lUserInterface.update" alt="" coords="513,201,705,243"/>
-</map>
