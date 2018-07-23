@@ -24,12 +24,16 @@ update:
 
 # Drone default control mode
 control:
-  use_ws_controller: True
+  
+  # Target
   target: "target"
-  follow_target: True
-  use_target_attitude: False
-  mask: [False, False, False, False]
+  follow: True
+  mimic: False
   shift: [0, -1.0, 0, 0, 0, 0]
+  
+  # Control mode
+  offboard: True
+  mask: [False, False, False, False]
 
 # Drone offboard PID attitude control
   pid:

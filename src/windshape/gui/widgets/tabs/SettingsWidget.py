@@ -32,50 +32,51 @@ class SettingsWidget(QWidget):
 		
 		# Drone ID (from VRPN server)
 		label = QLabel('Drone ID:')
-		self.body = ComboInput(self, [])
-		self.body.setValue(rospy.get_param('~tracking/tracker_drone'))
+		self.drone = ComboInput(self, [])
+		self.drone.setValue(rospy.get_param('~tracking/tracker'))
 		self.layout.addWidget(label, 0, 0)
-		self.layout.addWidget(self.body, 0, 1)
+		self.layout.addWidget(self.drone, 0, 1)
 		
 		 # Target ID (from VRPN server)
 		label = QLabel('Target ID:')
 		self.target = ComboInput(self, [])
-		self.target.setValue(rospy.get_param('~tracking/tracker_target'))
+		self.target.setValue(rospy.get_param('~control/target'))
 		self.layout.addWidget(label, 1, 0)
 		self.layout.addWidget(self.target, 1, 1)
 		
-		# Drone task
-		label = QLabel('Task:')
-		self.task = ComboInput(self, ['follow_target', 'reach_setpoint'])
-		self.task.setValue(rospy.get_param('~control/task'))
-		self.layout.addWidget(label, 2, 0)
-		self.layout.addWidget(self.task, 2, 1)
+		# Use WS controller
+		self.offboard = QCheckBox('Use offboard controller')
+		self.offboard.setChecked(rospy.get_param('~control/offboard'))
+		self.layout.addWidget(self.offboard, 2, 0)
 		
-		# Drone control mode
-		label = QLabel('Control mode:')
-		self.mode = ComboInput(self, ['onboard', 'offboard'])
-		self.mode.setValue(rospy.get_param('~control/mode'))
-		self.layout.addWidget(label, 3, 0)
-		self.layout.addWidget(self.mode, 3, 1)
+		# Follow target
+		self.follow = QCheckBox('Follow target')
+		self.follow.setChecked(rospy.get_param('~control/follow'))
+		self.layout.addWidget(self.follow, 3, 0)
+		
+		# Use target attitude as manual input
+		self.mimic = QCheckBox('Mimic target')
+		self.mimic.setChecked(rospy.get_param('~control/mimic'))
+		self.layout.addWidget(self.mimic, 4, 0)
 		
 		# Drone mask
 		mask = rospy.get_param('~control/mask')
 		
 		self.roll = QCheckBox('Mask Roll')
 		self.roll.setChecked(mask[0])
-		self.layout.addWidget(self.roll, 4, 0)
+		self.layout.addWidget(self.roll, 5, 0)
 		
 		self.pitch = QCheckBox('Mask Pitch')
 		self.pitch.setChecked(mask[1])
-		self.layout.addWidget(self.pitch, 4, 1)
+		self.layout.addWidget(self.pitch, 5, 1)
 		
 		self.yaw = QCheckBox('Mask Yaw')
 		self.yaw.setChecked(mask[2])
-		self.layout.addWidget(self.yaw, 5, 0)
+		self.layout.addWidget(self.yaw, 6, 0)
 		
 		self.thrust = QCheckBox('Mask Thrust')
 		self.thrust.setChecked(mask[3])
-		self.layout.addWidget(self.thrust, 5, 1)
+		self.layout.addWidget(self.thrust, 6, 1)
 		
 		# Stretch
 		self.layout.setRowStretch(self.layout.rowCount(), 1)
@@ -83,20 +84,21 @@ class SettingsWidget(QWidget):
 		
 	def getBodies(self):
 		"""Returns current list of bodies (str list)."""
-		return self.body.getItems()
+		return self.drone.getItems()
 		
 	def getControlParameters(self):
 		"""Returns drone task and control mode (str)."""
-		task = self.task.getValue()
-		mode = self.mode.getValue()
+		offboard = self.offboard.isChecked()
+		follow = self.follow.isChecked()
+		mimic = self.mimic.isChecked()
 		mask = [self.roll.isChecked(), self.pitch.isChecked(),
 				self.yaw.isChecked(), self.thrust.isChecked()]
 		
-		return task, mode, mask
+		return offboard, follow, mimic, mask
 		
 	def getMocapParameters(self):
-		"""Returns VRPN server IP, drone and target IDs (str)."""
-		body = self.body.getValue()
+		"""Returns drone and target IDs (str)."""
+		body = self.drone.getValue()
 		target = self.target.getValue()
 		
 		return body, target
@@ -107,5 +109,5 @@ class SettingsWidget(QWidget):
 		Args:
 			bodies (str list): List of streamed bodies.
 		"""
-		self.body.setItems(bodies)
+		self.drone.setItems(bodies)
 		self.target.setItems(bodies)

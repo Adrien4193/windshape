@@ -129,16 +129,12 @@ class ControlPanel(QTabWidget):
 		"""Returns the source of information asked in info tab."""
 		return self.info.getSource()
 		
-	def getConnectionParameters(self):
-		"""Returns FCU IP, protocol and stack from settings tab."""
-		return self.settings.getConnectionParameters()
-		
 	def getMocapParameters(self):
-		"""Returns server IP, drone and target ID from settings tab."""
+		"""Returns drone and target ID from settings tab."""
 		return self.settings.getMocapParameters()
 		
-	def getControlParameters(self):
-		"""Returns the task and the control mode from settings tab."""
+	def getSettings(self):
+		"""Returns control parameters from settings."""
 		return self.settings.getControlParameters()
 		
 	# VALIDITY CHECKS

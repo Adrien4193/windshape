@@ -241,8 +241,8 @@ class Drone(object):
 				'Target: {}'.format(control.getTarget().getLabel()),
 				'Tracked: {}'.format(control.getTarget().isTracked()),
 				'Follow: {}'.format(control.isFollowingTarget()),
-				'Mimic: {}'.format(control.isUsingTargetAttitude()),
-				'Offboard: {}'.format(control.isUsingWSController()),
+				'Mimic: {}'.format(control.isMimingTarget()),
+				'Offboard: {}'.format(control.isUsingOffboardControl()),
 				'Mask: {}'.format(control.getMask())
 				])
 		
@@ -297,17 +297,20 @@ class Drone(object):
 			return
 		
 		control = drone().getControlParameters()
+		pose = drone().getMocapPose().toArray()
+		estimate = drone().getEstimatedPose().toArray()
 		flightMode = drone().getFlightMode()
 		publisher = drone().__publisher
 		
 		# Control is done offboard -> Sends attitude to reach setpoint
-		if control.isUsingWSController():
+		if control.isUsingOffboardControl():
 			
 			if not drone().isArmed() or flightMode != 'OFFBOARD':
 				drone().__controller.reset()
 				attitude = DroneAttitude()
 			else:
-				attitude = drone().__controller(pose, estimate)
+				controlInput = drone().__controller(pose, estimate)
+				attitude = DroneAttitude(*controlInput)
 			
 			publisher.sendSetpointAttitude(attitude.toPoseStamped())
 			publisher.sendSetpointThrust(attitude.getThrust())
@@ -315,5 +318,5 @@ class Drone(object):
 		# Control is done onboard -> Just sends pose to reach
 		else:
 			drone().__controller.reset()
-			setpoint = drone().getSetpoint().toPoseStamped()
+			setpoint = control.getSetpoint().toPoseStamped()
 			publisher.sendSetpointPosition(setpoint)

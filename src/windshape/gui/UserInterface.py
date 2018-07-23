@@ -217,7 +217,7 @@ class UserInterface(QMainWindow):
 		"""Displays tracking status."""
 		msg = QMessageBox()
 		msg.setIcon(QMessageBox.Information)
-		msg.setText(str(self.drone.getTarget()))
+		msg.setText(str(self.control.getTarget()))
 		msg.setWindowTitle('Target information')
 		msg.setStandardButtons(QMessageBox.Ok)
 		msg.exec_()
@@ -469,7 +469,7 @@ class UserInterface(QMainWindow):
 		"""Plots drone pose (mocap, FCU, setpoint)."""
 		mocap = self.drone.getMocapPose()
 		estimated = self.drone.getEstimatedPose()
-		setpoint = self.drone.getSetpoint()
+		setpoint = self.drone.getControlParameters().getSetpoint()
 		
 		# Send to control panel as list with source label
 		self.controlPanel.plotData('Mocap', list(mocap))
@@ -477,32 +477,35 @@ class UserInterface(QMainWindow):
 		self.controlPanel.plotData('Setpoint', list(setpoint))
 		
 	def updateSettings(self):
-		"""Updates settings tab."""
-		task, mode, mask = self.controlPanel.getControlParameters()
-		
-		if task != self.drone.getTask():
-			self.drone.setTask(task)
-			self.showMessage('Task set to: '+str(task))
-		
-		if mode != self.control.getMode():
-			self.control.setMode(mode)
-			self.showMessage('Control mode set to: '+str(mode))
-			
-		if mask != self.control.getMask():
-			self.control.setMask(*mask)
-			self.showMessage('Control mask set to '+str(mask))
-		
-		# Get drone Tracker and target labels
+		"""Updates drone from settings tab."""
 		body, target = self.controlPanel.getMocapParameters()
 		
 		if body != self.drone.getMocapLabel():
 			self.drone.setMocapLabel(body)
 			self.showMessage('Drone tracker set to '+str(body))
 			
-		if target != self.drone.getTarget().getLabel():
-			self.drone.setTarget(target)
+		if target != self.control.getTarget().getLabel():
+			self.control.setTarget(target)
 			self.showMessage('Drone target set to '+str(target))
 		
+		offboard, follow, mimic, mask = self.controlPanel.getSettings()
+		
+		if offboard != self.control.isUsingOffboardControl():
+			self.control.useOffboardControl(offboard)
+			self.showMessage('Offboard control set to '+str(offboard))
+		
+		if follow != self.control.isFollowingTarget():
+			self.control.followTarget(follow)
+			self.showMessage('Target following set to '+str(follow))
+			
+		if mimic != self.control.isMimingTarget():
+			self.control.mimicTarget(mimic)
+			self.showMessage('Target imitation set to '+str(mimic))
+			
+		if mask != self.control.getMask():
+			self.control.setMask(*mask)
+			self.showMessage('Control mask set to '+str(mask))
+			
 		# Update drone manual inputs
 		roll, pitch, yaw, thrust = self.controlPanel.getAttitude()
 		self.control.setManualAttitude(roll, pitch, yaw, thrust)

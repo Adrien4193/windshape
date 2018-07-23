@@ -10,7 +10,7 @@ from windshape import UserInterface
 
 # Initializes node
 rospy.init_node('test_drone', anonymous=True, log_level=rospy.INFO)
-rospy.sleep(1.0)
+#rospy.sleep(1.0)
 
 # Creates App
 app = QApplication(['Drone control'])

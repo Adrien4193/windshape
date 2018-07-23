@@ -100,7 +100,7 @@ class Controller(object):
 			pose (numpy.array[6]): Current real drone pose.
 			estimate (float): Pose estimated by FCU (can be shifted).
 		"""
-		setpoint = self.__parameters.getSetpoint()
+		setpoint = self.__parameters.getSetpoint().toArray()
 		
 		# Filters manual setpoint (from current drone pose)
 		if not self.__parameters.isFollowingTarget():

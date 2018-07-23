@@ -28,16 +28,16 @@ class ControlParameters(object):
 		
 		# Target
 		self.__target = RigidBody(rospy.get_param('~control/target'))
-		self.__follow = rospy.get_param('~control/follow_target')
+		self.__follow = rospy.get_param('~control/follow')
 		self.__shift = numpy.array(rospy.get_param('~control/shift'))
-		self.__mimic = rospy.get_param('~control/use_target_attitude')
+		self.__mimic = rospy.get_param('~control/mimic')
 		
 		# Manual pose and attitude to reach
 		self.__setpoint = DronePose()
 		self.__attitude = DroneAttitude()
 		
 		# Use or not offboard position controller
-		self.__offboard = rospy.get_param('~control/use_ws_controller')
+		self.__offboard = rospy.get_param('~control/offboard')
 		self.__mask = rospy.get_param('~control/mask')
 		
 		# Display
@@ -110,7 +110,7 @@ class ControlParameters(object):
 		"""
 		return self.__follow
 		
-	def isUsingTargetAttitude(self):
+	def isMimingTarget(self):
 		"""Returns True if attitude control based on the target one.
 		
 		If False, the drone will try to reach a static attitude.
@@ -120,7 +120,7 @@ class ControlParameters(object):
 		"""
 		return self.__mimic
 		
-	def isUsingWSController(self):
+	def isUsingOffboardControl(self):
 		"""Returns True if the controller is used for position control.
 		
 		If False, onboard PX4 controller will be used.
@@ -137,6 +137,16 @@ class ControlParameters(object):
 			follow (bool): Follow target if True.
 		"""
 		self.__follow = follow
+		
+	def mimicTarget(self, mimic):
+		"""Defines the way the attitude control is done.
+		
+		Uses manual attitude if False, else target one (RPYZ).
+		
+		Args:
+			mimic (bool): Use target attitude if True.
+		"""
+		self.__mimic = mimic
 		
 	def setManualAttitude(self, roll, pitch, yaw, thrust):
 		"""Assigns manually an attitude to the drone.
@@ -190,25 +200,15 @@ class ControlParameters(object):
 		"""
 		self.__target = RigidBody(label)
 		
-	def useTargetAttitude(self, use):
-		"""Defines the way the attitude control is done.
-		
-		Uses manual attitude if False, else target one (RPYZ).
-		
-		Args:
-			use (bool): Use target attitude if True.
-		"""
-		self.__mimic = use
-		
-	def useWSController(self, use):
+	def useOffboardControl(self, offboard):
 		"""Defines if the position control is done offboard.
 		
 		Uses PX4 onboard controller if False.
 		
 		Args:
-			use (bool): Use offboard position control if True.
+			offboard (bool): Use offboard position control if True.
 		"""
-		self.__offboard = use
+		self.__offboard = offboard
 		
 	# CONTROL INPUTS RECORDS GETTERS
 	####################################################################

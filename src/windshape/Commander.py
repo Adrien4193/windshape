@@ -223,7 +223,7 @@ class Commander(object):
 		
 	def __onArmingChange(self):
 		"""Action to perform if drone armed or disarmed."""
-		self.__armed = self.__armed
+		self.__armed = not self.__armed
 		
 		if self.__armed:
 			rospy.loginfo('Drone armed')

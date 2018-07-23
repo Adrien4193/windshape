@@ -166,7 +166,7 @@ class PIDController(object):
 		
 	def __record(self, error, derivative):
 		"""Records control input in class attribute."""
-		self.__separatedOutputs = [self.__gainP * error,
+		self.__separatedOutputs = [	self.__gainP * error,
 									self.__gainI * self.__integral,
 									self.__gainD * derivative]
 		

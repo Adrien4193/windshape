@@ -10,7 +10,7 @@ import windshape
 
 # Initializes node (mendatory)
 rospy.init_node('test_drone', anonymous=True, log_level=rospy.DEBUG)
-rospy.sleep(1.0)
+#rospy.sleep(1.0)
 
 # Main instance
 commander = windshape.Commander()
