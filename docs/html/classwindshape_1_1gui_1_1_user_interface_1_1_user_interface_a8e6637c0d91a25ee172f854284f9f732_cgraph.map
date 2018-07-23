@@ -1,0 +1,6 @@
+<map id="windshape.gui.UserInterface.UserInterface.keyPressEvent" name="windshape.gui.UserInterface.UserInterface.keyPressEvent">
+<area shape="rect" id="node2" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ae1b487f3e6f38aa3429588bb885ef2d7" title="windshape.gui.UserInterface.\lUserInterface.sendSetpoint" alt="" coords="248,5,440,47"/>
+<area shape="rect" id="node5" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a4e188b0f5fbd942b9fdc57e24363f46e" title="windshape.gui.UserInterface.\lUserInterface.sendPWM" alt="" coords="248,71,440,112"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#abec836d949600735c76645000a412826" title="windshape.gui.UserInterface.\lUserInterface.showMessage" alt="" coords="488,39,680,80"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a50c3bc558203760d9cd4caebb5fdf319" title="windshape.gui.UserInterface.\lUserInterface.unlockStatus" alt="" coords="728,39,920,80"/>
+</map>
