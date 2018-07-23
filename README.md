@@ -6,7 +6,7 @@ Drone and WindShape fans array control using OptiTrack cameras.
 Documentation
 -------------
 
-Check doxygen documentation [here](https://github.com/Adrien4193/windshape/docs/html/index.html)
+Check doxygen documentation [here](https://adrien4193.github.io/windshape/)
 
 Getting windshape
 -------------
