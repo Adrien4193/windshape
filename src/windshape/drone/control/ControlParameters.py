@@ -3,6 +3,9 @@ import numpy
 # ROS main library
 import rospy
 
+# Receives messages from mocap system
+from ..mocap.RigidBody import RigidBody
+
 # RPYT attitude with facilities
 from ..common.DroneAttitude import DroneAttitude
 # 6DOF pose with facilities

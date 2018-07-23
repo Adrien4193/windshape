@@ -72,9 +72,6 @@ class Drone(object):
 		"""Creates all children instances and start RT update."""
 		rospy.logdebug('Drone initialization')
 		
-		# Drone label
-		drone = rospy.get_param('~tracking/tracker')
-		
 		# FCU
 		self.__client = MAVROSClient()
 		self.__listener = MAVROSListener()
@@ -95,7 +92,7 @@ class Drone(object):
 	def __del__(self):
 		"""Shutdown timers."""
 		rospy.logdebug('Drone destruction')
-		self.__close()
+		Drone.__close(weakref.ref(self))
 		
 	# ATTRIBUTES GETTERS
 	####################################################################
@@ -229,21 +226,25 @@ class Drone(object):
 				'FCU:',
 				'Connected: {}'.format(self.isConnected()),
 				'Armed: {}'.format(self.isArmed()),
-				'Mode: {}'.format(self.getFlightMode())])
+				'Mode: {}'.format(self.getFlightMode())
+				])
 			
 		mocap = '\n    '.join([
 				'Mocap:',
 				'Stream: {}'.format(self.getTrackersList()),
 				'Label: {}'.format(self.getMocapLabel()),
-				'Tracked: {}'.format(self.isTracked())])
+				'Tracked: {}'.format(self.isTracked())
+				])
 		
 		ctrl = '\n    '.join([
 				'Control:',
-				'Task: {}'.format(self.getTask()),
-				'Mode: {}'.format(control.getMode()),
-				'Mask: {}'.format(control.getMask())],
 				'Target: {}'.format(control.getTarget().getLabel()),
-				'Tracked: {}'.format(control.getTarget().isTracked())])
+				'Tracked: {}'.format(control.getTarget().isTracked()),
+				'Follow: {}'.format(control.isFollowingTarget()),
+				'Mimic: {}'.format(control.isUsingTargetAttitude()),
+				'Offboard: {}'.format(control.isUsingWSController()),
+				'Mask: {}'.format(control.getMask())
+				])
 		
 		return '\n\n'.join([fcu, mocap, ctrl])
 		
@@ -273,6 +274,14 @@ class Drone(object):
 		period = 1.0 / rate
 		timer = rospy.Timer(rospy.Duration(period), callback)
 		self.__timers.append(timer)
+		
+	@staticmethod
+	def __close(drone):
+		"""Closes all timers of drone (weakref)."""
+		if drone() is not None:
+			for timer in drone().__timers:
+				timer.shutdown()
+			drone().__timers = []
 	
 	@staticmethod
 	def __sendMocap(drone):
@@ -288,9 +297,11 @@ class Drone(object):
 			return
 		
 		control = drone().getControlParameters()
+		flightMode = drone().getFlightMode()
+		publisher = drone().__publisher
 		
 		# Control is done offboard -> Sends attitude to reach setpoint
-		if control.useOffboardController():
+		if control.isUsingWSController():
 			
 			if not drone().isArmed() or flightMode != 'OFFBOARD':
 				drone().__controller.reset()
@@ -302,15 +313,7 @@ class Drone(object):
 			publisher.sendSetpointThrust(attitude.getThrust())
 		
 		# Control is done onboard -> Just sends pose to reach
-		else controlMode == 'onboard':
+		else:
 			drone().__controller.reset()
 			setpoint = drone().getSetpoint().toPoseStamped()
 			publisher.sendSetpointPosition(setpoint)
-		
-	@staticmethod
-	def __close(drone):
-		"""Closes all timers of drone (weakref)."""
-		if drone() is not None:
-			for timer in drone().__timers:
-				timer.shutdown()
-			drone().__timers = []

@@ -47,6 +47,7 @@ class Commander(object):
 	def __del__(self):
 		"""Stops timers."""
 		rospy.logdebug('Commander destruction')
+		Commander.__close(weakref.ref(self))
 		
 	# ATTRIBUTES
 	####################################################################
@@ -77,35 +78,31 @@ class Commander(object):
 		"""Returns command and error from drone controller (str)."""
 		control = self.__drone.getControlParameters()
 		
-		error = control.getError()
-		cmd = control.getControlInput()
-		separated = control.getSeparatedOutputs()
+		error = control.getError().toString('Error')
+		cmd = control.getControlInput().toString('Total')
 		
-		error = ('error:\n'+str(error)).replace('\n', '\n    ')
-		cmd = ('control input:\n'+str(cmd)).replace('\n', '\n    ')
-		p = ('P:\n'+str(separated[0])).replace('\n', '\n    ')
-		i = ('I:\n'+str(separated[1])).replace('\n', '\n    ')
-		d = ('D:\n'+str(separated[2])).replace('\n', '\n    ')
+		separated = control.getSeparatedOutputs()
+		p = separated[0].toString('P')
+		i = separated[1].toString('I')
+		d = separated[2].toString('D')
 		
 		return '\n\n'.join([error, cmd, p, i, d])
 		
-	def getState(self):
+	def getState(self, shift=0):
 		"""Returns the drone pose and setpoint (str)."""
-		setpoint = 'setpoint:\n'+str(self.__drone.getSetpoint())
-		mocap = 'mocap:\n'+str(self.__drone.getMocapPose())
-		estimate = 'estimate:\n'+str(self.__drone.getEstimatedPose())
+		control = self.__drone.getControlParameters()
 		
-		setpoint = setpoint.replace('\n', '\n    ')
-		mocap = mocap.replace('\n', '\n    ')
-		estimate = estimate.replace('\n', '\n    ')
+		setpoint = control.getSetpoint().toString('Setpoint')
+		mocap = self.__drone.getMocapPose().toString('Mocap')
+		estimate = self.__drone.getEstimatedPose().toString('Estimate')
 		
 		return '\n\n'.join([setpoint, mocap, estimate])
 	
-	def getStatus(self):
+	def getStatus(self, shift=0):
 		"""Returns the drone and fans array status (str)."""
 		return str(self.__drone)+'\n\n'+str(self.__fansArray)
 		
-	# TIMERS
+	# REAL-TIME UPDATES
 	####################################################################
 	
 	def __initTimers(self):
@@ -113,50 +110,53 @@ class Commander(object):
 		
 		# IMPORTANT: (will block destructor otherwise)
 		# Create weakref on instance
-		commander = weakref.ref(self)
+		com = weakref.ref(self)
 		
 		# Updates drone status at defined rate
 		rate = rospy.get_param('~update/update_rate')
-		self.__startTimer(rate, lambda t: commander().__update())
+		self.__startTimer(rate, lambda t: Commander.__update(com))
 		
 		# Records drone status, pose and control input at defined rate
 		rate = rospy.get_param('~update/record_rate')
-		self.__startTimer(rate, lambda t: commander().__record())
+		self.__startTimer(rate, lambda t: Commander.__record(com))
 		
 		# Safety
-		rospy.on_shutdown(lambda: commander().__close())
+		rospy.on_shutdown(lambda: Commander.__close(com))
 		
 	def __startTimer(self, rate, callback):
 		"""Starts a ROS timer to call callback at rate."""
 		period = 1.0 / rate
 		timer = rospy.Timer(rospy.Duration(period), callback)
 		self.__timers.append(timer)
-		
-	def __close(self):
-		"""Closes all timers."""
-		for timer in self.__timers:
-			timer.shutdown()
-		
-	# UPDATE METHODS
-	####################################################################
-		
-	def __record(self):
-		"""Records drone status, pose and control input."""
-		self.__recorder.record('status', self.getStatus())
-		self.__recorder.record('pose', self.getState())
-		self.__recorder.record('command', self.getCommand())
-		
-	def __update(self):
-		"""Checks drone state and updates fans array if tracked."""
-		self.__checkState()
-		
-		if self.__autoWind:
-			self.__sendPWM()
+	
+	@staticmethod
+	def __close(com):
+		"""Closes all timers of commander (weakref)."""
+		if com() is not None:
+			for timer in com().__timers:
+				timer.shutdown()
+			com().__timers = []
+	
+	@staticmethod	
+	def __record(com):
+		"""Records drone status, pose and control input (weakref)."""
+		if com() is not None:
+			com().__recorder.record('status', com().getStatus())
+			com().__recorder.record('pose', com().getState())
+			com().__recorder.record('command', com().getCommand())
+	
+	@staticmethod	
+	def __update(com):
+		"""Checks drone state and generates wind (weakref)."""
+		if com() is not None:
+			com().__checkState()
+			if com().__autoWind:
+				com().__sendPWM()
 		
 	def __checkState(self):
 		"""Checks if drone state has changed."""
 		drone = self.__drone
-		target = drone.getTarget()
+		target = drone.getControlParameters().getTarget()
 		
 		if self.__tracked != drone.isTracked():
 			self.__onTrackChange()
@@ -196,7 +196,7 @@ class Commander(object):
 	
 	def __onTrackChange(self):
 		"""Action to perform if drone tracking has changed."""
-		self.__tracked = self.__drone.isTracked()
+		self.__tracked = not self.__tracked
 		
 		if self.__tracked:
 			rospy.loginfo('Drone tracked')
@@ -205,7 +205,7 @@ class Commander(object):
 		
 	def __onTargetTrackingChange(self):
 		"""Action to perform if target has changed."""
-		self.__targetTracked = self.__drone.getTarget().isTracked()
+		self.__targetTracked = not self.__targetTracked
 		
 		if self.__targetTracked:
 			rospy.loginfo('Target tracked')
@@ -214,7 +214,7 @@ class Commander(object):
 		
 	def __onConnectionChange(self):
 		"""Action to perform if drone connection has changed."""
-		self.__connected = self.__drone.isConnected()
+		self.__connected = not self.__connected
 		
 		if self.__connected:
 			rospy.loginfo('Drone connected')
@@ -223,7 +223,7 @@ class Commander(object):
 		
 	def __onArmingChange(self):
 		"""Action to perform if drone armed or disarmed."""
-		self.__armed = self.__drone.isArmed()
+		self.__armed = self.__armed
 		
 		if self.__armed:
 			rospy.loginfo('Drone armed')

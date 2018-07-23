@@ -9,9 +9,6 @@ from ControlParameters import ControlParameters
 # PID controller (SISO)
 from PIDController import PIDController
 
-# Receives messages from mocap system
-from ..mocap.RigidBody import RigidBody
-
 # Low-pass filter
 from ..common.LowPassFilter import LowPassFilter
 
@@ -89,7 +86,7 @@ class Controller(object):
 	# ATTITUDE COMPUTATION (CALL)
 	####################################################################
 
-	def __call__(self, setpoint, pose, estimate):
+	def __call__(self, pose, estimate):
 		"""Returns attitude (numpy.array[4]) to reach setpoint.
 		
 		Process:
@@ -100,14 +97,13 @@ class Controller(object):
 			4 - Returns R, P, Y, T.
 		
 		Args:
-			setpoint (numpy.array[6]): setpoint to reach.
 			pose (numpy.array[6]): Current real drone pose.
 			estimate (float): Pose estimated by FCU (can be shifted).
 		"""
 		setpoint = self.__parameters.getSetpoint()
 		
-		# Filters manual setpoint from drone pose
-		if self.__parameters.getTask() == 'reach_setpoint':
+		# Filters manual setpoint (from current drone pose)
+		if not self.__parameters.isFollowingTarget():
 			setpoint = self.__filter(setpoint)
 		else:
 			self.__filter.reset(pose)

@@ -113,7 +113,7 @@ class DroneAttitude(object):
 		
 		return poseStamped
 		
-	def toString(self, label, shift, indent=4):
+	def toString(self, label, shift=0, indent=4):
 		"""Returns a string to display the attitude.
 		
 		Structure:

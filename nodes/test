@@ -15,11 +15,5 @@ rospy.sleep(1.0)
 # Main instance
 commander = windshape.Commander()
 
-# Drone
-drone = commander.getDrone()
-
-# Fans array
-fansArray = commander.getFansArray()
-
 # Press Ctrl+C to quit
 rospy.spin()
