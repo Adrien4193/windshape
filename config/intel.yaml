@@ -12,8 +12,7 @@ fansarray:
 # Drone tracking using mocap system
 tracking:
   timeout: 0.1
-  tracker_drone: "drone"
-  tracker_target: "target"
+  tracker: "drone"
 
 # Drone real time management
 update:
@@ -25,38 +24,40 @@ update:
 
 # Drone default control mode
 control:
-  task: "follow_target"
-  mode: "offboard"
+  use_ws_controller: True
+  target: "target"
+  follow_target: True
+  use_target_attitude: False
   mask: [False, False, False, False]
   shift: [0, -1.0, 0, 0, 0, 0]
 
 # Drone offboard PID attitude control
   pid:
-    x:
+    roll:
       kp: 0.8
       ki: 0.1
       kd: 0.2
       min: deg(-30)
       max: deg(30)
       ff: deg(0)
-    y:
+    pitch:
       kp: 0.8
       ki: 0.1
       kd: 0.2
       min: deg(-30)
       max: deg(30)
       ff: deg(0)
-    z:
+    yaw:
+      kp: 1.0
+      ki: 0.1
+      kd: 0.05
+      min: deg(-180)
+      max: deg(180)
+      ff: deg(0)
+    thrust:
       kp: 1.0
       ki: 0.1
       kd: 0.1
       min: 0.0
       max: 0.8
       ff: 0.3
-    yaw:
-      kp: 1.0
-      ki: 0.1
-      kd: 0.05
-      min: deg(-10)
-      max: deg(10)
-      ff: deg(0)

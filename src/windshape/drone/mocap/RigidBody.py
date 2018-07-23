@@ -151,7 +151,4 @@ class RigidBody(object):
 		# Label and tracking state
 		header = '{}: ({})\n'.format(self.__label, tracked)
 		
-		# Pose with 4 spaces indent
-		pose = '    '+str(self.getPose()).replace('\n', '\n    ')
-
-		return header + pose
+		return self.getPose().toString(header, shift=0)

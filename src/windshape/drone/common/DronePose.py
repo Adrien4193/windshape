@@ -137,6 +137,24 @@ class DronePose(object):
 		
 		return poseStamped
 		
+	def toString(self, label, shift, indent=4):
+		"""Returns a string to display the pose.
+		
+		Structure:
+			<shift>*"space" label:
+			<shift>*"space" <indent>*"space" coordinate 1
+			...
+		
+		Args:
+			label (str): The label of the pose.
+			shift (int): Number of spaces to shift the whole string.
+			indent=4 (int): Number of spaces to indent pose from label.
+		"""
+		pose = indent*' '+str(self).replace('\n', '\n'+indent*' ')
+		string = '{}:\n{}'.format(label, pose)
+		
+		return shift*' '+string.replace('\n', '\n'+shift*' ')
+		
 	# SPECIAL METHODS
 	####################################################################
 		

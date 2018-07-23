@@ -75,7 +75,7 @@ class UserInterface(QMainWindow):
 		
 		# Window title and dimensions
 		self.setWindowTitle('Drone control')
-		self.setGeometry(0, 0, 800, 600)
+		self.setGeometry(0, 0, 1000, 800)
 		
 		# Main widget (TabWidget)
 		self.controlPanel = ControlPanel(self)

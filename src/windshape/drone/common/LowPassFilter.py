@@ -9,14 +9,15 @@ class LowPassFilter(object):
 	
 	y[n] = (x[n] + a*y[n-1]) / (a+1)
 	
-	where a is the parameter given to __init__. 
+	Where a is the parameter given to __init__. 
 	
 	Inherits from object.
 	
 	Overrides: __init__, __del__, __call__.
 	"""
 	
-	###################### INITIALIZER, DESTRUCTOR #####################
+	# INITIALIZER AND DESTRUCTOR
+	####################################################################
 	
 	def __init__(self, a, initValue):
 		"""Stores a and initializes previous value.
@@ -35,14 +36,19 @@ class LowPassFilter(object):
 		# Initializes y[n-1]
 		self.__y_1 = initValue
 		
-		# For reset
-		self.__resetValue = initValue
-		
 	def __del__(self):
 		"""Does nothing special."""
 		pass
+		
+	# COMMANDS
+	####################################################################
 	
-	############################# CALLER ###############################
+	def reset(self, value):
+		"""Resets the memory to init value or given one."""
+		self.__y_1 = value
+	
+	# SPECIAL METHODS
+	####################################################################
 	
 	def __call__(self, x):
 		"""Applies the filter on the given point.
@@ -60,10 +66,3 @@ class LowPassFilter(object):
 		self.__y_1 = y
 		
 		return y
-		
-	# COMMANDS
-	####################################################################
-	
-	def reset(self):
-		"""Resets the memory to init value."""
-		self.__y_1 = self.__resetValue

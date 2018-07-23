@@ -5,7 +5,7 @@ import math
 import rospy
 
 # Low-pass filters
-from LowPassFilter import LowPassFilter
+from ..common.LowPassFilter import LowPassFilter
 
 
 class PIDController(object):
@@ -22,7 +22,7 @@ class PIDController(object):
 	####################################################################
 	
 	def __init__(self, kp, ki, kd, umin, umax, ff):
-		"""Initializes gains, saturation, sum of and previous error.
+		"""Initializes parameters, integral and previous error.
 		
 		Args:
 			kp (float): Proportional gain
@@ -55,11 +55,37 @@ class PIDController(object):
 		self.__previousCall = None
 		
 		# Separated outputs for display
-		self.__separatedOutputs = [0, 0, 0]
+		self.__separatedOutputs = 3*[0.0]
 		
 	def __del__(self):
 		"""Does nothing special."""
 		pass
+		
+	# ATTRIBUTES
+	####################################################################
+	
+	def getError(self):
+		"""Returns the last error computed (float)."""
+		return self.__previousError
+		
+	def getIntegral(self):
+		"""Returns the current integral (float)."""
+		return self.__integral
+		
+	def getSeparatedOutputs(self):
+		"""Returns the last output computed (P, I, D)."""
+		return self.__separatedOutputs
+		
+	# COMMANDS
+	####################################################################
+	
+	def reset(self):
+		"""Resets the controller's parameters."""
+		self.__previousCall = None
+		
+	def setFeedForward(self, value):
+		"""Changes the feed forward value (float)."""
+		self.__feedForward = value
 		
 	# COMPUTATION
 	####################################################################
@@ -78,9 +104,9 @@ class PIDController(object):
 		# Uses first call as reference
 		if dt == 0:
 			self.__reset(error)
-			return 0.0
+			return 0
 		
-		# Computes intergral term
+		# Intergral term
 		if self.__gainI != 0:
 			self.__integral += error * dt
 		
@@ -101,28 +127,6 @@ class PIDController(object):
 		self.__record(error, derivative)
 		
 		return output
-		
-	# MEASUREMENTS
-	####################################################################
-	
-	def getError(self):
-		"""Returns the last error computed (float)."""
-		return self.__previousError
-		
-	def getIntegral(self):
-		"""Returns the current integral (float)."""
-		return self.__integral
-		
-	def getLastOutput(self):
-		"""Returns the last output computed (P, I, D)."""
-		return self.__separatedOutputs
-		
-	# COMMANDS
-	####################################################################
-	
-	def reset(self):
-		"""Resets the controller's parameters."""
-		self.__previousCall = None
 		
 	# PRIVATE COMPUTATION
 	####################################################################
@@ -169,6 +173,7 @@ class PIDController(object):
 	def __reset(self, error):
 		"""Initializes controller for first call."""
 		self.__previousCall = rospy.get_time()
-		self.__integral = 0.0
+		self.__integral = 0
 		self.__previousError = error
-		self.__filter.reset()
+		self.__separatedOutputs = 3*[0]
+		self.__filter.reset(0)

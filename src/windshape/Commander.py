@@ -77,13 +77,17 @@ class Commander(object):
 		"""Returns command and error from drone controller (str)."""
 		control = self.__drone.getControlParameters()
 		
-		command = 'control input:\n'+str(control.getControlInput())
-		error = 'error:\n'+str(control.getError())
+		error = control.getError()
+		cmd = control.getControlInput()
+		separated = control.getSeparatedOutputs()
 		
-		command = command.replace('\n', '\n    ')
-		error = error.replace('\n', '\n    ')
+		error = ('error:\n'+str(error)).replace('\n', '\n    ')
+		cmd = ('control input:\n'+str(cmd)).replace('\n', '\n    ')
+		p = ('P:\n'+str(separated[0])).replace('\n', '\n    ')
+		i = ('I:\n'+str(separated[1])).replace('\n', '\n    ')
+		d = ('D:\n'+str(separated[2])).replace('\n', '\n    ')
 		
-		return '\n\n'.join([command, error])
+		return '\n\n'.join([error, cmd, p, i, d])
 		
 	def getState(self):
 		"""Returns the drone pose and setpoint (str)."""
