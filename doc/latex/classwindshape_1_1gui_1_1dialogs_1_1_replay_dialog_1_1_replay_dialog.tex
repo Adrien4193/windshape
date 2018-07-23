@@ -1,0 +1,142 @@
+\hypertarget{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog}{}\section{windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog Class Reference}
+\label{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog}\index{windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog@{windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog}}
+
+
+Inheritance diagram for windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a246e5a6be9bd7ab2da465b3dae2f49e8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, parent, file\+Name)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ac0e3e46a05475732ed51c2da6874718e}{load}} (self, file\+Name)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ad8259d3892a7652ecae975b973e73294}{extract\+Data}} (self, file\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a02d908358d4ae112c11cddc979ad81b5}{layout}}
+\item 
+\mbox{\hyperlink{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a0a2d36aafb1963c1c6ed459d5aa202ae}{plot}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Plots data recorded in a file in a QDialog window.
+
+Inherits from QDialog.
+
+Overrides: __init__
+\end{DoxyVerb}
+ 
+
+Definition at line 13 of file Replay\+Dialog.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a246e5a6be9bd7ab2da465b3dae2f49e8}\label{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a246e5a6be9bd7ab2da465b3dae2f49e8}} 
+\index{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parent,  }\item[{}]{file\+Name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extracts data from file and plot it.
+
+Args:
+    parent (QWidget): The parent widget.
+    fileName (str): Path of the file with data to plot.
+\end{DoxyVerb}
+ 
+
+Definition at line 21 of file Replay\+Dialog.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ad8259d3892a7652ecae975b973e73294}\label{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ad8259d3892a7652ecae975b973e73294}} 
+\index{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}!extract\+Data@{extract\+Data}}
+\index{extract\+Data@{extract\+Data}!windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}}
+\subsubsection{\texorpdfstring{extract\+Data()}{extractData()}}
+{\footnotesize\ttfamily def windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog.\+extract\+Data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extracts data from file and add to plot.
+
+FORMAT:
+
+time: <time_stamp>
+    <source>:
+<variable>: <value> <unit>
+\end{DoxyVerb}
+ 
+
+Definition at line 69 of file Replay\+Dialog.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ad8259d3892a7652ecae975b973e73294_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ac0e3e46a05475732ed51c2da6874718e}\label{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ac0e3e46a05475732ed51c2da6874718e}} 
+\index{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}!load@{load}}
+\index{load@{load}!windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily def windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog.\+load (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+Name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Opens file and extract data.\end{DoxyVerb}
+ 
+
+Definition at line 54 of file Replay\+Dialog.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_ac0e3e46a05475732ed51c2da6874718e_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a02d908358d4ae112c11cddc979ad81b5}\label{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a02d908358d4ae112c11cddc979ad81b5}} 
+\index{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}!layout@{layout}}
+\index{layout@{layout}!windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}}
+\subsubsection{\texorpdfstring{layout}{layout}}
+{\footnotesize\ttfamily windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog.\+layout}
+
+
+
+Definition at line 40 of file Replay\+Dialog.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a0a2d36aafb1963c1c6ed459d5aa202ae}\label{classwindshape_1_1gui_1_1dialogs_1_1_replay_dialog_1_1_replay_dialog_a0a2d36aafb1963c1c6ed459d5aa202ae}} 
+\index{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}!plot@{plot}}
+\index{plot@{plot}!windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog@{windshape\+::gui\+::dialogs\+::\+Replay\+Dialog\+::\+Replay\+Dialog}}
+\subsubsection{\texorpdfstring{plot}{plot}}
+{\footnotesize\ttfamily windshape.\+gui.\+dialogs.\+Replay\+Dialog.\+Replay\+Dialog.\+plot}
+
+
+
+Definition at line 44 of file Replay\+Dialog.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/gui/dialogs/\mbox{\hyperlink{_replay_dialog_8py}{Replay\+Dialog.\+py}}\end{DoxyCompactItemize}

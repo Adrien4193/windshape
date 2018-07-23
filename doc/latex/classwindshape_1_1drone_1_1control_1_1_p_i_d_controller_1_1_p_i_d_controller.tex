@@ -1,0 +1,182 @@
+\hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller}{}\section{windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller Class Reference}
+\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller}\index{windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller@{windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller}}
+
+
+Inheritance diagram for windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_ad9a8dd923ba3d6fc00c55607acb008e3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, kp, ki, kd, umin, umax, ff)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a6f26110b94653fb4b21fb5962699caa1}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a558de8f7c8d2f86ad2cfe333547bfe4f}{get\+Error}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9a2fa18ceb6e0dfa2628a7d9ec8c6b00}{get\+Integral}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a66c09e31abe344dd6d977aa7ea67426c}{get\+Separated\+Outputs}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9dc623e815f70dbffaf8de91d2071dd3}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a8ca7fc46dff37bdf5b88ceb6683d0e9e}{set\+Feed\+Forward}} (self, value)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a932a9bc5936376c1da6f9df14f27f215}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, error)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Simple SISO PID controller with anti-windup and manual reset.
+
+The parameters (gains, saturation) are given to the constructor.
+
+Inherits from object.
+
+Overrides: __init__, __del__, __call__.
+\end{DoxyVerb}
+ 
+
+Definition at line 11 of file P\+I\+D\+Controller.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_ad9a8dd923ba3d6fc00c55607acb008e3}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_ad9a8dd923ba3d6fc00c55607acb008e3}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{kp,  }\item[{}]{ki,  }\item[{}]{kd,  }\item[{}]{umin,  }\item[{}]{umax,  }\item[{}]{ff }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes parameters, integral and previous error.
+
+Args:
+    kp (float): Proportional gain
+    ki (float): Integral gain
+    kd (float): Derivative gain
+    umin (float): Minimum value of the output
+    umax (float): Maximum value of the output
+    ff (float): Feed-forward to add to the output
+\end{DoxyVerb}
+ 
+
+Definition at line 24 of file P\+I\+D\+Controller.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a6f26110b94653fb4b21fb5962699caa1}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a6f26110b94653fb4b21fb5962699caa1}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+del\+\_\+\+\_\+()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Does nothing special.\end{DoxyVerb}
+ 
+
+Definition at line 60 of file P\+I\+D\+Controller.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a932a9bc5936376c1da6f9df14f27f215}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a932a9bc5936376c1da6f9df14f27f215}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!\+\_\+\+\_\+call\+\_\+\+\_\+@{\+\_\+\+\_\+call\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+call\+\_\+\+\_\+@{\+\_\+\+\_\+call\+\_\+\+\_\+}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+call\+\_\+\+\_\+()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the control input from error.
+
+Uses anti-windup for integral and filters error for derivative.
+
+Args:
+    error (float): Desired value - Measured value
+\end{DoxyVerb}
+ 
+
+Definition at line 93 of file P\+I\+D\+Controller.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a932a9bc5936376c1da6f9df14f27f215_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a558de8f7c8d2f86ad2cfe333547bfe4f}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a558de8f7c8d2f86ad2cfe333547bfe4f}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!get\+Error@{get\+Error}}
+\index{get\+Error@{get\+Error}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{get\+Error()}{getError()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+get\+Error (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the last error computed (float).\end{DoxyVerb}
+ 
+
+Definition at line 67 of file P\+I\+D\+Controller.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9a2fa18ceb6e0dfa2628a7d9ec8c6b00}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9a2fa18ceb6e0dfa2628a7d9ec8c6b00}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!get\+Integral@{get\+Integral}}
+\index{get\+Integral@{get\+Integral}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{get\+Integral()}{getIntegral()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+get\+Integral (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the current integral (float).\end{DoxyVerb}
+ 
+
+Definition at line 71 of file P\+I\+D\+Controller.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a66c09e31abe344dd6d977aa7ea67426c}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a66c09e31abe344dd6d977aa7ea67426c}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!get\+Separated\+Outputs@{get\+Separated\+Outputs}}
+\index{get\+Separated\+Outputs@{get\+Separated\+Outputs}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{get\+Separated\+Outputs()}{getSeparatedOutputs()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+get\+Separated\+Outputs (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the last output computed (P, I, D).\end{DoxyVerb}
+ 
+
+Definition at line 75 of file P\+I\+D\+Controller.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9dc623e815f70dbffaf8de91d2071dd3}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9dc623e815f70dbffaf8de91d2071dd3}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!reset@{reset}}
+\index{reset@{reset}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Resets the controller's parameters.\end{DoxyVerb}
+ 
+
+Definition at line 82 of file P\+I\+D\+Controller.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a9dc623e815f70dbffaf8de91d2071dd3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a8ca7fc46dff37bdf5b88ceb6683d0e9e}\label{classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller_a8ca7fc46dff37bdf5b88ceb6683d0e9e}} 
+\index{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}!set\+Feed\+Forward@{set\+Feed\+Forward}}
+\index{set\+Feed\+Forward@{set\+Feed\+Forward}!windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller@{windshape\+::drone\+::control\+::\+P\+I\+D\+Controller\+::\+P\+I\+D\+Controller}}
+\subsubsection{\texorpdfstring{set\+Feed\+Forward()}{setFeedForward()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+control.\+P\+I\+D\+Controller.\+P\+I\+D\+Controller.\+set\+Feed\+Forward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changes the feed forward value (float).\end{DoxyVerb}
+ 
+
+Definition at line 86 of file P\+I\+D\+Controller.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/drone/control/\mbox{\hyperlink{_p_i_d_controller_8py}{P\+I\+D\+Controller.\+py}}\end{DoxyCompactItemize}

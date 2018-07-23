@@ -1,0 +1,446 @@
+\hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone}{}\section{windshape.\+drone.\+Drone.\+Drone Class Reference}
+\label{classwindshape_1_1drone_1_1_drone_1_1_drone}\index{windshape.\+drone.\+Drone.\+Drone@{windshape.\+drone.\+Drone.\+Drone}}
+
+
+Inheritance diagram for windshape.\+drone.\+Drone.\+Drone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classwindshape_1_1drone_1_1_drone_1_1_drone__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+drone.\+Drone.\+Drone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classwindshape_1_1drone_1_1_drone_1_1_drone__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_ae2c508fe84e2be14bbf31812711cdfd6}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a1ab69c6c179d0dcab1694c42f023cb37}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a255d2634547c1cd613108951b968ed6f}{get\+Control\+Parameters}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_ab4435f13cb1e062137c822f7b0be778a}{get\+Estimated\+Pose}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a05934a953a52558fd19b18435c52cc40}{get\+Flight\+Mode}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_ac29dae974ab7bb13d250dbb752e20853}{get\+Mocap\+Label}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_aff00e3bde6aa9347331f92135644edd2}{get\+Mocap\+Pose}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a161d7774319e5de5dd7f13f5c66b64a3}{is\+Armed}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a0d6c9c56fd735733f4a2268896c30d37}{is\+Connected}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a8e5d50aa9df5f17650570e60ac809477}{is\+Tracked}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a56218cb96a8907668ec8137085fb41e7}{set\+Mocap\+Label}} (self, label)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a7418f92ab851d2707ac067fbec4cc8cd}{arm}} (self, cmd)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_ab98bca80eada4b3365774f3cc347ea9b}{land}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a728b7ccd51bc67e1338652940f24caac}{set\+Flight\+Mode}} (self, mode)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a76ec9fc58bfe4b6ddb8ab5739bfdd2ea}{takeoff}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a6c7c3a3cc6a63aec8e624febc3a40e67}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a7e7eced60d10a8b1eb38b7ebf6a02f0f}{get\+Trackers\+List}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwindshape_1_1drone_1_1_drone_1_1_drone_a4c87638c6657286a90b0141e456e90bb}{F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES}} = \mbox{\hyperlink{classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_client_1_1_m_a_v_r_o_s_client_abe3ff6179ff5fb0a038f5f8c2b7728cb}{M\+A\+V\+R\+O\+S\+Client.\+P\+X4\+\_\+\+F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES}}
+\begin{DoxyCompactList}\small\item\em Available flight modes for the drone (str) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Header class to control the drone.
+
+The control is performed in separated threads using ROS Timers.
+
+Notes:
+    Units are always [m], [rad], [0-1].
+    The global frame coordinate used is the one of the mocap system.
+    The drone must be aligned with the X axis of the global frame
+    BEFORE creating its rigid body.
+
+Inherits from: object.
+
+Overrides: __init__, __del__, __str__.
+\end{DoxyVerb}
+ 
+
+Definition at line 25 of file Drone.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_ae2c508fe84e2be14bbf31812711cdfd6}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_ae2c508fe84e2be14bbf31812711cdfd6}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates all children instances and start RT update.\end{DoxyVerb}
+ 
+
+Definition at line 66 of file Drone.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_ae2c508fe84e2be14bbf31812711cdfd6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a1ab69c6c179d0dcab1694c42f023cb37}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a1ab69c6c179d0dcab1694c42f023cb37}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+del\+\_\+\+\_\+()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Shutdown timers.\end{DoxyVerb}
+ 
+
+Definition at line 87 of file Drone.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a6c7c3a3cc6a63aec8e624febc3a40e67}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a6c7c3a3cc6a63aec8e624febc3a40e67}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a summary (str) of the drone status.\end{DoxyVerb}
+ 
+
+Definition at line 216 of file Drone.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a6c7c3a3cc6a63aec8e624febc3a40e67_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a7418f92ab851d2707ac067fbec4cc8cd}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a7418f92ab851d2707ac067fbec4cc8cd}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!arm@{arm}}
+\index{arm@{arm}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{arm()}{arm()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+arm (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{cmd }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Arms or disarms the drone.
+
+Uses MAVROS service "/mavros/cmd/arming" to send MAVLink arming
+message and get the response message (success or not).
+
+Args:
+    cmd (bool): Arm if True, else disarm.
+\end{DoxyVerb}
+ 
+
+Definition at line 175 of file Drone.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a255d2634547c1cd613108951b968ed6f}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a255d2634547c1cd613108951b968ed6f}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!get\+Control\+Parameters@{get\+Control\+Parameters}}
+\index{get\+Control\+Parameters@{get\+Control\+Parameters}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{get\+Control\+Parameters()}{getControlParameters()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+get\+Control\+Parameters (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the parameters of the controller (Parameters).
+
+See Parameters to extract and change control attributes.
+\end{DoxyVerb}
+ 
+
+Definition at line 95 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a255d2634547c1cd613108951b968ed6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_ab4435f13cb1e062137c822f7b0be778a}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_ab4435f13cb1e062137c822f7b0be778a}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!get\+Estimated\+Pose@{get\+Estimated\+Pose}}
+\index{get\+Estimated\+Pose@{get\+Estimated\+Pose}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{get\+Estimated\+Pose()}{getEstimatedPose()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+get\+Estimated\+Pose (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the drone pose estimated by the FCU (DronePose).
+
+Note:
+    Estimation depends on parameters set on QGoundControl.
+\end{DoxyVerb}
+ 
+
+Definition at line 102 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_ab4435f13cb1e062137c822f7b0be778a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a05934a953a52558fd19b18435c52cc40}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a05934a953a52558fd19b18435c52cc40}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!get\+Flight\+Mode@{get\+Flight\+Mode}}
+\index{get\+Flight\+Mode@{get\+Flight\+Mode}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{get\+Flight\+Mode()}{getFlightMode()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+get\+Flight\+Mode (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the drone's active flight mode (str).
+
+See MAVROSClient for available flight modes list.
+
+Uses topic /mavros/state to get the drone state.
+\end{DoxyVerb}
+ 
+
+Definition at line 110 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a05934a953a52558fd19b18435c52cc40_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_ac29dae974ab7bb13d250dbb752e20853}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_ac29dae974ab7bb13d250dbb752e20853}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!get\+Mocap\+Label@{get\+Mocap\+Label}}
+\index{get\+Mocap\+Label@{get\+Mocap\+Label}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{get\+Mocap\+Label()}{getMocapLabel()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+get\+Mocap\+Label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the label of the drone's VRPN Tracker (str).
+
+Note:
+    The tracker label is defined at rigid body creation on the
+    mocap system.
+\end{DoxyVerb}
+ 
+
+Definition at line 119 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_ac29dae974ab7bb13d250dbb752e20853_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_aff00e3bde6aa9347331f92135644edd2}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_aff00e3bde6aa9347331f92135644edd2}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!get\+Mocap\+Pose@{get\+Mocap\+Pose}}
+\index{get\+Mocap\+Pose@{get\+Mocap\+Pose}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{get\+Mocap\+Pose()}{getMocapPose()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+get\+Mocap\+Pose (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the drone pose from the mocap system (DronePose).
+
+Corresponds to the pose of the rigid body associated to the
+drone using setMocapLabel method.
+\end{DoxyVerb}
+ 
+
+Definition at line 128 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_aff00e3bde6aa9347331f92135644edd2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a7e7eced60d10a8b1eb38b7ebf6a02f0f}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a7e7eced60d10a8b1eb38b7ebf6a02f0f}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!get\+Trackers\+List@{get\+Trackers\+List}}
+\index{get\+Trackers\+List@{get\+Trackers\+List}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{get\+Trackers\+List()}{getTrackersList()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+get\+Trackers\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Returns the list of availables VRPN Trackers (str list).
+
+Based on the vrpn_client_ros published topics names. Should
+correspond to the rigid bodies list of the mocap system.
+
+Note:
+    Only trackers that have sent their pose at least once will
+    be in the list.
+\end{DoxyVerb}
+ 
+
+Definition at line 51 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a7e7eced60d10a8b1eb38b7ebf6a02f0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a161d7774319e5de5dd7f13f5c66b64a3}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a161d7774319e5de5dd7f13f5c66b64a3}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!is\+Armed@{is\+Armed}}
+\index{is\+Armed@{is\+Armed}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{is\+Armed()}{isArmed()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+is\+Armed (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the drone is armed.
+
+Uses topic /mavros/state to get the drone state.
+\end{DoxyVerb}
+ 
+
+Definition at line 136 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a161d7774319e5de5dd7f13f5c66b64a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a0d6c9c56fd735733f4a2268896c30d37}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a0d6c9c56fd735733f4a2268896c30d37}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{is\+Connected()}{isConnected()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+is\+Connected (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the drone is connected.
+
+Uses topic /mavros/state to get the drone state.
+\end{DoxyVerb}
+ 
+
+Definition at line 143 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a0d6c9c56fd735733f4a2268896c30d37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a8e5d50aa9df5f17650570e60ac809477}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a8e5d50aa9df5f17650570e60ac809477}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!is\+Tracked@{is\+Tracked}}
+\index{is\+Tracked@{is\+Tracked}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{is\+Tracked()}{isTracked()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+is\+Tracked (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the drone is tracked by the mocap system.
+
+Note:
+    Based on heartbeats timeout from VRPN stream.
+\end{DoxyVerb}
+ 
+
+Definition at line 150 of file Drone.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1_drone_1_1_drone_a8e5d50aa9df5f17650570e60ac809477_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_ab98bca80eada4b3365774f3cc347ea9b}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_ab98bca80eada4b3365774f3cc347ea9b}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!land@{land}}
+\index{land@{land}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{land()}{land()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+land (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Lands the drone using PX4 auto-land.
+
+Uses MAVROS service "/mavros/cmd/land" to send MAVLink landing
+message and get the response message (success or not).
+\end{DoxyVerb}
+ 
+
+Definition at line 186 of file Drone.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a728b7ccd51bc67e1338652940f24caac}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a728b7ccd51bc67e1338652940f24caac}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!set\+Flight\+Mode@{set\+Flight\+Mode}}
+\index{set\+Flight\+Mode@{set\+Flight\+Mode}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{set\+Flight\+Mode()}{setFlightMode()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+set\+Flight\+Mode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mode }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sets drone active flight mode.
+
+Uses MAVROS service "/mavros/set_mode" to send MAVLink setMode
+message and get the response message (success or not).
+
+Args:
+    mode (str): Mode to set (see getFlightModes).
+\end{DoxyVerb}
+ 
+
+Definition at line 194 of file Drone.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a56218cb96a8907668ec8137085fb41e7}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a56218cb96a8907668ec8137085fb41e7}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!set\+Mocap\+Label@{set\+Mocap\+Label}}
+\index{set\+Mocap\+Label@{set\+Mocap\+Label}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{set\+Mocap\+Label()}{setMocapLabel()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+set\+Mocap\+Label (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Assigns a rigid body to the drone to measure its pose.
+
+Args:
+    label (str): Label of the VRPN Tracker (from mocap system)
+    
+Notes:
+    getTrackersList returns the streamed VRPN Trackers.
+\end{DoxyVerb}
+ 
+
+Definition at line 161 of file Drone.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a76ec9fc58bfe4b6ddb8ab5739bfdd2ea}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a76ec9fc58bfe4b6ddb8ab5739bfdd2ea}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!takeoff@{takeoff}}
+\index{takeoff@{takeoff}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{takeoff()}{takeoff()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+Drone.\+Drone.\+takeoff (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takeoffs the drone using PX4 auto-takeoff.
+
+Uses MAVROS service "/mavros/cmd/takeoff" to send MAVLink
+takeoff message and get the response message (success or not).
+\end{DoxyVerb}
+ 
+
+Definition at line 205 of file Drone.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1_drone_1_1_drone_a4c87638c6657286a90b0141e456e90bb}\label{classwindshape_1_1drone_1_1_drone_1_1_drone_a4c87638c6657286a90b0141e456e90bb}} 
+\index{windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}!F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES@{F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES}}
+\index{F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES@{F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES}!windshape\+::drone\+::\+Drone\+::\+Drone@{windshape\+::drone\+::\+Drone\+::\+Drone}}
+\subsubsection{\texorpdfstring{F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES}{FLIGHT\_MODES}}
+{\footnotesize\ttfamily windshape.\+drone.\+Drone.\+Drone.\+F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES = \mbox{\hyperlink{classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_client_1_1_m_a_v_r_o_s_client_abe3ff6179ff5fb0a038f5f8c2b7728cb}{M\+A\+V\+R\+O\+S\+Client.\+P\+X4\+\_\+\+F\+L\+I\+G\+H\+T\+\_\+\+M\+O\+D\+ES}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Available flight modes for the drone (str) 
+
+
+
+Definition at line 45 of file Drone.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/drone/\mbox{\hyperlink{_drone_8py}{Drone.\+py}}\end{DoxyCompactItemize}

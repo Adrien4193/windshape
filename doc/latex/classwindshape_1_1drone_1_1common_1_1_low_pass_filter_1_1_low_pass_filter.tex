@@ -1,0 +1,114 @@
+\hypertarget{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter}{}\section{windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter Class Reference}
+\label{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter}\index{windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter@{windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter}}
+
+
+Inheritance diagram for windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_aec2612729f5fd2c71dbbdb0780b0dd8f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, a, init\+Value)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_ae6f9d1dd9254ed3a0f2db3e56018039c}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_a7524c63f98753225a2ed9b8af5740778}{reset}} (self, value)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_affefdaba14cb9cd690ae7ab9881cc16c}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, x)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Simple low-pass filter.
+
+The response y of a signal x is based on the following relationship:
+
+y[n] = (x[n] + a*y[n-1]) / (a+1)
+
+Where a is the parameter given to __init__. 
+
+Inherits from object.
+
+Overrides: __init__, __del__, __call__.
+\end{DoxyVerb}
+ 
+
+Definition at line 5 of file Low\+Pass\+Filter.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_aec2612729f5fd2c71dbbdb0780b0dd8f}\label{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_aec2612729f5fd2c71dbbdb0780b0dd8f}} 
+\index{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{a,  }\item[{}]{init\+Value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Stores a and initializes previous value.
+
+Arg:
+    a (float): Weight of x[n-1] (a in description)
+    initValue (object with __add__): Inititalization of y[n-1]
+\end{DoxyVerb}
+ 
+
+Definition at line 22 of file Low\+Pass\+Filter.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_ae6f9d1dd9254ed3a0f2db3e56018039c}\label{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_ae6f9d1dd9254ed3a0f2db3e56018039c}} 
+\index{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}!\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+del\+\_\+\+\_\+()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Does nothing special.\end{DoxyVerb}
+ 
+
+Definition at line 39 of file Low\+Pass\+Filter.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_affefdaba14cb9cd690ae7ab9881cc16c}\label{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_affefdaba14cb9cd690ae7ab9881cc16c}} 
+\index{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}!\+\_\+\+\_\+call\+\_\+\+\_\+@{\+\_\+\+\_\+call\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+call\+\_\+\+\_\+@{\+\_\+\+\_\+call\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+call\+\_\+\+\_\+()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Applies the filter on the given point.
+
+Arg:
+    x (object with __add__): Current point of the input signal
+\end{DoxyVerb}
+ 
+
+Definition at line 53 of file Low\+Pass\+Filter.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_a7524c63f98753225a2ed9b8af5740778}\label{classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter_a7524c63f98753225a2ed9b8af5740778}} 
+\index{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}!reset@{reset}}
+\index{reset@{reset}!windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter@{windshape\+::drone\+::common\+::\+Low\+Pass\+Filter\+::\+Low\+Pass\+Filter}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Low\+Pass\+Filter.\+Low\+Pass\+Filter.\+reset (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Resets the memory to init value or given one.\end{DoxyVerb}
+ 
+
+Definition at line 46 of file Low\+Pass\+Filter.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/drone/common/\mbox{\hyperlink{_low_pass_filter_8py}{Low\+Pass\+Filter.\+py}}\end{DoxyCompactItemize}

@@ -27,11 +27,6 @@ class Drone(object):
 	
 	The control is performed in separated threads using ROS Timers.
 	
-	Control parameters:
-		Setpoint: Static pose (x, y, z, yaw) to reach.
-		Target: Rigid body to follow (mocap label) with given shift.
-		Task: Choose between the two tasks above (see TASKS).
-	
 	Notes:
 		Units are always [m], [rad], [0-1].
 		The global frame coordinate used is the one of the mocap system.

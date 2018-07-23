@@ -1,0 +1,210 @@
+\hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array}{}\section{windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array Class Reference}
+\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array}\index{windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array@{windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array}}
+
+
+Inheritance diagram for windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a687c03adb1154426ef089168dcbadc34}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adde804756bae93dadb093223f56b05fa}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a56e88cf7d3e1c3804ad8f22bae65ac45}{get\+P\+WM}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_ae9e1608f5d5faf5602a036983dec76ea}{is\+Powered}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a420bbec4827c3a8fb3bff65aaba918d7}{set\+P\+WM}} (self, pwm)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adafadce72737f9e1228fa6ff0cd93779}{turn\+On\+P\+SU}} (self, powered)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_aceaf476d88639804e38c4af301acfec1}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_afa94dcdf36ecce45c8189bb68fe8efe9}{run}} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Send PWM values to the fans array.
+
+Communicates with the fans array server that hosts a database. Uses
+MySQL requests to write into the database that the server reads in
+loop and sends the PWM values to the fans.
+
+Structure: Module = 2 layers of 9 fans = 18 fans.
+
+Written in Module: "pwm" field: "PWM1, PWM2, ..., PWM18"
+
+Can also power on or off a Module using "isPowered" field.
+
+Inherits from: threading.Thread.
+
+Overrides: __init__, __del__, __str__, run.
+\end{DoxyVerb}
+ 
+
+Definition at line 12 of file Fans\+Array.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a687c03adb1154426ef089168dcbadc34}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a687c03adb1154426ef089168dcbadc34}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates modules instances and auto start.\end{DoxyVerb}
+ 
+
+Definition at line 33 of file Fans\+Array.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adde804756bae93dadb093223f56b05fa}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adde804756bae93dadb093223f56b05fa}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+del\+\_\+\+\_\+()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set PWM to 0 and switch off the power supply.\end{DoxyVerb}
+ 
+
+Definition at line 51 of file Fans\+Array.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adde804756bae93dadb093223f56b05fa_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_aceaf476d88639804e38c4af301acfec1}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_aceaf476d88639804e38c4af301acfec1}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a summary of the fans array status.\end{DoxyVerb}
+ 
+
+Definition at line 107 of file Fans\+Array.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_aceaf476d88639804e38c4af301acfec1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a56e88cf7d3e1c3804ad8f22bae65ac45}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a56e88cf7d3e1c3804ad8f22bae65ac45}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!get\+P\+WM@{get\+P\+WM}}
+\index{get\+P\+WM@{get\+P\+WM}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{get\+P\+W\+M()}{getPWM()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+get\+P\+WM (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the current PWM value (int) of the fans.\end{DoxyVerb}
+ 
+
+Definition at line 69 of file Fans\+Array.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a56e88cf7d3e1c3804ad8f22bae65ac45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_ae9e1608f5d5faf5602a036983dec76ea}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_ae9e1608f5d5faf5602a036983dec76ea}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!is\+Powered@{is\+Powered}}
+\index{is\+Powered@{is\+Powered}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{is\+Powered()}{isPowered()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+is\+Powered (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns True if the power supply is on.\end{DoxyVerb}
+ 
+
+Definition at line 78 of file Fans\+Array.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_ae9e1608f5d5faf5602a036983dec76ea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_afa94dcdf36ecce45c8189bb68fe8efe9}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_afa94dcdf36ecce45c8189bb68fe8efe9}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!run@{run}}
+\index{run@{run}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates the database at given rate.\end{DoxyVerb}
+ 
+
+Definition at line 118 of file Fans\+Array.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_afa94dcdf36ecce45c8189bb68fe8efe9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a420bbec4827c3a8fb3bff65aaba918d7}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a420bbec4827c3a8fb3bff65aaba918d7}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!set\+P\+WM@{set\+P\+WM}}
+\index{set\+P\+WM@{set\+P\+WM}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{set\+P\+W\+M()}{setPWM()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+set\+P\+WM (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pwm }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Assigns a PWM value to all modules.\end{DoxyVerb}
+ 
+
+Definition at line 89 of file Fans\+Array.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_a420bbec4827c3a8fb3bff65aaba918d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adafadce72737f9e1228fa6ff0cd93779}\label{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adafadce72737f9e1228fa6ff0cd93779}} 
+\index{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}!turn\+On\+P\+SU@{turn\+On\+P\+SU}}
+\index{turn\+On\+P\+SU@{turn\+On\+P\+SU}!windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array@{windshape\+::fansarray\+::\+Fans\+Array\+::\+Fans\+Array}}
+\subsubsection{\texorpdfstring{turn\+On\+P\+S\+U()}{turnOnPSU()}}
+{\footnotesize\ttfamily def windshape.\+fansarray.\+Fans\+Array.\+Fans\+Array.\+turn\+On\+P\+SU (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{powered }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Turns on Power Supply Units if powered is True.\end{DoxyVerb}
+ 
+
+Definition at line 97 of file Fans\+Array.\+py.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array_adafadce72737f9e1228fa6ff0cd93779_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/fansarray/\mbox{\hyperlink{_fans_array_8py}{Fans\+Array.\+py}}\end{DoxyCompactItemize}

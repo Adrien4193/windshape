@@ -1,0 +1,285 @@
+\hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude}{}\section{windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude Class Reference}
+\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude}\index{windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude@{windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude}}
+
+
+Inheritance diagram for windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a3e991775a6809f6507e42dd571e42575}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, roll=0, pitch=0, yaw=0, thrust=0)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a0918a45d1cf3fff9c41111d20b139ff0}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a8cf53f4c965b1bf6d8694372a87a1b1f}{get\+Roll}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a59925ea9211fb77379912b046a8ad669}{get\+Pitch}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ad73d293c12238fb9307f08cf0883c135}{get\+Yaw}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_aec3fd39de28bfdc64005b0e9beb64351}{get\+Thrust}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ac85419be27b7512b724be6168ccb8a28}{set\+Roll}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a0bc38aba42c44d1c79867162af802163}{set\+Pitch}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_aef125acf4c972ede21e327b3f1bde9f4}{set\+Yaw}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a3071d0f96fa4705fd4474a041075f9b2}{set\+Thrust}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a28c3c394be649cd84b4a636e8f7952c4}{to\+Array}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a4084bc01dc5a69a8458dab944441bd1d}{to\+Pose\+Stamped}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ab8a7d91f530c6cd77d9ba0f6a20084b9}{to\+String}} (self, label, shift=0, indent=4)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_abe0b3446f225d7613eb2412a0731d6fc}{\+\_\+\+\_\+iter\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ac4e68e64f1c161596d87b15a7329cfce}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a1935bec5ebbfbd088ad61a78b987ee41}{from\+Pose\+Stamped}} (pose\+Stamped)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Structure used to represent the drone's attitude.
+
+roll, pitch and yaw are in radians.
+
+thrust is from 0.0 to 1.0.
+
+When converted as list or array: 0=roll, 1=pitch, 2=yaw, 3=thrust.
+
+Inherits from object.
+    
+Overrides __init__, __del__, __iter__, __str__
+\end{DoxyVerb}
+ 
+
+Definition at line 11 of file Drone\+Attitude.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a3e991775a6809f6507e42dd571e42575}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a3e991775a6809f6507e42dd571e42575}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{roll = {\ttfamily 0},  }\item[{}]{pitch = {\ttfamily 0},  }\item[{}]{yaw = {\ttfamily 0},  }\item[{}]{thrust = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes x, y, z, roll, pitch, yaw (m, rad).
+
+Args:
+    roll, pitch, yaw (float): Drone orientation [rad]
+    thrust (float): Drone thrust [0-1]
+\end{DoxyVerb}
+ 
+
+Definition at line 39 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a0918a45d1cf3fff9c41111d20b139ff0}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a0918a45d1cf3fff9c41111d20b139ff0}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+del\+\_\+\+\_\+()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Does nothing special.\end{DoxyVerb}
+ 
+
+Definition at line 51 of file Drone\+Attitude.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_abe0b3446f225d7613eb2412a0731d6fc}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_abe0b3446f225d7613eb2412a0731d6fc}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+iter\+\_\+\+\_\+@{\+\_\+\+\_\+iter\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+iter\+\_\+\+\_\+()}{\_\_iter\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+\_\+\+\_\+iter\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Used to convert the attitude as a list.\end{DoxyVerb}
+ 
+
+Definition at line 137 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ac4e68e64f1c161596d87b15a7329cfce}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ac4e68e64f1c161596d87b15a7329cfce}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a string representing the attitude in deg and %.\end{DoxyVerb}
+ 
+
+Definition at line 144 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a1935bec5ebbfbd088ad61a78b987ee41}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a1935bec5ebbfbd088ad61a78b987ee41}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!from\+Pose\+Stamped@{from\+Pose\+Stamped}}
+\index{from\+Pose\+Stamped@{from\+Pose\+Stamped}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{from\+Pose\+Stamped()}{fromPoseStamped()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+from\+Pose\+Stamped (\begin{DoxyParamCaption}\item[{}]{pose\+Stamped }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Returns DroneAttitude from a PoseStamped message.\end{DoxyVerb}
+ 
+
+Definition at line 29 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a59925ea9211fb77379912b046a8ad669}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a59925ea9211fb77379912b046a8ad669}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!get\+Pitch@{get\+Pitch}}
+\index{get\+Pitch@{get\+Pitch}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{get\+Pitch()}{getPitch()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+get\+Pitch (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the Pitch (float) of the attitude in [rad].\end{DoxyVerb}
+ 
+
+Definition at line 62 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a8cf53f4c965b1bf6d8694372a87a1b1f}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a8cf53f4c965b1bf6d8694372a87a1b1f}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!get\+Roll@{get\+Roll}}
+\index{get\+Roll@{get\+Roll}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{get\+Roll()}{getRoll()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+get\+Roll (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the Roll float) of the attitude in [rad].\end{DoxyVerb}
+ 
+
+Definition at line 58 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_aec3fd39de28bfdc64005b0e9beb64351}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_aec3fd39de28bfdc64005b0e9beb64351}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!get\+Thrust@{get\+Thrust}}
+\index{get\+Thrust@{get\+Thrust}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{get\+Thrust()}{getThrust()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+get\+Thrust (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the Thrust in [0-1].\end{DoxyVerb}
+ 
+
+Definition at line 70 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ad73d293c12238fb9307f08cf0883c135}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ad73d293c12238fb9307f08cf0883c135}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!get\+Yaw@{get\+Yaw}}
+\index{get\+Yaw@{get\+Yaw}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{get\+Yaw()}{getYaw()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+get\+Yaw (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the Yaw (float) of the attitude in [rad].\end{DoxyVerb}
+ 
+
+Definition at line 66 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a0bc38aba42c44d1c79867162af802163}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a0bc38aba42c44d1c79867162af802163}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!set\+Pitch@{set\+Pitch}}
+\index{set\+Pitch@{set\+Pitch}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{set\+Pitch()}{setPitch()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+set\+Pitch (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changes the Pitch (float) of the attitude in [rad].\end{DoxyVerb}
+ 
+
+Definition at line 81 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ac85419be27b7512b724be6168ccb8a28}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ac85419be27b7512b724be6168ccb8a28}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!set\+Roll@{set\+Roll}}
+\index{set\+Roll@{set\+Roll}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{set\+Roll()}{setRoll()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+set\+Roll (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changes the Roll float) of the attitude in [rad].\end{DoxyVerb}
+ 
+
+Definition at line 77 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a3071d0f96fa4705fd4474a041075f9b2}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a3071d0f96fa4705fd4474a041075f9b2}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!set\+Thrust@{set\+Thrust}}
+\index{set\+Thrust@{set\+Thrust}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{set\+Thrust()}{setThrust()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+set\+Thrust (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changes the Thrust value (float) in [0-1].\end{DoxyVerb}
+ 
+
+Definition at line 89 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_aef125acf4c972ede21e327b3f1bde9f4}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_aef125acf4c972ede21e327b3f1bde9f4}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!set\+Yaw@{set\+Yaw}}
+\index{set\+Yaw@{set\+Yaw}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{set\+Yaw()}{setYaw()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+set\+Yaw (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Changes the Yaw (float) of the attitude in [rad].\end{DoxyVerb}
+ 
+
+Definition at line 85 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a28c3c394be649cd84b4a636e8f7952c4}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a28c3c394be649cd84b4a636e8f7952c4}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!to\+Array@{to\+Array}}
+\index{to\+Array@{to\+Array}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{to\+Array()}{toArray()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+to\+Array (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a numpy.array representing the attitude.\end{DoxyVerb}
+ 
+
+Definition at line 96 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a4084bc01dc5a69a8458dab944441bd1d}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_a4084bc01dc5a69a8458dab944441bd1d}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!to\+Pose\+Stamped@{to\+Pose\+Stamped}}
+\index{to\+Pose\+Stamped@{to\+Pose\+Stamped}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{to\+Pose\+Stamped()}{toPoseStamped()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+to\+Pose\+Stamped (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the attitude as a PoseStamped message.
+
+Notes:
+    Only the orientation field is taken into account (convert 
+    RPY to quaternion and fill PS orientation with it).
+\end{DoxyVerb}
+ 
+
+Definition at line 100 of file Drone\+Attitude.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ab8a7d91f530c6cd77d9ba0f6a20084b9}\label{classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude_ab8a7d91f530c6cd77d9ba0f6a20084b9}} 
+\index{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude@{windshape\+::drone\+::common\+::\+Drone\+Attitude\+::\+Drone\+Attitude}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+Drone\+Attitude.\+Drone\+Attitude.\+to\+String (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{label,  }\item[{}]{shift = {\ttfamily 0},  }\item[{}]{indent = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a string to display the attitude.
+
+Structure:
+    <shift>*"space" label:
+    <shift>*"space" <indent>*"space" coordinate 1
+    ...
+
+Args:
+    label (str): The label of the attitude.
+    shift (int): Number of spaces to shift the whole string.
+    indent=4 (int): Number of spaces to indent pose from label.
+\end{DoxyVerb}
+ 
+
+Definition at line 116 of file Drone\+Attitude.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/drone/common/\mbox{\hyperlink{_drone_attitude_8py}{Drone\+Attitude.\+py}}\end{DoxyCompactItemize}

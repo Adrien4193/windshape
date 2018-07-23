@@ -1,0 +1,120 @@
+\hypertarget{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber}{}\section{windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber Class Reference}
+\label{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber}\index{windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber@{windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber}}
+
+
+Inheritance diagram for windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_aab8903d5a44710a25575d8462b195d64}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, topic, message\+Type)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_ad60c57cf3ae7c6eabcfe0d7c6864539e}{\+\_\+\+\_\+del\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_ae742a4434dcca3bcc614f4784cc7d8d6}{get\+Data}} (self)
+\item 
+def \mbox{\hyperlink{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_a07f832744f619030283a77075635cfd4}{get\+Topic}} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Custom ROS subscriber to store data from a ROS topic.
+
+Overrides rospy.Subscriber to get and memorize the data published on
+a given ROS topic from its name ("/node/...") and its type
+(ROS message).
+
+Inherits:
+    rospy.Subscriber
+
+Overrides:
+    __init__, __del__.
+\end{DoxyVerb}
+ 
+
+Definition at line 5 of file My\+Subscriber.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_aab8903d5a44710a25575d8462b195d64}\label{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_aab8903d5a44710a25575d8462b195d64}} 
+\index{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{topic,  }\item[{}]{message\+Type }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calls parent constructor and init attributes. 
+
+Args:
+    topic (str): ROS topic that publishes the data.
+    message_type (ROS message): Expected ROS message type.
+    
+Raises:
+    TypeError: topic is not a string
+\end{DoxyVerb}
+ 
+
+Definition at line 22 of file My\+Subscriber.\+py.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_aab8903d5a44710a25575d8462b195d64_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_ad60c57cf3ae7c6eabcfe0d7c6864539e}\label{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_ad60c57cf3ae7c6eabcfe0d7c6864539e}} 
+\index{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}!\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+del\+\_\+\+\_\+@{\+\_\+\+\_\+del\+\_\+\+\_\+}!windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+del\+\_\+\+\_\+()}{\_\_del\_\_()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber.\+\_\+\+\_\+del\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Just logs debug message.\end{DoxyVerb}
+ 
+
+Definition at line 46 of file My\+Subscriber.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_ae742a4434dcca3bcc614f4784cc7d8d6}\label{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_ae742a4434dcca3bcc614f4784cc7d8d6}} 
+\index{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber.\+get\+Data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the last message received (ROS message).\end{DoxyVerb}
+ 
+
+Definition at line 53 of file My\+Subscriber.\+py.
+
+\mbox{\Hypertarget{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_a07f832744f619030283a77075635cfd4}\label{classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber_a07f832744f619030283a77075635cfd4}} 
+\index{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}!get\+Topic@{get\+Topic}}
+\index{get\+Topic@{get\+Topic}!windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber@{windshape\+::drone\+::common\+::\+My\+Subscriber\+::\+My\+Subscriber}}
+\subsubsection{\texorpdfstring{get\+Topic()}{getTopic()}}
+{\footnotesize\ttfamily def windshape.\+drone.\+common.\+My\+Subscriber.\+My\+Subscriber.\+get\+Topic (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the topic subscribed (str).\end{DoxyVerb}
+ 
+
+Definition at line 57 of file My\+Subscriber.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/adrien/catkin\+\_\+ws/src/windshape/src/windshape/drone/common/\mbox{\hyperlink{_my_subscriber_8py}{My\+Subscriber.\+py}}\end{DoxyCompactItemize}
