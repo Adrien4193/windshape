@@ -173,10 +173,13 @@ class Controller(object):
 		# Error RPYT
 		self.__parameters._setError(error)
 		
-		# Separated PID contributions
-		attitudes = 3*[numpy.zeros(4)]
-		for axis in range(4):
-			outputs = self.__pids[axis].getSeparatedOutputs()
-			for output in range(3):
-				attitudes[output][axis] = outputs[output]
+		# Separated P, I and D contributions
+		attitudes = [numpy.zeros(4), numpy.zeros(4), numpy.zeros(4)]
+		
+		for axis, pid in enumerate(self.__pids):
+			p, i, d = pid.getSeparatedOutputs()
+			attitudes[0][axis] = p
+			attitudes[1][axis] = i
+			attitudes[2][axis] = d
+			
 		self.__parameters._setSetparatedOutputs(*attitudes)

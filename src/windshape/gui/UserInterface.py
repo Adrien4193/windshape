@@ -39,7 +39,6 @@ class UserInterface(QMainWindow):
  
 	def __init__(self):
 		"""Initializes parent and starts update."""
-		
 		super(UserInterface, self).__init__()
 		
 		# Main class
@@ -72,7 +71,6 @@ class UserInterface(QMainWindow):
 	
 	def setupUI(self):
 		"""Creates Graphical User Interface."""
-		
 		# Window title and dimensions
 		self.setWindowTitle('Drone control')
 		self.setGeometry(0, 0, 1000, 800)
@@ -128,7 +126,6 @@ class UserInterface(QMainWindow):
 		
 	def initToolBar(self):
 		"""Loads toolbar actions."""
-		
 		# Connection
 		self.connectAction = QAction(self.icon_drone_red, 'Drone diconnected', self)
 		self.connectAction.triggered.connect(self.onConnect)
@@ -186,7 +183,6 @@ class UserInterface(QMainWindow):
 		
 	def showMessage(self, message, duration=3):
 		"""Displays a message for duration beofre overwrite."""
-		
 		# Locks status bar to block updates and prevents overwriting
 		self.updateStatus = False
 		
@@ -331,7 +327,6 @@ class UserInterface(QMainWindow):
 	
 	def checkStatus(self):
 		"""Asks for refresh if something needs display."""
-		
 		if self.connected != self.drone.isConnected():
 			self.connected = self.drone.isConnected()
 			self.updateToolbar = True
@@ -352,7 +347,6 @@ class UserInterface(QMainWindow):
 	
 	def updateStatusBar(self):
 		"""Updates the status bar message."""
-		
 		if self.drone.isConnected():
 			message = 'Connected'
 		else:
@@ -379,7 +373,6 @@ class UserInterface(QMainWindow):
 		
 	def updateConnectAction(self):
 		"""Updates connection icon."""
-		
 		# Icon and tool tip
 		if self.drone.isConnected():
 			self.connectAction.setIcon(self.icon_drone_green)
@@ -393,7 +386,6 @@ class UserInterface(QMainWindow):
 		
 	def updateToggleAction(self):
 		"""Change fans array power supply icon."""
-		
 		if self.fansArray.isPowered():
 			self.toggleAction.setIcon(self.icon_green)
 			self.toggleAction.setToolTip('PSU on')
@@ -403,7 +395,6 @@ class UserInterface(QMainWindow):
 		
 	def updateTrackAction(self):
 		"""Updates tracking icon."""
-		
 		# Icon and tool tip
 		if self.drone.isTracked():
 			self.trackAction.setIcon(self.icon_opened_eye)
@@ -417,7 +408,6 @@ class UserInterface(QMainWindow):
 		
 	def updateArmingAction(self):
 		"""Enables/disables arming action and updates icon."""
-		
 		# Arming icon = A if armed
 		if self.drone.isArmed():
 			self.armingAction.setIcon(self.icon_A)
@@ -434,7 +424,6 @@ class UserInterface(QMainWindow):
 			
 	def updateTLAction(self):
 		"""Enables/disables takeoff/land action."""
-		
 		# Can takeoff/land only if armed
 		if self.drone.isArmed():
 			self.takeoffAction.setEnabled(True)
@@ -449,8 +438,7 @@ class UserInterface(QMainWindow):
 	
 	def updateInfo(self):
 		"""Updates info tab (get data from drone)."""
-		
-		# Get info source from CP
+		# Gets info source from CP
 		source = self.controlPanel.getSource()
 		
 		if source == 'Info':
@@ -462,7 +450,7 @@ class UserInterface(QMainWindow):
 		elif source == 'Command':
 			text = self.commander.getCommand()
 		
-		# Send info to CP
+		# Sends info to CP
 		self.controlPanel.displayInfo(text)
 		
 	def updatePlot(self):
@@ -518,7 +506,6 @@ class UserInterface(QMainWindow):
 	
 	def keyPressEvent(self, event):
 		"""Press Enter to send setpoint, PWM or validate settings."""
-		
 		# Enter pressed
 		if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
 			
@@ -532,17 +519,15 @@ class UserInterface(QMainWindow):
 				
 	def sendSetpoint(self):
 		"""Sends setpoint to the drone chosen in control panel."""
-
 		if self.controlPanel.setpointValid():
 			x, y, z, yaw = self.controlPanel.getSetpoint()
 			self.showMessage('Pose sent: '+str((x, y, z, yaw)))
-			self.drone.setManualSetpoint(x, y, z, yaw)
+			self.control.setManualSetpoint(x, y, z, yaw)
 		else:
 			self.showMessage('Invalid setpoint')
 														
 	def sendPWM(self):
 		"""Sends PWM value to fans array chosen in control panel."""
-
 		if self.controlPanel.pwmValid():
 			pwm = self.controlPanel.getPWM()
 			self.showMessage('PWM sent: '+str(pwm))

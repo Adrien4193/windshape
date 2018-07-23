@@ -149,6 +149,6 @@ class RigidBody(object):
 		tracked = 'tracked' if self.isTracked() else 'lost'
 		
 		# Label and tracking state
-		header = '{}: ({})\n'.format(self.__label, tracked)
+		header = '{} ({})\n'.format(self.__label, tracked)
 		
 		return self.getPose().toString(header, shift=0)

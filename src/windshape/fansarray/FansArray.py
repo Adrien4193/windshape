@@ -200,7 +200,7 @@ class FansArray(threading.Thread):
 			Blocks until message received.
 		"""
 		port = rospy.get_param('~fansarray/broadcast_port')
-		rospy.loginfo('Waiting for server broadcast on %d', port)
+		rospy.loginfo('Waiting for server broadcast on port %d', port)
 		
 		# Client socket on known port
 		sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
