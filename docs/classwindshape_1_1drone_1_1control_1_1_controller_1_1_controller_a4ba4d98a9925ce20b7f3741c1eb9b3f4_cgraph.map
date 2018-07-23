@@ -1,6 +1,0 @@
-<map id="windshape.drone.control.Controller.Controller.__call__" name="windshape.drone.control.Controller.Controller.__call__">
-<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1control_1_1_controller_1_1_controller.html#a94c618838ae2420a234f0d9d884c36d4" title="windshape.drone.control.\lController.Controller.reset" alt="" coords="254,5,425,47"/>
-<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1control_1_1_controller_1_1_controller.html#a69211ed53c20b95a4d1168b09b4ce01e" title="windshape.drone.control.\lController.Controller.\l__computeAttitude" alt="" coords="256,70,423,126"/>
-<area shape="rect" id="node4" href="$classwindshape_1_1_commander_1_1_commander.html#a3c6362ee3abb03ba90609d69c43d9700" title="windshape.Commander.Commander.\l__record" alt="" coords="220,149,459,191"/>
-<area shape="rect" id="node5" href="$classwindshape_1_1drone_1_1control_1_1_controller_1_1_controller.html#aea44820c18c90d5322adb130593f182a" title="windshape.drone.control.\lController.Controller.\l__record" alt="" coords="256,214,423,270"/>
-</map>

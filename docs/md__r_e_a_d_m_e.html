@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drone control in a wind test environment: Member List</title>
+<title>Drone control in a wind test environment: WINDSHAPE</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,24 +62,47 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>windshape</b></li><li class="navelem"><b>drone</b></li><li class="navelem"><b>fcu</b></li><li class="navelem"><b>MAVROSListener</b></li><li class="navelem"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html">MAVROSListener</a></li>  </ul>
-</div>
 </div><!-- top -->
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">windshape.drone.fcu.MAVROSListener.MAVROSListener Member List</div>  </div>
+<div class="title">WINDSHAPE </div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html">windshape.drone.fcu.MAVROSListener.MAVROSListener</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html#a130c4c7a29f2e9c4dc8d56bb7ad5e29b">__del__</a>(self)</td><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html">windshape.drone.fcu.MAVROSListener.MAVROSListener</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html#adc66f66ce7c42fd27f42cb361447ee75">__init__</a>(self, log=None)</td><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html">windshape.drone.fcu.MAVROSListener.MAVROSListener</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html#a7ded0f686fc683775ed94a7481bacea4">getPose</a>(self)</td><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html">windshape.drone.fcu.MAVROSListener.MAVROSListener</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html#a2f38b685fb050dccf2a0eddf244605ca">getState</a>(self)</td><td class="entry"><a class="el" href="classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html">windshape.drone.fcu.MAVROSListener.MAVROSListener</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="textblock"><p class="">Drone and WindShape fans array control using OptiTrack cameras.</p>
+<h2>Documentation </h2>
+<p class="">Check doxygen documentation <a href="https://adrien4193.github.io/windshape/index.html">here</a>.</p>
+<h2>Installation </h2>
+<p class="">This package has been tested using ROS Kinetic on Ubuntu 16.04.</p>
+<p class="">See the tutorial to install ROS <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">here</a>.</p>
+<p class="">Install vrpn_client_ros using:</p>
+<p class=""><code>sudo apt-get install ros-kinetic-vrpn-client-node</code></p>
+<p class="">Install MAVROS using:</p>
+<p class=""><code>sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras</code></p>
+<p class="">Then install GeographicLib datasets by running the install_geographiclib_datasets.sh script:</p>
+<p class=""><code>wget <a href="https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh">https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh</a> ./install_geographiclib_datasets.sh</code></p>
+<h2>Getting windshape </h2>
+<p class="">If you just want to browse the repository, you can do so by going <a href="https://github.com/Adrien4193/windshape">here</a>.</p>
+<p class="">The latest version of windshape can be installed as follows:</p>
+<p class="">Go to your catkin workspace source directory (usually located under $HOME/catkin_ws/src):</p>
+<p class=""><code>cd ~/catkin_ws/src</code></p>
+<p class="">Download the source files:</p>
+<p class=""><code>git clone git://github.com/Adrien4193/windshape.git</code></p>
+<p class="">Return to the catkin packages directory (catkin_ws here):</p>
+<p class=""><code>cd ..</code></p>
+<p class="">Setup your environment using catkin (DO NOT run <a class="el" href="setup_8py_source.html">setup.py</a> directly):</p>
+<p class=""><code>catkin_make</code></p>
+<p class="">Setup your ROS environment to include the new development workspace:</p>
+<p class=""><code>. devel/setup.bash</code></p>
+<h2>Using windshape </h2>
+<p class="">Run the GUI:</p>
+<p class=""><code>roslaunch windshape control.launch</code></p>
+<p class="">You should see the interface.</p>
+<h2>Conditions of use </h2>
+<p class="">windshape is distributed under the terms of the <a href="https://github.com/">BSD License</a>.</p>
+<h2>Bug reporting </h2>
+<p class="">Please report bugs (haha). </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

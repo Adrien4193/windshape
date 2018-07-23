@@ -1,5 +1,0 @@
-<map id="windshape.gui.widgets.plots.RealTimePlotWidget.RealTimePlotWidget.draw" name="windshape.gui.widgets.plots.RealTimePlotWidget.RealTimePlotWidget.draw">
-<area shape="rect" id="node2" href="$classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a8b06aa1c5c5ed45d893a7b0674387759" title="windshape.gui.widgets.plots.\lPlotWidget.PlotWidget.setupLayout" alt="" coords="283,5,513,47"/>
-<area shape="rect" id="node3" href="$classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#afa4ffce30d37b17607e1f5acba0e357e" title="windshape.gui.widgets.plots.\lPlotWidget.PlotWidget.resetViewport" alt="" coords="279,71,517,112"/>
-<area shape="rect" id="node4" href="$classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a7afbd6a1cb3fde419ba5d829b2937122" title="windshape.gui.widgets.plots.\lPlotWidget.PlotWidget.getBounds" alt="" coords="565,71,785,112"/>
-</map>

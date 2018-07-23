@@ -1,8 +1,0 @@
-<map id="windshape.fansarray.FansArray.FansArray.run" name="windshape.fansarray.FansArray.FansArray.run">
-<area shape="rect" id="node2" href="$classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#a2d038ebb60228a7c54c3cd6886953850" title="windshape.fansarray.Fans\lArray.FansArray.__loadModules" alt="" coords="235,5,443,47"/>
-<area shape="rect" id="node3" href="$classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#a47a4db83820255b272ff0f61c30f473b" title="windshape.fansarray.Fans\lArray.FansArray.__openDB" alt="" coords="248,71,431,112"/>
-<area shape="rect" id="node4" href="$classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#abc3a422a9ce41cb47b0619fe0c3a32d0" title="windshape.fansarray.Fans\lArray.FansArray.__updateDB" alt="" coords="243,136,436,177"/>
-<area shape="rect" id="node5" href="$classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#a08cd7d351904744297908eecbd71d5b4" title="windshape.fansarray.Fans\lArray.FansArray.__updateAttribute" alt="" coords="228,201,451,243"/>
-<area shape="rect" id="node6" href="$classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#af377750a016a0eb59b8712a82a74ce1b" title="windshape.fansarray.Fans\lArray.FansArray.__findServer" alt="" coords="242,267,437,308"/>
-<area shape="rect" id="node7" href="$classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#a1c0dee16de64b3b86cb46c9b675ce4f8" title="windshape.fansarray.Fans\lArray.FansArray.__getModules\lFromDB" alt="" coords="238,331,441,387"/>
-</map>
