@@ -93,9 +93,9 @@ class Drone(object):
 	####################################################################
 	
 	def getControlParameters(self):
-		"""Returns the parameters of the controller (Parameters).
+		"""Returns the controller parameters (ControlParameters).
 		
-		See Parameters to extract and change control attributes.
+		See ControlParameters to extract and change control parameters.
 		"""
 		return self.__controller.getParameters()
 	
@@ -241,14 +241,13 @@ class Drone(object):
 				'Mask: {}'.format(control.getMask())
 				])
 		
-		return '\n\n'.join([fcu, mocap, ctrl])
+		return '\n'.join([fcu, mocap, ctrl])
 		
 	# REAL-TIME UPDATE
 	####################################################################
 	
 	def __initTimers(self):
 		"""Starts ROS timers."""
-		
 		# IMPORTANT: (will block destructor otherwise)
 		# Create weakref on instance
 		drone = weakref.ref(self)

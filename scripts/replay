@@ -1,34 +1,25 @@
 #!/usr/bin/env python
 
-"""
-Displays the replay of the drone's data.
+"""Display a log file of a windshape run.
 
-	Usage (terminal prompt):
+Files are stored under windshape/src/windshape/log/files.
 
-	- Tell ROS where packages are located (do once)
-		"source $HOME/catkin_ws/devel/setup.bash"
-
-	- Run this file from windshape package
-	
-		From any location with catkin workspace sourced:
-		"rosrun windshape_project replay.py"
-		
-		From windshape location (no source)
-		"python replay.py"
+Usage: rosrun windshape replay
 """
 
 import os
 import sys
 
-# QT Application
 from PyQt5.QtWidgets import QApplication
 
-# Replay widget
-from windshape import Replay
+# Package
+import windshape
 
-
+# Creates App
 app = QApplication(['Replay'])
 
+# Replay window
 replay = Replay()
 
+# Exits after closing window
 sys.exit(app.exec_())

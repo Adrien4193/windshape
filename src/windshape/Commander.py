@@ -71,7 +71,7 @@ class Commander(object):
 		"""
 		self.__autoWind = activate
 		
-	# STATUS
+	# STATUS REPORT
 	####################################################################
 	
 	def getCommand(self):
@@ -107,7 +107,6 @@ class Commander(object):
 	
 	def __initTimers(self):
 		"""Starts ROS timers."""
-		
 		# IMPORTANT: (will block destructor otherwise)
 		# Create weakref on instance
 		com = weakref.ref(self)

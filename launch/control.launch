@@ -1,11 +1,6 @@
 <!-- Launches drone control with Graphical User Interface.
 		
 	Usage:
-	
-	- Locate catkin workspace (do once):
-		"source $HOME/catkin_ws/devel/setup.bash"
-	
-	- Launch drone control:
 		"roslaunch windshape control.launch <arg_name>:=<value>"
 -->
 
@@ -14,7 +9,7 @@
 	<!-- ======================== ARGUMENTS ======================== -->
 	
 	<!-- File to execute as windshape_node -->
-	<arg name="node" default="gui" />
+	<arg name="node" default="windshape_node" />
 	
 	<!-- Connection to VRPN server (Motive)
 		- IP of the server (default = VirtualBox host)
@@ -33,20 +28,20 @@
 	
 	<!-- ========================== NODES ========================== -->
 	
-	<!-- vrpn_client_ros node -->
+	<!-- vrpn_client_ros -->
 	<node pkg="vrpn_client_ros" type="vrpn_client_node" name="vrpn_client_node" required="true" clear_params="true" output="log">
 		<param name="server" value="$(arg server)" />
 		<param name="port" value="$(arg port)" />
 		<rosparam command="load" file="$(find windshape)/config/vrpn.yaml" />
 	</node>
 	
-	<!-- mavros node -->
+	<!-- mavros -->
 	<node pkg="mavros" type="mavros_node" name="mavros" required="true" clear_params="true" output="log">
 		<param name="fcu_url" value="$(arg fcu_url)" />
 		<rosparam command="load" file="$(find windshape)/config/px4.yaml" />
 	</node>
 	
-	<!-- windshape node -->
+	<!-- windshape -->
 	<node pkg="windshape" type="$(arg node)" name="windshape_node" required="true" clear_params="true" output="screen">
 		<rosparam command="load" file="$(find windshape)/config/intel.yaml" />
 	</node>

@@ -12,7 +12,7 @@ Check doxygen documentation [here](https://adrien4193.github.io/windshape/index.
 
 This package has been tested on Ubuntu 16.04 in native and Virtual Machine with ROS Kinetic but other Linux and ROS configurations may work as well.
 
-1. Install Ubuntu 16.04 ([download](http://releases.ubuntu.com/16.04/)).
+1. Install Ubuntu 16.04 ([download](http://releases.ubuntu.com/16.04)).
 
 2. Install ROS Kinetic using [this tutorial](http://wiki.ros.org/kinetic/Installation/Ubuntu).
 
@@ -20,17 +20,17 @@ This package has been tested on Ubuntu 16.04 in native and Virtual Machine with 
 
 	Note: You will have to source your catkin workspace at each terminal prompt opening using:
 	
-		`source <path/to/your/catkin_ws>/devel/setup.bash`.
+	`source <path/to/your/catkin_ws>/devel/setup.bash`.
 	
-	Tip: To avoid that, in a terminal prompt, you can do the following:
-		
-		Open bashrc (the script executed at each new terminal window) in gedit.
-		
-		`gedit ~/.bashrc`
+	To avoid that, in a terminal prompt, you can do the following:
+	
+	Open bashrc (the script executed at each new terminal window) in gedit.
+	
+	`gedit ~/.bashrc`
 
-		Then add this line at the end of the file (usually path is ~/catkin_ws):
-		
-		`source <path/to/your/catkin_ws>/devel/setup.bash`
+	Then add this line at the end of the file (usually path is ~/catkin_ws):
+	
+	`source <path/to/your/catkin_ws>/devel/setup.bash`
 
 4. Install vrpn_client_ros (to collect 6DOF data from Motive):
 

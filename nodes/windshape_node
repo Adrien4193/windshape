@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+"""Starts windshape drone and fans array control.
+
+The parameters used will be the one of intel.yaml in config folder.
+
+Default node of windshape launch file control.launch.
+
+Usage: "roslaunch windshape control.launch"
+"""
+
+# ROS main library
+import rospy
+
+# Package
+import windshape
+
+# Initializes node (mendatory)
+rospy.init_node('test_drone', anonymous=True, log_level=rospy.DEBUG)
+
+# Drone control and fans array communication
+commander = windshape.Commander()
+
+# Press Ctrl+C to quit
+rospy.spin()
