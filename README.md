@@ -18,11 +18,19 @@ This package has been tested on Ubuntu 16.04 in native and Virtual Machine with 
 
 3. Configure your ROS environment as described [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 
-	Note: You will have to source your catkin workspace at each terminal prompt opening using `source <path/to/your/catkin_ws>/devel/setup.bash`. To avoid that, you can do the following:
+	Note: You will have to source your catkin workspace at each terminal prompt opening using:
 	
-	`gedit ~/.bashrc` to open bashrc (the script executed at each new terminal window) in gedit.
+		`source <path/to/your/catkin_ws>/devel/setup.bash`.
+	
+	Tip: To avoid that, in a terminal prompt, you can do the following:
+		
+		Open bashrc (the script executed at each new terminal window) in gedit.
+		
+		`gedit ~/.bashrc`
 
-	Then add at the end of the file `source ~/catkin_ws/devel/setup.bash` (assuming your catkin workspace is located in your home folder).
+		Then add this line at the end of the file (usually path is ~/catkin_ws):
+		
+		`source <path/to/your/catkin_ws>/devel/setup.bash`
 
 4. Install vrpn_client_ros (to collect 6DOF data from Motive):
 
