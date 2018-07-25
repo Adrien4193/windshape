@@ -3,15 +3,10 @@ class Module(dict):
 	
 	Keys are modules attributes.
 	
-	Can write and read into a MySQL database using its connector.
-	
 	Inherits from: dict.
 	
 	Overrides: __init__, __del__, __str__.
 	"""
-	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self, module):
 		"""Initializes keys and values.
@@ -70,18 +65,29 @@ class Module(dict):
 		"""Does nothing special."""
 		pass
 		
-	# ATTRIBUTES
-	####################################################################
-	
-	def getAttribute(self, attribute):
-		"""Reads an attribute of the module in the database."""
-		with self.con:
-			cmd = 'SELECT '+attribute+' FROM modules WHERE modID=%s'
-			self.cur.execute(cmd, [self['modID']])
-			value = self.cur.fetchone()[0]
-			self[attribute] = value
+	def __str__(self):
+		"""Display the modules attributes."""
+		string = ['Module '+str(self['modID'])+':']
+		
+		for attribute, value in self.items():
+			string.append('{}: {}'.format(attribute, value))
 			
-		return value
+		return '\n    '.join(string)
+	
+	#
+	# Public methods to update attributes.
+	#
+	
+	def needsUpdate(self, attribute):
+		"""Returns True if the attribute (str) needs to be updated."""
+		if attribute not in self.keys():
+			rospy.logerr('Wrong attribute: %s', attribute)
+			
+		elif self.__update[attribute]:
+			self.__update[attribute] = False
+			return True
+		
+		return False
 		
 	def setAttribute(self, attribute, value):
 		"""Writes module in database."""
@@ -91,24 +97,3 @@ class Module(dict):
 		
 		self[attribute] = value
 		self.__update[attribute] = True
-		
-	def updateAttribute(self, attribute):
-		"""Returns True if the attribute (str) needs to be updated."""
-		if attribute in self.keys():
-			if self.__update[attribute]:
-				self.__update[attribute] = False
-				return True
-		
-		return False
-		
-	# MODULE AS STRING
-	####################################################################
-	
-	def __str__(self):
-		"""Display the modules attributes."""
-		string = ['Module '+str(self['modID'])+':']
-		
-		for attribute, value in self.items():
-			string.append('{}: {}'.format(attribute, value))
-			
-		return '\n    '.join(string)

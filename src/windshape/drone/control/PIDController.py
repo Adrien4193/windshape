@@ -11,15 +11,14 @@ from ..common.LowPassFilter import LowPassFilter
 class PIDController(object):
 	"""Simple SISO PID controller with anti-windup and manual reset.
 	
+	Called as a function.
+	
 	The parameters (gains, saturation) are given to the constructor.
 	
 	Inherits from object.
 	
 	Overrides: __init__, __del__, __call__.
 	"""
-	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self, kp, ki, kd, umin, umax, ff):
 		"""Initializes parameters, integral and previous error.
@@ -61,35 +60,6 @@ class PIDController(object):
 		"""Does nothing special."""
 		pass
 		
-	# ATTRIBUTES
-	####################################################################
-	
-	def getError(self):
-		"""Returns the last error computed (float)."""
-		return self.__previousError
-		
-	def getIntegral(self):
-		"""Returns the current integral (float)."""
-		return self.__integral
-		
-	def getSeparatedOutputs(self):
-		"""Returns the last output computed (P, I, D)."""
-		return self.__separatedOutputs
-		
-	# COMMANDS
-	####################################################################
-	
-	def reset(self):
-		"""Resets the controller's parameters."""
-		self.__previousCall = None
-		
-	def setFeedForward(self, value):
-		"""Changes the feed forward value (float)."""
-		self.__feedForward = value
-		
-	# COMPUTATION
-	####################################################################
-		
 	def __call__(self, error):
 		"""Returns the control input from error.
 		
@@ -128,8 +98,33 @@ class PIDController(object):
 		
 		return output
 		
-	# PRIVATE COMPUTATION
-	####################################################################
+	#
+	# Public methods to see computed values and change parameters.
+	#
+	
+	def getError(self):
+		"""Returns the last error computed (float)."""
+		return self.__previousError
+		
+	def getIntegral(self):
+		"""Returns the current integral (float)."""
+		return self.__integral
+		
+	def getSeparatedOutputs(self):
+		"""Returns the last output computed (P, I, D)."""
+		return self.__separatedOutputs
+	
+	def reset(self):
+		"""Resets the controller's parameters."""
+		self.__previousCall = None
+		
+	def setFeedForward(self, value):
+		"""Changes the feed forward value (float)."""
+		self.__feedForward = value
+		
+	#
+	# Private methods to perform some computations and records.
+	#
 		
 	def __checkSaturation(self, output):
 		"""Returns the output (float) in the saturation limits."""

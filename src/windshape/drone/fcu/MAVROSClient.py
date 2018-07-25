@@ -17,9 +17,6 @@ class MAVROSClient(object):
 	Overrides __init__, __del__.
 	"""
 	
-	# CLASS ATTRIBUTES
-	####################################################################
-	
 	# Flight modes (PX4)
 	PX4_FLIGHT_MODES = ['MANUAL',
 						'ACRO',
@@ -35,9 +32,6 @@ class MAVROSClient(object):
 						'AUTO.RTGS',
 						'AUTO.READY',
 						'AUTO.TAKEOFF']
-
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self):
 		"""Just logs debug messages."""
@@ -47,10 +41,11 @@ class MAVROSClient(object):
 	def __del__(self):
 		"""Just logs debug message."""
 		rospy.logdebug('MAVROSClient destruction')
-		
-	# COMMANDS
-	####################################################################
-		
+	
+	#
+	# Public methods to send command to the drone.
+	#	
+	
 	def callArming(self, command):
 		"""Arms the drone with MAVROS service cmd/arming."""
 		rospy.loginfo('Arming' if command else 'Disarming')
@@ -75,8 +70,9 @@ class MAVROSClient(object):
 		self.__callService('/mavros/cmd/takeoff', CommandTOL,
 							0, 0, 0, 0, 1.0)
 		
-	# ROS SERVICES CALL
-	####################################################################
+	#
+	# Private methods to call a ROS service.
+	#
 	
 	def __callService(self, serviceName, commandType, *args):
 		"""Call ROS service with all safeties."""

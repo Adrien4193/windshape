@@ -11,6 +11,8 @@ from geometry_msgs.msg import Quaternion, PoseStamped
 class DroneAttitude(object):
 	"""Structure used to represent the drone's attitude.
 	
+	Can be converted as list and str.
+	
 	roll, pitch and yaw are in radians.
 	
 	thrust is from 0.0 to 1.0.
@@ -22,9 +24,6 @@ class DroneAttitude(object):
 	Overrides __init__, __del__, __iter__, __str__
 	"""
 	
-	# STATIC METHODS
-	####################################################################
-	
 	@staticmethod
 	def fromPoseStamped(poseStamped):
 		"""Returns DroneAttitude from a PoseStamped message."""
@@ -32,9 +31,6 @@ class DroneAttitude(object):
 		roll, pitch, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
 		
 		return DroneAttitude(roll, pitch, yaw, 0)
-	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self, roll=0, pitch=0, yaw=0, thrust=0):
 		""" Initializes x, y, z, roll, pitch, yaw (m, rad).
@@ -52,8 +48,27 @@ class DroneAttitude(object):
 		"""Does nothing special."""
 		pass
 		
-	# ATTRIBUTES GETTERS
-	####################################################################
+	def __iter__(self):
+		"""Used to convert the attitude as a list."""
+		yield self.__roll
+		yield self.__pitch
+		yield self.__yaw
+		yield self.__thrust
+		
+	def __str__(self):
+		"""Returns a string representing the attitude in deg and %."""
+		roll, pitch, yaw, thrust = list(self)
+		
+		return '\n'.join([
+				'roll: {:.2f} deg'.format(math.degrees(roll)),
+				'pitch: {:.2f} deg'.format(math.degrees(pitch)),
+				'yaw: {:.2f} deg'.format(math.degrees(yaw)),
+				'thrust: {:.2f} %'.format(100.0*thrust)
+				])
+		
+	#
+	# Private methods to get attributes and make conversions.
+	#
 		
 	def getRoll(self):
 		"""Returns the Roll float) of the attitude in [rad]."""
@@ -71,9 +86,6 @@ class DroneAttitude(object):
 		"""Returns the Thrust in [0-1]."""
 		return self.__thrust
 		
-	# ATTRIBUTES SETTERS
-	####################################################################
-		
 	def setRoll(self):
 		"""Changes the Roll float) of the attitude in [rad]."""
 		self.__roll = float(value)
@@ -89,9 +101,6 @@ class DroneAttitude(object):
 	def setThrust(self):
 		"""Changes the Thrust value (float) in [0-1]."""
 		self.__thrust = float(value)
-		
-	# CONVERSION
-	####################################################################
 		
 	def toArray(self):
 		"""Returns a numpy.array representing the attitude."""
@@ -130,25 +139,3 @@ class DroneAttitude(object):
 		string = '{}:\n{}'.format(label, attitude)
 		
 		return shift*' '+string.replace('\n', '\n'+shift*' ')
-		
-	# SPECIAL METHODS
-	####################################################################
-		
-	def __iter__(self):
-		"""Used to convert the attitude as a list."""
-		yield self.__roll
-		yield self.__pitch
-		yield self.__yaw
-		yield self.__thrust
-		
-	def __str__(self):
-		"""Returns a string representing the attitude in deg and %."""
-		roll, pitch, yaw, thrust = list(self)
-		
-		string = ['roll: {:.2f} deg'.format(math.degrees(roll)),
-				'pitch: {:.2f} deg'.format(math.degrees(pitch)),
-				'yaw: {:.2f} deg'.format(math.degrees(yaw)),
-				'thrust: {:.2f} %'.format(100.0*thrust)
-				]
-		
-		return '\n'.join(string)

@@ -9,15 +9,10 @@ class MySubscriber(rospy.Subscriber):
 	a given ROS topic from its name ("/node/...") and its type
 	(ROS message).
 	
-	Inherits:
-		rospy.Subscriber
+	Inheritsfrom: rospy.Subscriber
 	
-	Overrides:
-		__init__, __del__.
+	Overrides: __init__, __del__.
 	"""
-	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self, topic, messageType):
 		"""Calls parent constructor and init attributes. 
@@ -25,9 +20,6 @@ class MySubscriber(rospy.Subscriber):
 		Args:
 			topic (str): ROS topic that publishes the data.
 			message_type (ROS message): Expected ROS message type.
-			
-		Raises:
-			TypeError: topic is not a string
 		"""
 		rospy.logdebug('New subscription to %s', topic)
 		
@@ -47,8 +39,9 @@ class MySubscriber(rospy.Subscriber):
 		"""Just logs debug message."""
 		rospy.logdebug('Unregister from %s', self.__topic)
 		
-	# ATTRIBUTES GETTERS
-	####################################################################
+	#
+	# Public methods to get the messages.
+	#
 	
 	def getData(self):
 		"""Returns the last message received (ROS message)."""
@@ -58,9 +51,10 @@ class MySubscriber(rospy.Subscriber):
 		"""Returns the topic subscribed (str)."""
 		return self.__topic
 		
-	# PRIVATE CALLBACK
-	####################################################################
+	#
+	# Privates methods to receive the messages from ROS.
+	#
 	
 	def __data_cb(self, data):
-		"""Callback each time a new message is published."""
+		"""Called each time a new message is published."""
 		self.__buffer = data

@@ -4,10 +4,12 @@
 
 The parameters used will be the one of intel.yaml in config folder.
 
-Default node of windshape launch file control.launch.
+Node used for windshape drone control and fans array communication.
 
 Usage: "roslaunch windshape control.launch"
 """
+
+import sys
 
 # ROS main library
 import rospy
@@ -15,11 +17,27 @@ import rospy
 # Package
 import windshape
 
-# Initializes node (mendatory)
+# Initializes node
 rospy.init_node('test_drone', anonymous=True, log_level=rospy.DEBUG)
 
-# Drone control and fans array communication
-commander = windshape.Commander()
+# With GUI
+if rospy.get_param('~gui'):
+	
+	# Creates App
+	from PyQt5.QtWidgets import QApplication
+	app = QApplication(['Drone control'])
 
-# Press Ctrl+C to quit
-rospy.spin()
+	# Main widget with all interface
+	mainWindow = windshape.UserInterface()
+
+	# Exits after closing window
+	sys.exit(app.exec_())
+
+# Without GUI
+else:
+	
+	# Drone control and fans array communication
+	commander = windshape.Commander()
+
+	# Press Ctrl+C to quit
+	rospy.spin()

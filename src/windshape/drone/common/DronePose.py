@@ -11,6 +11,8 @@ from geometry_msgs.msg import Quaternion, PoseStamped
 class DronePose(object):
 	"""Structure used to represent a 6DOF pose.
 	
+	Can be converted as list and str.
+	
 	x, y and z coordinates are in meters.
 	
 	roll, pitch and yaw are in radians.
@@ -21,9 +23,6 @@ class DronePose(object):
 		
 	Overrides __init__, __del__, __iter__, __str__
 	"""
-	
-	# STATIC METHODS
-	####################################################################
 	
 	@staticmethod
 	def fromPoseStamped(poseStamped):
@@ -38,9 +37,6 @@ class DronePose(object):
 		roll, pitch, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
 		
 		return DronePose(x, y, z, roll, pitch, yaw)
-	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self, x=0, y=0, z=0, roll=0, pitch=0, yaw=0):
 		"""Initializes x, y, z, roll, pitch, yaw (m, rad).
@@ -60,8 +56,31 @@ class DronePose(object):
 		"""Does nothing special."""
 		pass
 		
-	# ATTRIBUTES GETTERS
-	####################################################################
+	def __iter__(self):
+		"""Used to convert the pose as a list."""
+		yield self.__x
+		yield self.__y
+		yield self.__z
+		yield self.__roll
+		yield self.__pitch
+		yield self.__yaw
+		
+	def __str__(self):
+		"""Returns a string representing the pose in mm and deg."""
+		x, y, z, roll, pitch, yaw = list(self)
+		
+		return '\n'.join([
+				'x: {:.2f} mm'.format(1000*x),
+				'y: {:.2f} mm'.format(1000*y),
+				'z: {:.2f} mm'.format(1000*z),
+				'roll: {:.2f} deg'.format(math.degrees(roll)),
+				'pitch: {:.2f} deg'.format(math.degrees(pitch)),
+				'yaw: {:.2f} deg'.format(math.degrees(yaw))
+				])
+				
+	#
+	# Private methods to get attributes and make conversions.
+	#
 	
 	def getX(self):
 		"""Returns the X coordinate of the pose in [m]."""
@@ -86,9 +105,6 @@ class DronePose(object):
 	def getYaw(self):
 		"""Returns the Yaw coordinate of the pose in [rad]."""
 		return self.__yaw
-		
-	# ATTRIBUTES SETTERS
-	####################################################################
 	
 	def setX(self, value):
 		"""Changes the X coordinate (float) of the pose in [m]."""
@@ -113,9 +129,6 @@ class DronePose(object):
 	def setYaw(self):
 		"""Changes the Yaw coordinate (float) of the pose in [rad]."""
 		self.__yaw = float(value)
-		
-	# CONVERSION
-	####################################################################
 		
 	def toArray(self):
 		"""Returns a numpy.array representing the pose."""
@@ -154,28 +167,3 @@ class DronePose(object):
 		string = '{}:\n{}'.format(label, pose)
 		
 		return shift*' '+string.replace('\n', '\n'+shift*' ')
-		
-	# SPECIAL METHODS
-	####################################################################
-		
-	def __iter__(self):
-		"""Used to convert the pose as a list."""
-		yield self.__x
-		yield self.__y
-		yield self.__z
-		yield self.__roll
-		yield self.__pitch
-		yield self.__yaw
-		
-	def __str__(self):
-		"""Returns a string representing the pose in mm and deg."""
-		x, y, z, roll, pitch, yaw = list(self)
-		
-		string = [	'x: {:.2f} mm'.format(1000*x),
-					'y: {:.2f} mm'.format(1000*y),
-					'z: {:.2f} mm'.format(1000*z),
-					'roll: {:.2f} deg'.format(math.degrees(roll)),
-					'pitch: {:.2f} deg'.format(math.degrees(pitch)),
-					'yaw: {:.2f} deg'.format(math.degrees(yaw))]
-		
-		return '\n'.join(string)

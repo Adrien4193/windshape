@@ -16,26 +16,17 @@ class RigidBody(object):
 	(see: http://wiki.ros.org/vrpn_client_ros). Uses Tracker's label to
 	find the corresponding topic name.
 	
-	Attributes:
-		count (int): Number of instances of RigidBody.
-	
 	Inherits from: object.
 	
 	Overrides: __init__, __del__, __str__.
 	"""
 	
-	# CLASS ATTRIBUTES
-	####################################################################
-	
-	# Total number of class instances.
+	## Total number of class instances.
 	__count = 0
-	
-	# STATIC METHODS
-	####################################################################
 	
 	@staticmethod
 	def getCount():
-		"""Returns the number of instances."""
+		"""Returns the number of RigidBody instances."""
 		return RigidBody.__count
 		
 	@staticmethod
@@ -60,9 +51,6 @@ class RigidBody(object):
 		labels.sort()
 		
 		return labels
-		
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self, label):
 		"""Stores parameters and starts updating pose.
@@ -101,38 +89,6 @@ class RigidBody(object):
 		
 		rospy.logdebug('RigidBody count %d', RigidBody.__count)
 		
-	# ATTRIBUTES GETTERS
-	####################################################################
-		
-	def getLabel(self):
-		"""Returns the label of the body's VRPN Tracker (str)."""
-		return self.__label
-		
-	def getPose(self):
-		"""Returns the pose of the body (DronePose)."""
-		return DronePose.fromPoseStamped(self.getPoseStamped())
-		
-	def getPoseStamped(self):
-		"""Returns the raw pose message from client (PoseStamped)."""
-		return self.__sub.getData()
-		
-	def getTopic(self):
-		"""Returns the topic (str) publishing the body's pose."""
-		return self.__topic
-	
-	def isTracked(self):
-		"""Returns True if the RB is tracked (based on timeout)."""
-		timestamp = self.getPoseStamped().header.stamp.to_sec()
-		dt = rospy.get_time() - timestamp
-		
-		if dt < self.__timeout:
-			return True
-			
-		return False
-		
-	# SPECIAL METHODS
-	####################################################################
-		
 	def __str__(self):
 		"""Displays the label, tracking state and pose of the RB.
 		
@@ -151,4 +107,34 @@ class RigidBody(object):
 		# Label and tracking state
 		header = '{} ({})\n'.format(self.__label, tracked)
 		
-		return self.getPose().toString(header, shift=0)
+		return self.getPose().toString(header)
+	
+	#
+	# Public methods to access attributes.
+	#
+	
+	def getLabel(self):
+		"""Returns the label of the body's VRPN Tracker (str)."""
+		return self.__label
+		
+	def getPose(self):
+		"""Returns the pose of the body (DronePose)."""
+		return DronePose.fromPoseStamped(self.getPoseStamped())
+		
+	def getPoseStamped(self):
+		"""Returns the raw pose message from client (PoseStamped)."""
+		return self.__sub.getData()
+		
+	def getTopic(self):
+		"""Returns the topic (str) publishing the RB's pose."""
+		return self.__topic
+	
+	def isTracked(self):
+		"""Returns True if the RB is tracked (based on timeout)."""
+		timestamp = self.getPoseStamped().header.stamp.to_sec()
+		dt = rospy.get_time() - timestamp
+		
+		if dt < self.__timeout:
+			return True
+			
+		return False

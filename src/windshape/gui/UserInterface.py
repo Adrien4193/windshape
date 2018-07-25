@@ -29,13 +29,8 @@ class UserInterface(QMainWindow):
 	Overrides: __init__, KeyPressEvent
 	"""
 	
-	# CLASS ATTRIBUTES
-	####################################################################
-	
-	FRAMERATE = 30 # [s]
-
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
+	## Refreshing rate
+	FRAMERATE = 30
  
 	def __init__(self):
 		"""Initializes parent and starts update."""
@@ -65,9 +60,6 @@ class UserInterface(QMainWindow):
 		
 		# Shows window
 		self.show()
-		
-	# GUI SETUP
-	####################################################################
 	
 	def setupUI(self):
 		"""Creates Graphical User Interface."""
@@ -166,9 +158,6 @@ class UserInterface(QMainWindow):
 		self.replayAction.triggered.connect(self.onReplay)
 		self.toolbar.addAction(self.replayAction)
 	
-	# TOOLBAR AND STATUSBAR FUNCTIONS
-	####################################################################
-	
 	def disableToolBar(self):
 		"""Disables all toolbar actions."""
 		self.connectAction.setEnabled(False)
@@ -196,9 +185,6 @@ class UserInterface(QMainWindow):
 	def unlockStatus(self):
 		"""Enable overwriting messages in statusbar."""
 		self.updateStatus = True
-		
-	# ACTIONS
-	####################################################################
 	
 	def onConnect(self):
 		"""Displays drone status."""
@@ -289,19 +275,12 @@ class UserInterface(QMainWindow):
 		"""Turns on or off fans array power supply."""
 		self.fansArray.turnOnPSU(not self.fansArray.isPowered())
 	
-	# UPDATE
-	####################################################################
-	
-	# TIMER
-	
 	def initTimer(self):
 		"""Starts calling update at FRAMERATE."""
 		self.timer = QTimer(self)
 		self.timer.setInterval(1000.0/UserInterface.FRAMERATE)
 		self.timer.timeout.connect(self.update)
 		self.timer.start()
-	
-	# MAIN
 	
 	def update(self):
 		"""Updates toolbar, statusbar and control panel."""
@@ -322,8 +301,6 @@ class UserInterface(QMainWindow):
 		self.updateInfo()
 		self.updatePlot()
 		self.updateSettings()
-		
-	# DRONE STATUS
 	
 	def checkStatus(self):
 		"""Asks for refresh if something needs display."""
@@ -343,8 +320,6 @@ class UserInterface(QMainWindow):
 			self.powered = self.fansArray.isPowered()
 			self.updateToolbar = True
 	
-	# STATUS BAR
-	
 	def updateStatusBar(self):
 		"""Updates the status bar message."""
 		if self.drone.isConnected():
@@ -357,8 +332,6 @@ class UserInterface(QMainWindow):
 			
 		self.statusbar.showMessage(message)
 		self.updateStatus = True
-		
-	# TOOL BAR
 
 	def updateToolBar(self):
 		"""Updates the tool bar icons and activation."""
@@ -429,8 +402,6 @@ class UserInterface(QMainWindow):
 			self.takeoffAction.setEnabled(True)
 			self.landAction.setEnabled(True)
 	
-	# WIDGETS
-	
 	def updateWind(self):
 		"""Updates wind tab (activation of auto wind)."""
 		activate = self.controlPanel.getAutoWind()
@@ -442,21 +413,21 @@ class UserInterface(QMainWindow):
 		source = self.controlPanel.getSource()
 		
 		if source == 'Info':
-			text = self.commander.getStatus()
+			text = str(self.commander)
 			
 		elif source == 'Pose':
-			text = self.commander.getState()
+			text = self.drone.getMeasurements()
 					
 		elif source == 'Command':
-			text = self.commander.getCommand()
+			text = self.control.getMeasurements()
 		
 		# Sends info to CP
 		self.controlPanel.displayInfo(text)
 		
 	def updatePlot(self):
 		"""Plots drone pose (mocap, FCU, setpoint)."""
-		mocap = self.drone.getMocapPose()
-		estimated = self.drone.getEstimatedPose()
+		mocap = self.drone.getPoseMocap()
+		estimated = self.drone.getPoseEstimate()
 		setpoint = self.drone.getControlParameters().getSetpoint()
 		
 		# Send to control panel as list with source label
@@ -500,9 +471,6 @@ class UserInterface(QMainWindow):
 		
 		# Update rigid bodies list in CP
 		self.controlPanel.updateBodies(self.drone.getTrackersList())
-
-	# KEYBOARD EVENT
-	####################################################################
 	
 	def keyPressEvent(self, event):
 		"""Press Enter to send setpoint, PWM or validate settings."""

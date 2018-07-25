@@ -1,11 +1,14 @@
 # windshape configuration file
 
+# Uses Graphical User Interface
+gui: True
+
 # Number of log files
 max_files: 10
 
 # Fans array
 fansarray:
-  db_update_rate: 20
+  db_update_rate: 10
   broadcast_port: 58084
   auto_wind: False
 
@@ -24,6 +27,11 @@ update:
 
 # Drone default control mode
 control:
+
+  # Wind
+  pwm_gain: 50
+  min_wind: 5
+  max_wind: 60
   
   # Target
   target: "target"

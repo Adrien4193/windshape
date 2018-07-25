@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Display a log file of a windshape run.
+"""Plots a log file of a windshape run.
 
 Files are stored under windshape/src/windshape/log/files.
 

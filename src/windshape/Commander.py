@@ -14,9 +14,18 @@ from log.Recorder import Recorder
 class Commander(object):
 	"""Monitors drone and fans array.
 	
+	Uses a Drone and a FansArray instances (that can be accessed by
+	user) to communicate with the real devices.
+	
+	See Drone and FansArray to communicate with them.
+	
+	Uses separated threads to record the drone status, pose and control
+	inputs, warn user about changes and control the wind as a function
+	of the drone pose.
+	
 	Inherits from: object.
 	
-	Overrides: __init__, __del__.
+	Overrides: __init__, __del__, __str__.
 	"""
 	
 	def __init__(self):
@@ -49,84 +58,46 @@ class Commander(object):
 		rospy.logdebug('Commander destruction')
 		Commander.__close(weakref.ref(self))
 		
-	# ATTRIBUTES
-	####################################################################
+	def __str__(self):
+		"""Describes the drone and fans array status.
+		
+		See Drone and FansArray __str__ for more details.
+		"""
+		return (str(self.__drone)+'\n\n'+str(self.__fansArray)+'\n'
+				+'Auto-wind: '+str(self.__autoWind))
+	
+	#
+	# Public methods to access drone and fans array interfaces and
+	# activate the wind as a function of the drone pose.
+	#
 		
 	def getDrone(self):
-		"""Returns the drone interface (see Drone)."""
+		"""Returns the drone interface (Drone).
+		
+		See Drone for usage.
+		"""
 		return self.__drone
 		
 	def getFansArray(self):
-		"""Returns the fans array interface (see FansArray)."""
-		return self.__fansArray
+		"""Returns the fans array interface (FansArray).
 		
-	# COMMANDS
-	####################################################################
+		See FansArray for usage.
+		"""
+		return self.__fansArray
 	
 	def setAutoWind(self, activate):
 		"""Activate or desactivate automatic wind.
+		
+		Auto-wind is proportional to the drone X position.
 		
 		Args:
 			activate (bool): Activate auto wind if True.
 		"""
 		self.__autoWind = activate
-		
-	# STATUS REPORT
-	####################################################################
 	
-	def getCommand(self):
-		"""Returns command and error from drone controller (str)."""
-		control = self.__drone.getControlParameters()
-		
-		error = control.getError().toString('Error')
-		cmd = control.getControlInput().toString('Total')
-		
-		separated = control.getSeparatedOutputs()
-		p = separated[0].toString('P')
-		i = separated[1].toString('I')
-		d = separated[2].toString('D')
-		
-		return '\n\n'.join([error, cmd, p, i, d])
-		
-	def getState(self, shift=0):
-		"""Returns the drone pose and setpoint (str)."""
-		control = self.__drone.getControlParameters()
-		
-		setpoint = control.getSetpoint().toString('Setpoint')
-		mocap = self.__drone.getMocapPose().toString('Mocap')
-		estimate = self.__drone.getEstimatedPose().toString('Estimate')
-		
-		return '\n\n'.join([setpoint, mocap, estimate])
-	
-	def getStatus(self, shift=0):
-		"""Returns the drone and fans array status (str)."""
-		return str(self.__drone)+'\n\n'+str(self.__fansArray)
-		
-	# REAL-TIME UPDATES
-	####################################################################
-	
-	def __initTimers(self):
-		"""Starts ROS timers."""
-		# IMPORTANT: (will block destructor otherwise)
-		# Create weakref on instance
-		com = weakref.ref(self)
-		
-		# Updates drone status at defined rate
-		rate = rospy.get_param('~update/update_rate')
-		self.__startTimer(rate, lambda t: Commander.__update(com))
-		
-		# Records drone status, pose and control input at defined rate
-		rate = rospy.get_param('~update/record_rate')
-		self.__startTimer(rate, lambda t: Commander.__record(com))
-		
-		# Safety
-		rospy.on_shutdown(lambda: Commander.__close(com))
-		
-	def __startTimer(self, rate, callback):
-		"""Starts a ROS timer to call callback at rate."""
-		period = 1.0 / rate
-		timer = rospy.Timer(rospy.Duration(period), callback)
-		self.__timers.append(timer)
+	#	
+	# Private methods for real-time update in separated threads.
+	#
 	
 	@staticmethod
 	def __close(com):
@@ -140,9 +111,11 @@ class Commander(object):
 	def __record(com):
 		"""Records drone status, pose and control input (weakref)."""
 		if com() is not None:
-			com().__recorder.record('status', com().getStatus())
-			com().__recorder.record('pose', com().getState())
-			com().__recorder.record('command', com().getCommand())
+			rec = com().__recorder
+			control = com().__drone.getControlParameters()
+			rec.record('status', str(com()))
+			rec.record('pose', com().__drone.getMeasurements())
+			rec.record('command', control.getMeasurements())
 	
 	@staticmethod	
 	def __update(com):
@@ -151,7 +124,7 @@ class Commander(object):
 			com().__checkState()
 			if com().__autoWind:
 				com().__sendPWM()
-		
+				
 	def __checkState(self):
 		"""Checks if drone state has changed."""
 		drone = self.__drone
@@ -172,27 +145,23 @@ class Commander(object):
 		if self.__mode != drone.getFlightMode():
 			self.__onModeChange()
 	
-	def __sendPWM(self):
-		"""Sends a PWM value corresponding to drone pose."""
-		if not self.__drone.isTracked():
-			return
-			
-		if not self.__fansArray.isPowered():
-			return
+	def __initTimers(self):
+		"""Starts ROS timers for real-time updates."""
+		# IMPORTANT: (will block destructor otherwise)
+		# Creates weakref on instance
+		com = weakref.ref(self)
 		
-		x = self.__drone.getMocapPose().getX()
-		pwm = int(50 * x)
+		# Updates drone status at defined rate
+		rate = rospy.get_param('~update/update_rate')
+		self.__startTimer(rate, lambda t: Commander.__update(com))
 		
-		if pwm > 60:
-			pwm = 60
-		elif pwm < 5:
-			pwm = 5
+		# Records drone status, pose and control input at defined rate
+		rate = rospy.get_param('~update/record_rate')
+		self.__startTimer(rate, lambda t: Commander.__record(com))
 		
-		self.__fansArray.setPWM(pwm)
-	
-	# ON CHANGE METHODS
-	####################################################################
-	
+		# Safety
+		rospy.on_shutdown(lambda: Commander.__close(com))
+		
 	def __onTrackChange(self):
 		"""Action to perform if drone tracking has changed."""
 		self.__tracked = not self.__tracked
@@ -233,3 +202,30 @@ class Commander(object):
 		"""Action to perform if drone flight mode has changed."""
 		self.__mode = self.__drone.getFlightMode()
 		rospy.loginfo('New flight mode: %s', self.__mode)
+	
+	def __sendPWM(self):
+		"""Sends a PWM value from drone pose."""
+		if not self.__drone.isTracked():
+			return
+			
+		if not self.__fansArray.isPowered():
+			return
+		
+		gain = rospy.get_param('~control/pwm_gain')
+		min_ = rospy.get_param('~control/min_wind')
+		max_ = rospy.get_param('~control/max_wind')
+		
+		x = self.__drone.getPoseMocap().getX()
+		pwm = int(gain * x)
+		if pwm > max_:
+			pwm = max_
+		elif pwm < min_:
+			pwm = min_
+		
+		self.__fansArray.setPWM(pwm)
+		
+	def __startTimer(self, rate, callback):
+		"""Starts a ROS timer to call callback at rate."""
+		period = 1.0 / rate
+		timer = rospy.Timer(rospy.Duration(period), callback)
+		self.__timers.append(timer)

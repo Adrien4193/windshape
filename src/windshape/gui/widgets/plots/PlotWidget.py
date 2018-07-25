@@ -20,11 +20,10 @@ class PlotWidget(QWidget):
 	Overrides __init__.
 	"""
 	
-	GRAPH_SPAN_Y = 2000
+	## Graph min span X
 	GRAPH_SPAN_X = 20
-	
-	# INITIALIZATION
-	####################################################################
+	## Graph min span Y
+	GRAPH_SPAN_Y = 2000
 	
 	def __init__(self, parent):
 		"""Creates plot figure and data points lists.
@@ -98,9 +97,6 @@ class PlotWidget(QWidget):
 		self.variable = str(item)
 		self.draw()
 		
-	# DATA PLOTTING
-	####################################################################
-		
 	def addSource(self, name):
 		"""Creates new source for a variable.
 		
@@ -152,9 +148,6 @@ class PlotWidget(QWidget):
 		
 		# Append datapoint as tuple
 		self.datapoints[variable][source].append((x, y))
-
-	# DRAWING
-	####################################################################
 		
 	def draw(self):
 		"""Redraws the whole figure."""

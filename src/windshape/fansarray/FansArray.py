@@ -27,9 +27,6 @@ class FansArray(threading.Thread):
 	Overrides: __init__, __del__, __str__, run.
 	"""
 	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
-	
 	def __init__(self):
 		"""Creates modules instances and auto start."""
 		rospy.logdebug('FansArray initialization')
@@ -51,26 +48,33 @@ class FansArray(threading.Thread):
 	def __del__(self):
 		"""Set PWM to 0 and switch off the power supply."""
 		rospy.logdebug('FansArray destruction')
-		self.__close()
 		
-	def __close(self):
-		"""Set PWM to 0 and turn off PSU."""
 		self.setPWM(0)
 		self.turnOnPSU(False)
 		
-		# Force DB update to be sure
+		# Updates DB manually because thread is not running any more
 		con, cur = self.__openDB()
 		self.__updateAttribute(con, cur, 'pwm')
 		self.__updateAttribute(con, cur, 'isPowered')
-		
-	# ATTRIBUTES
-	####################################################################
+	
+	def __str__(self):
+		"""Returns a summary of the fans array status."""
+		return '\n'.join([	'Host: {}'.format(self.__serverIP),
+					'Modules {}'.format(len(self.__modules)),
+					'Powered: {}'.format(self.isPowered()),
+					'PWM: {}'.format(self.getPWM())
+					])
+	
+	#
+	# Public methods to get status and send commands.
+	#
 	
 	def getPWM(self):
 		"""Returns the current PWM value (int) of the fans."""
 		if self.__modules:
 			modID = self.__modules.keys()[0]  # Takes a random module
 			string = self.__modules[modID]['pwm']
+			
 			return int(string.split(',', 2)[0])
 		
 		return 0
@@ -83,13 +87,8 @@ class FansArray(threading.Thread):
 		
 		return False
 		
-	# COMMANDS
-	####################################################################
-		
 	def setPWM(self, pwm):
 		"""Assigns a PWM value to all modules."""
-		rospy.logdebug('Set pwm to: %d', int(pwm))
-
 		for module in self.__modules.values():
 			pwm_str = ','.join(len(self.__modules)*[str(int(pwm))])
 			module.setAttribute('pwm', pwm_str)
@@ -97,102 +96,31 @@ class FansArray(threading.Thread):
 	def turnOnPSU(self, powered):
 		"""Turns on Power Supply Units if powered is True."""
 		rospy.loginfo('Turn on PSU: '+str(powered))
-		
 		for module in self.__modules.values():
 			module.setAttribute('isPowered', int(powered))
-			
-	# STATUS AS STRING
-	####################################################################
-			
-	def __str__(self):
-		"""Returns a summary of the fans array status."""
-		string = [	'Host: {}'.format(self.__serverIP),
-					'Powered: {}'.format(self.isPowered()),
-					'PWM: {}'.format(self.getPWM())]
 		
-		return '\n'.join(string)
-		
-	# MAIN LOOP
-	####################################################################
+	#
+	# Private methods
+	#
 	
 	def run(self):
 		"""Updates the database at given rate."""
-		
-		# Wait for server connection
-		self.__loadModules()
-		
-		# Cursors for this thread
-		con, cur = self.__openDB()
-		
-		# Starts update
 		rate = rospy.Rate(rospy.get_param('~fansarray/db_update_rate'))
+		
 		while not rospy.is_shutdown():
-			self.__updateDB(con, cur)
-			rate.sleep()
 		
-	def __updateDB(self, con, cur):
-		"""Updates the DB from the stored ones.
-		
-		Query structure:
-		
-			UPDATE modules SET pwm=CASE modID
+			# Wait for server connection
+			con, cur = self.__connectToDB()
 			
-			WHEN <id 1> THEN <pwm 1>
-			...
-			
-			WHEN <id n> THEN <pwm n>
-			
-			ELSE pwm END;
-		"""
-		if not self.__modules:
-			return
+			# Update DB in loop
+			while not rospy.is_shutdown():
+				try:
+					self.__updateDB(con, cur)
+				except MySQLdb.Error as e:
+					rospy.logerr(e)
+					break
+				rate.sleep()
 		
-		# Updates modules attributes if needed
-		for module in self.__modules.values():
-			for attribute in module.keys():
-				if module.updateAttribute(attribute):
-					self.__updateAttribute(con, cur, attribute)
-			
-	def __updateAttribute(self, con, cur, attribute):
-		"""Updates an attribute of the modules."""
-		
-		# Updates PWM field as a function of modID field
-		cmd = 'UPDATE modules SET '+attribute+'=CASE modID '
-		
-		# commandes: WHEN modID THEN pwm
-		cmds = []
-		values = []
-		
-		for modID, module in self.__modules.items():
-			cmds.append('WHEN %s THEN %s')
-			values.append(modID)
-			values.append(module[attribute])
-		
-		# If not in list: Don't touch !
-		cmds.append('ELSE pwm END;')
-		
-		cmd += ' '.join(cmds)
-		
-		# Executes SQL command
-		with con:
-			cur.execute(cmd, values)
-			
-	# DB CONNECTION
-	####################################################################
-	
-	def __loadModules(self):
-		"""Fetches modules in DB and stores them as Module instances."""
-		rospy.loginfo('Loading modules from database')
-		
-		# Try to find DB host
-		self.__findServer()
-		
-		# Loads modules from DB
-		con, cur = self.__openDB()	
-		self.__getModulesFromDB(con, cur)
-		
-		rospy.loginfo('Modules successfully loaded')
-	
 	def __findServer(self):
 		"""Returns DB host IP (str) if server is broadcasting.
 		
@@ -223,25 +151,8 @@ class FansArray(threading.Thread):
 				self.__serverIP = sAddr[0]
 				break
 		
-	def __openDB(self):
-		"""Open a MySQL connection at given IP (str).
-		
-		Returns a MySQLConnection and a MySQLCursor (two objects).
-		"""
-		if self.__serverIP == None:
-			rospy.logerr('No server to open DB')
-
-		con = MySQLdb.connect(	host=self.__serverIP,
-								user="ws_user",
-								passwd="Aero-1234",
-								db="mysql")
-		cur = con.cursor()
-		
-		return con, cur
-		
-	def __getModulesFromDB(self, con, cur):
+	def __loadModules(self, con, cur):
 		"""Get modules list from database."""
-		
 		# Fetches modules (list of tuples)
 		with con:
 			cur.execute("""
@@ -258,3 +169,81 @@ class FansArray(threading.Thread):
 			modID = module[0]
 			self.__modules[modID] = Module(module)
 			rospy.logdebug('Module loaded: %s', self.__modules[modID])
+			
+	def __connectToDB(self):
+		"""Fetches modules in DB and stores them as Module instances."""
+		rospy.loginfo('Loading modules from database')
+		
+		# Block until DB host found
+		self.__findServer()
+		
+		# Loads modules from DB
+		con, cur = self.__openDB()
+		self.__loadModules(con, cur)
+		
+		rospy.loginfo('Modules successfully loaded')
+		
+		return con, cur
+			
+	def __openDB(self):
+		"""Open a MySQL connection at given IP (str).
+		
+		Returns a MySQLConnection and a MySQLCursor (two objects).
+		"""
+		if self.__serverIP == None:
+			rospy.logfatal('No server to open DB')
+
+		con = MySQLdb.connect(	host=self.__serverIP,
+								user="ws_user",
+								passwd="Aero-1234",
+								db="mysql")
+		cur = con.cursor()
+		
+		return con, cur
+		
+	def __updateAttribute(self, con, cur, attribute):
+		"""Updates an attribute of the modules.
+		
+		Query structure:
+		
+			UPDATE modules SET pwm=CASE modID
+			
+			WHEN <id 1> THEN <pwm 1>
+			...
+			
+			WHEN <id n> THEN <pwm n>
+			
+			ELSE pwm END;
+		"""
+		# Updates attribute as a function of modID
+		cmd = 'UPDATE modules SET '+attribute+'=CASE modID '
+		
+		# commandes: WHEN modID THEN value
+		cmds = []
+		values = []
+		
+		for modID, module in self.__modules.items():
+			if module.needsUpdate(attribute):
+				cmds.append('WHEN %s THEN %s')
+				values.append(modID)
+				values.append(module[attribute])
+		
+		# If not in list: Don't touch !
+		cmds.append('ELSE '+attribute+' END;')
+		
+		# Final query
+		cmd += ' '.join(cmds)
+		
+		# Executes SQL query only if needed
+		if values:
+			with con:
+				cur.execute(cmd, values)
+			
+	def __updateDB(self, con, cur):
+		"""Updates the DB from the modules in memory."""
+		if self.__modules:
+			modID = self.__modules.keys()[0]  # Takes random module
+			
+			for attribute in self.__modules[modID].keys():
+				self.__updateAttribute(con, cur, attribute)
+			

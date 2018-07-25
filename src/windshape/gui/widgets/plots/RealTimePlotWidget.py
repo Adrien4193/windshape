@@ -23,15 +23,9 @@ class RealTimePlotWidget(PlotWidget):
 	Overrides: __init__, addSource, appendData, draw
 	"""
 	
-	# CLASS ATTRIBUTES
-	####################################################################
-	
+	## Animation rate
 	FRAMERATE = 30.0
-	GRAPH_SPAN_X = 20.0
 	
-	# INITIALIZATION
-	####################################################################
-		
 	def __init__(self, parent):
 		"""Creates parent and start animation.
 		
@@ -49,9 +43,6 @@ class RealTimePlotWidget(PlotWidget):
 		# Animation to optimize real time display
 		self.anim = animation.FuncAnimation(self.figure, self.refresh,  
 							interval=1000/RealTimePlotWidget.FRAMERATE)
-	
-	# ADD DATA
-	####################################################################
 		
 	def addSource(self, source):
 		"""Adds new source to display (overrides parent method).
@@ -86,9 +77,6 @@ class RealTimePlotWidget(PlotWidget):
 		
 		while line[-1][0] - line[0][0] > self.GRAPH_SPAN_X:
 			del line[0]
-			
-	# DRAWING
-	####################################################################
 		
 	def draw(self):
 		"""Redraws the whole graph."""
@@ -136,10 +124,10 @@ class RealTimePlotWidget(PlotWidget):
 		max_x, max_y = self.getBounds()
 		
 		# Defile with GRAPH_SPAN_X span
-		if max_x > RealTimePlotWidget.GRAPH_SPAN_X:
-			self.axes.set_xbound(max_x-RealTimePlotWidget.GRAPH_SPAN_X, max_x)
+		if max_x > self.GRAPH_SPAN_X:
+			self.axes.set_xbound(max_x-self.GRAPH_SPAN_X, max_x)
 		else:
-			self.axes.set_xbound(0, RealTimePlotWidget.GRAPH_SPAN_X)
+			self.axes.set_xbound(0, self.GRAPH_SPAN_X)
 		
 		# Symetric in Y
 		self.axes.set_ybound(-max_y, max_y)

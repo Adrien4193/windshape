@@ -14,7 +14,9 @@ from ..common.LowPassFilter import LowPassFilter
 
 
 class Controller(object):
-	"""MIMO controller to compute drone attitude.
+	"""MIMO controller to compute drone attitude to reach a position.
+	
+	Called as a function.
 	
 	The attitude is computed from the X, Y, Z and Yaw errors between the
 	desired setpoint and the drone pose measured by the mocap system
@@ -30,13 +32,9 @@ class Controller(object):
 	
 	Overrides __init__, __del__, __call__.
 	"""
-
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
 	
 	def __init__(self):
 		"""Initializes drone PIDs (x, y, z, yaw) and LP filter."""
-		
 		# Control attributes
 		self.__parameters = ControlParameters()
 		
@@ -65,29 +63,8 @@ class Controller(object):
 		"""Does nothing special."""
 		pass
 		
-	# ATTRIBUTES GETTERS
-	####################################################################
-	
-	def getParameters(self):
-		"""Returns the controller parameters (ControlParameters)."""
-		return self.__parameters
-		
-	# COMMANDS
-	####################################################################
-		
-	def reset(self):
-		"""Resets PIDs and display when controller is disabled."""
-		for pid in self.__pids:
-			pid.reset()
-		self.__parameters._setControlInput(numpy.zeros(4))
-		self.__parameters._setError(numpy.zeros(4))
-		self.__parameters._setSetparatedOutputs(*(3*[numpy.zeros(4)]))
-		
-	# ATTITUDE COMPUTATION (CALL)
-	####################################################################
-
 	def __call__(self, pose, estimate):
-		"""Returns attitude (numpy.array[4]) to reach setpoint.
+		"""Returns attitude (numpy.array[4]) to reach the setpoint.
 		
 		Process:
 			1 - Computes X, Y, Z, Yaw error.
@@ -130,10 +107,27 @@ class Controller(object):
 		self.__record(attitude, error)
 		
 		return attitude
+	
+	#
+	# Public methods to access parameters and perform reset.
+	#
+	
+	def getParameters(self):
+		"""Returns the controller parameters (ControlParameters)."""
+		return self.__parameters
 		
-	# PRIVATE COMPUTATIONS
-	####################################################################
-		
+	def reset(self):
+		"""Resets PIDs and display when controller is disabled."""
+		for pid in self.__pids:
+			pid.reset()
+		self.__parameters._setControlInput(numpy.zeros(4))
+		self.__parameters._setError(numpy.zeros(4))
+		self.__parameters._setSetparatedOutputs(*(3*[numpy.zeros(4)]))
+	
+	#
+	# Private methods to make some computations and records.
+	#
+	
 	def __angle(self, value):
 		"""Returns the given angle between -pi and pi.
 		

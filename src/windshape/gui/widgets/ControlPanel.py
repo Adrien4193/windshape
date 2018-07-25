@@ -38,9 +38,6 @@ class ControlPanel(QTabWidget):
 	
 	Overrides: __init__.
 	"""
-	
-	# INITIALIZATION
-	####################################################################
 
 	def __init__(self, parent):
 		"""Creates all tabs and initialize UI.
@@ -62,9 +59,6 @@ class ControlPanel(QTabWidget):
 		self.createPlotTab()
 		# Tab 5
 		self.createSettingsTab()
-		
-	# TABS CREATION
-	####################################################################
 		
 	def createSetpointTab(self):
 		"""Creates tab to choose drone setpoint (SetpointWidget)."""
@@ -103,9 +97,6 @@ class ControlPanel(QTabWidget):
 		"""Create tab to select drone parameters (SettingsWidget)."""
 		self.settings = SettingsWidget(self)
 		self.addTab(self.settings, 'Settings')
-		
-	# ATTRIBUTES GETTERS
-	####################################################################
 	
 	def getSetpoint(self):
 		"""Returns the setpoint selected in setpoint tab."""
@@ -136,9 +127,6 @@ class ControlPanel(QTabWidget):
 	def getSettings(self):
 		"""Returns control parameters from settings."""
 		return self.settings.getControlParameters()
-		
-	# VALIDITY CHECKS
-	####################################################################
 	
 	def setpointValid(self):
 		"""Returns True if the setpoint selected is valid."""
@@ -147,9 +135,6 @@ class ControlPanel(QTabWidget):
 	def pwmValid(self):
 		"""Returns True if the PWM value selected is valid."""
 		return self.wind.isValid()
-		
-	# UPDATE
-	####################################################################
 	
 	def displayInfo(self, text):
 		"""Set text (str) into info tab."""

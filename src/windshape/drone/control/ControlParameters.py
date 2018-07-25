@@ -13,18 +13,37 @@ from ..common.DronePose import DronePose
 
 
 class ControlParameters(object):
-	"""Control parameters used in offboard.
+	"""Control parameters used in offboard position control.
+	
+	The parameters are evaluated as follows:
+	
+	- Offboard: Use offboard custom position controller. Else use PX4.
+	
+	- Target: A rigid body defined on the mocap system.
+	
+	- Manual setpoint: XYZYaw pose to reach.
+	
+	- Follow: Follow or not the target (with a shift to save user).
+	
+	- Setpoint: The position to reach (XYZYaw). Can be either the target
+		pose or manual setpoint depending on "follow".
+	
+	- Mask: Mask roll, pitch, yaw or thrust of the controller output and
+		replace by "attitude". "offboard" must be set to have an effect.
+	
+	- Attitude: The attitude to reach if the controller output is
+		masked. Can be the target attitude or a manual one.
+	
+	"Friend" class: Controller
 	
 	Inherits from: object.
 	
 	Overrides: __init__, __del__.
 	"""
 	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
-	
 	def __init__(self):
-		"""Loads parameters."""
+		"""Loads parameters from config file."""
+		rospy.logdebug('Loading control parameters')
 		
 		# Target
 		self.__target = RigidBody(rospy.get_param('~control/target'))
@@ -45,22 +64,66 @@ class ControlParameters(object):
 		self.__error = DroneAttitude()
 		self.__separatedOutputs = 3*[DroneAttitude()]
 		
+		rospy.logdebug('Control parameters loaded')
+		
 	def __del__(self):
 		"""Does nothing special."""
 		pass
+		
+	def __str__(self):
+		"""Display the parameters."""
+		return '\n'.join([
+				'Target: {}'.format(self.getTarget().getLabel()),
+				'Tracked: {}'.format(self.getTarget().isTracked()),
+				'Follow: {}'.format(self.isFollowingTarget()),
+				'Shift: {}'.format(self.__shift),
+				'Mimic: {}'.format(self.isMimingTarget()),
+				'Offboard: {}'.format(self.isUsingOffboardControl()),
+				'Mask: {}'.format(self.getMask())
+				])
 	
-	# PARAMETERS GETTERS
-	####################################################################
+	#
+	# Public methods to get and set parameters.
+	#
+	
+	def followTarget(self, follow):
+		"""Makes the drone follow or not its target.
+		
+		Args:
+			follow (bool): Follow target if True.
+		"""
+		self.__follow = follow
 	
 	def getAttitude(self):
 		"""Returns attitude replacement to control (DroneAttitude).
 		
 		The attitude is composed of roll, pitch, yaw, thrust.
 		
+		Depends on the mask and if the mimic is activated.
+		
 		The attitude can either be the manual attitude given with
 		setManualAttitude or the target attitude given with setTarget.
 		"""
 		return self.__getAttitude()
+	
+	def getControlInput(self):
+		"""Returns the last control input sent (DroneAttitude).
+		
+		The control input is an attitude (roll, pitch, yaw, thrust).
+		
+		Notes:
+			- Is zero if no offboard control is performed.
+			- Does not compute anything, just displays.
+		"""
+		return self.__controlInput
+		
+	def getError(self):
+		"""Returns the last error (setpoint - pose) (DroneAttitude).
+		
+		The error is composed of X, Y, Yaw, Z (X and Y are
+		projected on the drone body frame).
+		"""
+		return self.__error
 		
 	def getManualAttitude(self):
 		"""Returns the last attitude entered by user (DroneAttitude).
@@ -86,10 +149,33 @@ class ControlParameters(object):
 		"""
 		return self.__mask
 		
+	def getMeasurements(self):
+		"""Returns the controller outputs (str).
+		
+		Structure: (attitudes)
+			error
+			total controlInput
+			p-term
+			i-term
+			d-term
+		
+		See DroneAttitude for the exact structure of each term.
+		"""
+		return self.__getMeasurements()
+		
+	def getSeparatedOutputs(self):
+		"""Returns separated values of the PIDs (DroneAttitude[3]).
+		
+		0 = P-term, 1 = I-term, 2 = D-term.
+		"""
+		return self.__separatedOutputs
+		
 	def getSetpoint(self):
 		"""Returns the drone's current setpoint (DronePose).
 		
 		A setpoint is composed of X, Y, Z and Yaw coordinates only.
+		
+		Depends on the follow parameter.
 		
 		The setpoint can either be the manual setpoint given with
 		setManualSetpoint or the target pose given with setTarget.
@@ -106,14 +192,14 @@ class ControlParameters(object):
 	def isFollowingTarget(self):
 		"""Returns True if the drone is following its target.
 		
-		If False, the drone will try to reach a static setpoint.
+		If False, the drone is reaching the manual setpoint.
 		"""
 		return self.__follow
 		
 	def isMimingTarget(self):
 		"""Returns True if attitude control based on the target one.
 		
-		If False, the drone will try to reach a static attitude.
+		If False, the drone will try to reach the manual attitude.
 		
 		Notes:
 			Will only have an effect on masked attitude fields.
@@ -127,24 +213,14 @@ class ControlParameters(object):
 		"""
 		return self.__offboard
 		
-	# PARAMETERS SETTERS
-	####################################################################
-	
-	def followTarget(self, follow):
-		"""Defines if the drone is following its target.
-		
-		Args:
-			follow (bool): Follow target if True.
-		"""
-		self.__follow = follow
-		
 	def mimicTarget(self, mimic):
-		"""Defines the way the attitude control is done.
+		"""Sends the target attitude to the drone.
 		
-		Uses manual attitude if False, else target one (RPYZ).
+		The drone "mimics" the target (reaches the same attitude) if the
+		correponding fields are masked.
 		
 		Args:
-			mimic (bool): Use target attitude if True.
+			mimic (bool): Sends target attitude if True.
 		"""
 		self.__mimic = mimic
 		
@@ -210,37 +286,9 @@ class ControlParameters(object):
 		"""
 		self.__offboard = offboard
 		
-	# CONTROL INPUTS RECORDS GETTERS
-	####################################################################
-	
-	def getControlInput(self):
-		"""Returns the last control input sent (DroneAttitude).
-		
-		The control input is an attitude (roll, pitch, yaw, thrust).
-		
-		Notes:
-			- Is zero if no offboard control is performed.
-			- Does not compute anything, just displays.
-		"""
-		return self.__controlInput
-		
-	def getError(self):
-		"""Returns the last error (setpoint - pose) (DroneAttitude).
-		
-		The error is composed of X, Y, Yaw, Z (X and Y are
-		projected on the drone body frame).
-		"""
-		return self.__error
-		
-	def getSeparatedOutputs(self):
-		"""Returns separated values of the PIDs (DroneAttitude[3]).
-		
-		0 = P-term, 1 = I-term, 2 = D-term.
-		"""
-		return self.__separatedOutputs
-		
-	# PROTECTED CONTROLLER SETTERS
-	####################################################################
+	#
+	# Protected methods to allow controller to fill input values.
+	#
 	
 	def _setControlInput(self, attitude):
 		"""Fills control input field (numpy.array[4])."""
@@ -256,8 +304,9 @@ class ControlParameters(object):
 									DroneAttitude(*i),
 									DroneAttitude(*d)]
 	
-	# PRIVATE COMPUTATION
-	####################################################################
+	#
+	# Private methods to make some computation.
+	#
 	
 	def __getAttitude(self):
 		"""Returns the attitude to reach (DroneAttitude)."""
@@ -266,6 +315,18 @@ class ControlParameters(object):
 			return DroneAttitude(roll, pitch, yaw, z)
 		else:
 			return self.__attitude
+	
+	def __getMeasurements(self):
+		"""Creates the measurement string (str)."""		
+		error = self.getError().toString('Error')
+		cmd = self.getControlInput().toString('Total')
+		
+		separated = self.getSeparatedOutputs()
+		p = separated[0].toString('P')
+		i = separated[1].toString('I')
+		d = separated[2].toString('D')
+		
+		return '\n\n'.join([error, cmd, p, i, d])
 	
 	def __getSetpoint(self):
 		"""Returns the setpoint to reach (DronePose)."""

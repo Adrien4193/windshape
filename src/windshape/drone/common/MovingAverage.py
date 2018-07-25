@@ -5,6 +5,8 @@ import rospy
 class MovingAverage(object):
 	"""Simple moving average filter.
 	
+	The filter is called as a function.
+	
 	The response y of a signal x is based on the following relationship:
 	
 	y[k] = x[k] + x[k-1] + ... + x[k-n+1]
@@ -16,8 +18,6 @@ class MovingAverage(object):
 	Overrides: __init__, __del__, __call__.
 	"""
 	
-	###################### INITIALIZER, DESTRUCTOR #####################
-	
 	def __init__(self, n, initValue):
 		"""Stores a and initializes previous value.
 		
@@ -25,7 +25,6 @@ class MovingAverage(object):
 			n (int): Number of points (must be >= 1).
 			initValue (object with __add__): Inititalization.
 		"""
-		# Safety
 		if not isinstance(n, int) or n < 1:
 			rospy.logfatal('n = %s is not an int >= 1', n)
 		
@@ -42,8 +41,6 @@ class MovingAverage(object):
 		"""Does nothing special."""
 		pass
 	
-	############################# CALLER ###############################
-	
 	def __call__(self, x):
 		"""Applies the filter on the given point.
 		
@@ -57,8 +54,9 @@ class MovingAverage(object):
 		
 		return y
 		
-	# COMMANDS
-	####################################################################
+	#
+	# Public methods to reset the filter.
+	#
 	
 	def reset(self):
 		"""Resets the memory to init value."""

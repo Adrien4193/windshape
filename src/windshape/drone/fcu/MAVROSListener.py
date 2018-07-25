@@ -22,9 +22,6 @@ class MAVROSListener(object):
 	Overrides __init__, __del__.
 	"""
 	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
-	
 	def __init__(self, log=None):
 		"""Initializes attributes and ROS subscribers."""
 		rospy.logdebug('MAVROSListener initialization')
@@ -42,8 +39,9 @@ class MAVROSListener(object):
 		for sub in self.__subs.values():
 			sub.unregister()
 	
-	# ATTRIBUTES GETTERS
-	####################################################################
+	#
+	# Public methods to get the published data.
+	#
 	
 	def getState(self):
 		"""Returns drone state.
@@ -59,8 +57,9 @@ class MAVROSListener(object):
 		"""
 		return self.__subs['pose'].getData()
 	
-	# SUBSCRIBERS
-	####################################################################
+	#
+	# Private methods to initialize subscribers.
+	#
 	
 	def __initSubscribers(self):
 		"""Subscribes to MAVROS topics to get messages from FCU."""

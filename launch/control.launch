@@ -8,9 +8,6 @@
 	
 	<!-- ======================== ARGUMENTS ======================== -->
 	
-	<!-- File to execute as windshape_node -->
-	<arg name="node" default="windshape_node" />
-	
 	<!-- Connection to VRPN server (Motive)
 		- IP of the server (default = VirtualBox host)
 		- Communication port (default = standard VRPN port)
@@ -42,8 +39,8 @@
 	</node>
 	
 	<!-- windshape -->
-	<node pkg="windshape" type="$(arg node)" name="windshape_node" required="true" clear_params="true" output="screen">
-		<rosparam command="load" file="$(find windshape)/config/intel.yaml" />
+	<node pkg="windshape" type="windshape_node" name="windshape_node" required="true" clear_params="true" output="screen">
+		<rosparam command="load" file="$(find windshape)/config/windshape.yaml" />
 	</node>
 	
 </launch>

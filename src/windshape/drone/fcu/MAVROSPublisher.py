@@ -21,9 +21,6 @@ class MAVROSPublisher(object):
 	Overrides __init__, __del__.
 	"""
 	
-	# INITIALIZER AND DESTRUCTOR
-	####################################################################
-	
 	def __init__(self):
 		"""Initializes publishers."""
 		rospy.logdebug('MAVROSPublisher initialization')
@@ -35,14 +32,14 @@ class MAVROSPublisher(object):
 		rospy.logdebug('MAVROSPublisher initialized')
 		
 	def __del__(self):
-		"""Closes publishers with debug message."""
+		"""Closes publishers."""
 		rospy.logdebug('MAVROSPublisher destruction')
-		
 		for pub in self.__pubs.values():
 			pub.unregister()
 			
-	# DATA PUBLISHING
-	####################################################################
+	#
+	# Public methods to send data to the drone.
+	#
 	
 	def sendMocapPose(self, poseStamped):
 		"""Publishes mocap pose on "/mavros/mocap/pose".
@@ -85,26 +82,6 @@ class MAVROSPublisher(object):
 		
 		self.__pubs['attitude'].publish(poseStamped)
 		
-	def sendSetpointThrust(self, thrust):
-		"""Publishes setpoint on /mavros/setpoint_attitude/thrust.
-		 
-		Must be called at minimum 2Hz to enable OFFBOARD flight mode.
-		
-		Uses MAVLink SET_ATTITUDE_TARGET message (see mavros plugin
-		"setpoint_attitude").
-		
-		Notes:
-			Uses the same MAVLink message as attitude.
-		
-		Args:
-			thrust (float): Thrust value (0-1).
-		"""
-		if not isinstance(thrust, (float, int)):
-			rospy.logerr('%s is not a number', thrust)
-		
-		thrust = Thrust(thrust=thrust)
-		self.__pubs['thrust'].publish(thrust)
-		
 	def sendSetpointPosition(self, poseStamped):
 		"""Publishes setpoint on /mavros/setpoint_position/local.
 		
@@ -126,8 +103,29 @@ class MAVROSPublisher(object):
 		
 		self.__pubs['position'].publish(poseStamped)
 		
-	# INITIALIZATION
-	####################################################################
+	def sendSetpointThrust(self, thrust):
+		"""Publishes setpoint on /mavros/setpoint_attitude/thrust.
+		 
+		Must be called at minimum 2Hz to enable OFFBOARD flight mode.
+		
+		Uses MAVLink SET_ATTITUDE_TARGET message (see mavros plugin
+		"setpoint_attitude").
+		
+		Notes:
+			Uses the same MAVLink message as attitude.
+		
+		Args:
+			thrust (float): Thrust value (0-1).
+		"""
+		if not isinstance(thrust, (float, int)):
+			rospy.logerr('%s is not a number', thrust)
+		
+		thrust = Thrust(thrust=thrust)
+		self.__pubs['thrust'].publish(thrust)
+		
+	#
+	# Private methods to initialize ROS publishers.
+	#
 	
 	def __initPublishers(self):
 		"""Creates publishers to send data through MAVROS topics."""
