@@ -80,15 +80,11 @@ $(function() {
 Inheritance diagram for windshape.drone.mocap.RigidBody.RigidBody:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body__inherit__graph.png" border="0" usemap="#windshape_8drone_8mocap_8_rigid_body_8_rigid_body_inherit__map" alt="Inheritance graph"/></div>
-<map name="windshape_8drone_8mocap_8_rigid_body_8_rigid_body_inherit__map" id="windshape_8drone_8mocap_8_rigid_body_8_rigid_body_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for windshape.drone.mocap.RigidBody.RigidBody:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body__coll__graph.png" border="0" usemap="#windshape_8drone_8mocap_8_rigid_body_8_rigid_body_coll__map" alt="Collaboration graph"/></div>
-<map name="windshape_8drone_8mocap_8_rigid_body_8_rigid_body_coll__map" id="windshape_8drone_8mocap_8_rigid_body_8_rigid_body_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -97,6 +93,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2804ab5c7a3a61772342037b39fe4eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24ef689ecd1fdf8f85ca82b1abc442e2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#a24ef689ecd1fdf8f85ca82b1abc442e2">__del__</a> (self)</td></tr>
 <tr class="separator:a24ef689ecd1fdf8f85ca82b1abc442e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdba89fb5adee293cf44812c6887dc1a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#afdba89fb5adee293cf44812c6887dc1a">__str__</a> (self)</td></tr>
+<tr class="separator:afdba89fb5adee293cf44812c6887dc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79269837a1148c0d9c74fde66d6e4697"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#a79269837a1148c0d9c74fde66d6e4697">getLabel</a> (self)</td></tr>
 <tr class="separator:a79269837a1148c0d9c74fde66d6e4697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a253804cb7092d4e5084ba1312dc7219a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#a253804cb7092d4e5084ba1312dc7219a">getPose</a> (self)</td></tr>
@@ -107,8 +105,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02cbe842fdaffeaa5593a5163f03d65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad094c24d63255feeb6280825e7731596"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#ad094c24d63255feeb6280825e7731596">isTracked</a> (self)</td></tr>
 <tr class="separator:ad094c24d63255feeb6280825e7731596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdba89fb5adee293cf44812c6887dc1a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#afdba89fb5adee293cf44812c6887dc1a">__str__</a> (self)</td></tr>
-<tr class="separator:afdba89fb5adee293cf44812c6887dc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -123,9 +119,6 @@ Static Public Member Functions</h2></td></tr>
 Used to get the pose of a streamed VRPN Tracker with vrpn_client_ros
 (see: http://wiki.ros.org/vrpn_client_ros). Uses Tracker's label to
 find the corresponding topic name.
-
-Attributes:
-    count (int): Number of instances of RigidBody.
 
 Inherits from: object.
 
@@ -163,7 +156,7 @@ Overrides: __init__, __del__, __str__.
 Args:
     label (str): Label of the rigid body Tracker (from Motive).
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00067">67</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00055">55</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 
 </div>
 </div>
@@ -183,7 +176,7 @@ Args:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Closes subscriber at destruction.</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00092">92</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00080">80</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 
 </div>
 </div>
@@ -215,7 +208,7 @@ roll: &lt;value&gt; deg
 pitch: &lt;value&gt; deg
 yaw: &lt;value&gt; deg
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00136">136</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00092">92</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -253,8 +246,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns the number of instances.</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00037">37</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<pre class="fragment">Returns the number of RigidBody instances.</pre> 
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00028">28</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 
 </div>
 </div>
@@ -274,7 +267,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns the label of the body's VRPN Tracker (str).</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00107">107</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00116">116</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 
 </div>
 </div>
@@ -294,7 +287,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns the pose of the body (DronePose).</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00111">111</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00120">120</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -330,7 +323,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns the raw pose message from client (PoseStamped).</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00115">115</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00124">124</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -359,8 +352,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns the topic (str) publishing the body's pose.</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00119">119</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<pre class="fragment">Returns the topic (str) publishing the RB's pose.</pre> 
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00128">128</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 
 </div>
 </div>
@@ -393,7 +386,7 @@ by vrpn_client_ros.
 
 Structure of topic name: "/vrpn_client_node/&lt;label&gt;/pose"
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00042">42</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00033">33</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 
 </div>
 </div>
@@ -413,7 +406,7 @@ Structure of topic name: "/vrpn_client_node/&lt;label&gt;/pose"
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns True if the RB is tracked (based on timeout).</pre> 
-<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00123">123</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_rigid_body_8py_source.html#l00132">132</a> of file <a class="el" href="_rigid_body_8py_source.html">RigidBody.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

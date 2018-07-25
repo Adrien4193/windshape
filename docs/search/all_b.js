@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['offboard',['offboard',['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_settings_widget_1_1_settings_widget.html#a629598843d7ab0157d47036e2a4d9eb2',1,'windshape::gui::widgets::tabs::SettingsWidget::SettingsWidget']]],
-  ['onactivated',['onActivated',['../classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a3e65ce3d2fcd5e51ee91a0ce953f6749',1,'windshape::gui::widgets::plots::PlotWidget::PlotWidget']]],
-  ['onarm',['onArm',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#aa1efa5b7a6485835efc4f4d7fa846648',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['onconnect',['onConnect',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ab63acb414500fcc98a4ac3447b0f44af',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['onland',['onLand',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a53a63252e00a919480b45dec74cffc5e',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['onmode',['onMode',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a21c27cfeeef61034950c762af6b54d6e',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['onreplay',['onReplay',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a565478da5db3f57dd069012c24874c04',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['ontakeoff',['onTakeoff',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a470abbe9bce9b3102124b68e11b46e99',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['ontogglepsu',['onTogglePSU',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a7267a6cc282b9cc69588fdf9d4efb803',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['ontrack',['onTrack',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a7507015694cc3304027f777968182ec3',1,'windshape::gui::UserInterface::UserInterface']]]
+  ['mavrosclient',['MAVROSClient',['../classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_client_1_1_m_a_v_r_o_s_client.html',1,'windshape::drone::fcu::MAVROSClient']]],
+  ['mavrosclient_2epy',['MAVROSClient.py',['../_m_a_v_r_o_s_client_8py.html',1,'']]],
+  ['mavroslistener',['MAVROSListener',['../classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_listener_1_1_m_a_v_r_o_s_listener.html',1,'windshape::drone::fcu::MAVROSListener']]],
+  ['mavroslistener_2epy',['MAVROSListener.py',['../_m_a_v_r_o_s_listener_8py.html',1,'']]],
+  ['mavrospublisher',['MAVROSPublisher',['../classwindshape_1_1drone_1_1fcu_1_1_m_a_v_r_o_s_publisher_1_1_m_a_v_r_o_s_publisher.html',1,'windshape::drone::fcu::MAVROSPublisher']]],
+  ['mavrospublisher_2epy',['MAVROSPublisher.py',['../_m_a_v_r_o_s_publisher_8py.html',1,'']]],
+  ['menu_2ejs',['menu.js',['../menu_8js.html',1,'']]],
+  ['menudata_2ejs',['menudata.js',['../menudata_8js.html',1,'']]],
+  ['mimic',['mimic',['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_settings_widget_1_1_settings_widget.html#a3e1a5fc56eb46d68c2ce28540394e6a7',1,'windshape::gui::widgets::tabs::SettingsWidget::SettingsWidget']]],
+  ['mimictarget',['mimicTarget',['../classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#aad3f2cbc6db9cd97d53d9aa0abeae949',1,'windshape::drone::control::ControlParameters::ControlParameters']]],
+  ['modeaction',['modeAction',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a036ab9bb46f313a8413d080c5ee26c14',1,'windshape::gui::UserInterface::UserInterface']]],
+  ['module',['Module',['../classwindshape_1_1fansarray_1_1_module_1_1_module.html',1,'windshape::fansarray::Module']]],
+  ['module_2epy',['Module.py',['../_module_8py.html',1,'']]],
+  ['movingaverage',['MovingAverage',['../classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average.html',1,'windshape::drone::common::MovingAverage']]],
+  ['movingaverage_2epy',['MovingAverage.py',['../_moving_average_8py.html',1,'']]],
+  ['mysubscriber',['MySubscriber',['../classwindshape_1_1drone_1_1common_1_1_my_subscriber_1_1_my_subscriber.html',1,'windshape::drone::common::MySubscriber']]],
+  ['mysubscriber_2epy',['MySubscriber.py',['../_my_subscriber_8py.html',1,'']]]
 ];

@@ -1,19 +1,8 @@
 var searchData=
 [
-  ['unlockstatus',['unlockStatus',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a50c3bc558203760d9cd4caebb5fdf319',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['update',['update',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a65ae15262d2becb2093acd7e54b92fb3',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatearmingaction',['updateArmingAction',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a6eea698663fbc82963d3984b0a9a8ef1',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updateattribute',['updateAttribute',['../classwindshape_1_1fansarray_1_1_module_1_1_module.html#abe9124728d6647413c921324f659780b',1,'windshape::fansarray::Module::Module']]],
-  ['updatebodies',['updateBodies',['../classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#a0b74858744235c75e82c691d031fcdc1',1,'windshape::gui::widgets::ControlPanel::ControlPanel']]],
-  ['updateconnectaction',['updateConnectAction',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a18f90d2c6c5635130e9181facda026c0',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updateinfo',['updateInfo',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a286ad19e8d76c02314769ce90e47513e',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updateplot',['updatePlot',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a492252a536a8bc6328e97189dbf8ecbc',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatesettings',['updateSettings',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a0c45babf6fcb71ad8ffe53dbecf07e99',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatestatusbar',['updateStatusBar',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a8b50a6746f4bfc24923999b5022896c8',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatetlaction',['updateTLAction',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a26806922c4bfbbbbbffe85dfcf85e614',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatetoggleaction',['updateToggleAction',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ad5d42b4891098687b296ef6893d7274d',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatetoolbar',['updateToolBar',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a0c543aa08f2f27a8c65a3c6de8963f85',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatetrackaction',['updateTrackAction',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#adaa93924687bf5f63c18839c154a8d6d',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['updatewind',['updateWind',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a3b931ffc0ac301822ae74b0dccafa426',1,'windshape::gui::UserInterface::UserInterface']]],
-  ['useoffboardcontrol',['useOffboardControl',['../classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#ac3e8fcfadece2245111f2e2ceb925c83',1,'windshape::drone::control::ControlParameters::ControlParameters']]]
+  ['takeoff',['takeoff',['../classwindshape_1_1drone_1_1_drone_1_1_drone.html#a76ec9fc58bfe4b6ddb8ab5739bfdd2ea',1,'windshape::drone::Drone::Drone']]],
+  ['toarray',['toArray',['../classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude.html#a28c3c394be649cd84b4a636e8f7952c4',1,'windshape.drone.common.DroneAttitude.DroneAttitude.toArray()'],['../classwindshape_1_1drone_1_1common_1_1_drone_pose_1_1_drone_pose.html#a3536e8c8371167b7b1e224065403bfde',1,'windshape.drone.common.DronePose.DronePose.toArray()']]],
+  ['toposestamped',['toPoseStamped',['../classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude.html#a4084bc01dc5a69a8458dab944441bd1d',1,'windshape.drone.common.DroneAttitude.DroneAttitude.toPoseStamped()'],['../classwindshape_1_1drone_1_1common_1_1_drone_pose_1_1_drone_pose.html#a4bc818606b6fd4b97bc845313bbb1e71',1,'windshape.drone.common.DronePose.DronePose.toPoseStamped()']]],
+  ['tostring',['toString',['../classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude.html#ab8a7d91f530c6cd77d9ba0f6a20084b9',1,'windshape.drone.common.DroneAttitude.DroneAttitude.toString()'],['../classwindshape_1_1drone_1_1common_1_1_drone_pose_1_1_drone_pose.html#a15505ebfbe68d80031b8f81a9a9a3bf4',1,'windshape.drone.common.DronePose.DronePose.toString()']]],
+  ['turnonpsu',['turnOnPSU',['../classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#adafadce72737f9e1228fa6ff0cd93779',1,'windshape::fansarray::FansArray::FansArray']]]
 ];

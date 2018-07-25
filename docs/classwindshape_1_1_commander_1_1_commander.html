@@ -79,15 +79,11 @@ $(function() {
 Inheritance diagram for windshape.Commander.Commander:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1_commander_1_1_commander__inherit__graph.png" border="0" usemap="#windshape_8_commander_8_commander_inherit__map" alt="Inheritance graph"/></div>
-<map name="windshape_8_commander_8_commander_inherit__map" id="windshape_8_commander_8_commander_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for windshape.Commander.Commander:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1_commander_1_1_commander__coll__graph.png" border="0" usemap="#windshape_8_commander_8_commander_coll__map" alt="Collaboration graph"/></div>
-<map name="windshape_8_commander_8_commander_coll__map" id="windshape_8_commander_8_commander_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -96,25 +92,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac3981f08b87030cbda690d7100e5c35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc11cb334a91d601f066f8f560bdb168"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#acc11cb334a91d601f066f8f560bdb168">__del__</a> (self)</td></tr>
 <tr class="separator:acc11cb334a91d601f066f8f560bdb168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e488e8c0d613080c271e988497fc46d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#a8e488e8c0d613080c271e988497fc46d">__str__</a> (self)</td></tr>
+<tr class="separator:a8e488e8c0d613080c271e988497fc46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad00a4b5be5f80bc13beef2d9ab6af3c4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#ad00a4b5be5f80bc13beef2d9ab6af3c4">getDrone</a> (self)</td></tr>
 <tr class="separator:ad00a4b5be5f80bc13beef2d9ab6af3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a706de451ebba6d6c28dbb6db81ae1763"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#a706de451ebba6d6c28dbb6db81ae1763">getFansArray</a> (self)</td></tr>
 <tr class="separator:a706de451ebba6d6c28dbb6db81ae1763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0101ad8065016c602ceaf665ab63d6f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#af0101ad8065016c602ceaf665ab63d6f">setAutoWind</a> (self, activate)</td></tr>
 <tr class="separator:af0101ad8065016c602ceaf665ab63d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5251ca75fd2309bac57fd4abf00b7963"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#a5251ca75fd2309bac57fd4abf00b7963">getCommand</a> (self)</td></tr>
-<tr class="separator:a5251ca75fd2309bac57fd4abf00b7963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb51776e8a0d70e32f93988565b78c40"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#acb51776e8a0d70e32f93988565b78c40">getState</a> (self, shift=0)</td></tr>
-<tr class="separator:acb51776e8a0d70e32f93988565b78c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5457a24e8bf37f5e89aa16e6b210c9e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1_commander_1_1_commander.html#ac5457a24e8bf37f5e89aa16e6b210c9e">getStatus</a> (self, shift=0)</td></tr>
-<tr class="separator:ac5457a24e8bf37f5e89aa16e6b210c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Monitors drone and fans array.
 
+Uses a Drone and a FansArray instances (that can be accessed by
+user) to communicate with the real devices.
+
+See Drone and FansArray to communicate with them.
+
+Uses separated threads to record the drone status, pose and control
+inputs, warn user about changes and control the wind as a function
+of the drone pose.
+
 Inherits from: object.
 
-Overrides: __init__, __del__.
+Overrides: __init__, __del__, __str__.
 </pre> 
 <p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00014">14</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -134,7 +135,7 @@ Overrides: __init__, __del__.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Creates drone and fans array managers.</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00022">22</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00031">31</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -162,19 +163,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Stops timers.</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00047">47</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00056">56</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5251ca75fd2309bac57fd4abf00b7963"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5251ca75fd2309bac57fd4abf00b7963">&#9670;&nbsp;</a></span>getCommand()</h2>
+<a id="a8e488e8c0d613080c271e988497fc46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e488e8c0d613080c271e988497fc46d">&#9670;&nbsp;</a></span>__str__()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def windshape.Commander.Commander.getCommand </td>
+          <td class="memname">def windshape.Commander.Commander.__str__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -182,16 +183,11 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns command and error from drone controller (str).</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00077">77</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwindshape_1_1_commander_1_1_commander_a5251ca75fd2309bac57fd4abf00b7963_icgraph.png" border="0" usemap="#classwindshape_1_1_commander_1_1_commander_a5251ca75fd2309bac57fd4abf00b7963_icgraph" alt=""/></div>
-<map name="classwindshape_1_1_commander_1_1_commander_a5251ca75fd2309bac57fd4abf00b7963_icgraph" id="classwindshape_1_1_commander_1_1_commander_a5251ca75fd2309bac57fd4abf00b7963_icgraph">
-<area shape="rect" id="node2" href="classwindshape_1_1_commander_1_1_commander.html#ac5457a24e8bf37f5e89aa16e6b210c9e" title="windshape.Commander.Commander.get\lStatus" alt="" coords="309,5,565,47"/>
-</map>
-</div>
+<pre class="fragment">Describes the drone and fans array status.
+
+See Drone and FansArray __str__ for more details.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00061">61</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
 
 </div>
 </div>
@@ -210,8 +206,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns the drone interface (see Drone).</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00055">55</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
+<pre class="fragment">Returns the drone interface (Drone).
+
+See Drone for usage.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00074">74</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
 
 </div>
 </div>
@@ -230,91 +229,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns the fans array interface (see FansArray).</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00059">59</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
+<pre class="fragment">Returns the fans array interface (FansArray).
 
-</div>
-</div>
-<a id="acb51776e8a0d70e32f93988565b78c40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb51776e8a0d70e32f93988565b78c40">&#9670;&nbsp;</a></span>getState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def windshape.Commander.Commander.getState </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>shift</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Returns the drone pose and setpoint (str).</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00091">91</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwindshape_1_1_commander_1_1_commander_acb51776e8a0d70e32f93988565b78c40_icgraph.png" border="0" usemap="#classwindshape_1_1_commander_1_1_commander_acb51776e8a0d70e32f93988565b78c40_icgraph" alt=""/></div>
-<map name="classwindshape_1_1_commander_1_1_commander_acb51776e8a0d70e32f93988565b78c40_icgraph" id="classwindshape_1_1_commander_1_1_commander_acb51776e8a0d70e32f93988565b78c40_icgraph">
-<area shape="rect" id="node2" href="classwindshape_1_1_commander_1_1_commander.html#ac5457a24e8bf37f5e89aa16e6b210c9e" title="windshape.Commander.Commander.get\lStatus" alt="" coords="309,5,565,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac5457a24e8bf37f5e89aa16e6b210c9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5457a24e8bf37f5e89aa16e6b210c9e">&#9670;&nbsp;</a></span>getStatus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def windshape.Commander.Commander.getStatus </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>shift</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Returns the drone and fans array status (str).</pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00101">101</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classwindshape_1_1_commander_1_1_commander_ac5457a24e8bf37f5e89aa16e6b210c9e_cgraph.png" border="0" usemap="#classwindshape_1_1_commander_1_1_commander_ac5457a24e8bf37f5e89aa16e6b210c9e_cgraph" alt=""/></div>
-<map name="classwindshape_1_1_commander_1_1_commander_ac5457a24e8bf37f5e89aa16e6b210c9e_cgraph" id="classwindshape_1_1_commander_1_1_commander_ac5457a24e8bf37f5e89aa16e6b210c9e_cgraph">
-<area shape="rect" id="node2" href="classwindshape_1_1_commander_1_1_commander.html#a137ca2dadfe75ed6aeaebb6e0363cb70" title="windshape.Commander.Commander.\l__startTimer" alt="" coords="318,5,557,47"/>
-<area shape="rect" id="node3" href="classwindshape_1_1_commander_1_1_commander.html#acb51776e8a0d70e32f93988565b78c40" title="windshape.Commander.Commander.get\lState" alt="" coords="309,71,565,112"/>
-<area shape="rect" id="node4" href="classwindshape_1_1_commander_1_1_commander.html#a5251ca75fd2309bac57fd4abf00b7963" title="windshape.Commander.Commander.get\lCommand" alt="" coords="309,136,565,177"/>
-<area shape="rect" id="node5" href="classwindshape_1_1_commander_1_1_commander.html#a6918c145da043fe28bfea9a38a7822db" title="windshape.Commander.Commander.\l__onTrackChange" alt="" coords="318,201,557,243"/>
-<area shape="rect" id="node6" href="classwindshape_1_1_commander_1_1_commander.html#a21282224af367f3b2c59576f89f62ca0" title="windshape.Commander.Commander.\l__onTargetTrackingChange" alt="" coords="318,267,557,308"/>
-<area shape="rect" id="node7" href="classwindshape_1_1_commander_1_1_commander.html#aace2e4d8325326f0821f4088dccf81a8" title="windshape.Commander.Commander.\l__onConnectionChange" alt="" coords="318,332,557,373"/>
-<area shape="rect" id="node8" href="classwindshape_1_1_commander_1_1_commander.html#a93be4bad5a552f9cf594e2dcd7403c37" title="windshape.Commander.Commander.\l__onArmingChange" alt="" coords="318,397,557,439"/>
-<area shape="rect" id="node9" href="classwindshape_1_1_commander_1_1_commander.html#acc93b3658e7140a7366bb9ad8c2c2e8e" title="windshape.Commander.Commander.\l__onModeChange" alt="" coords="318,463,557,504"/>
-</map>
-</div>
+See FansArray for usage.
+</pre> 
+<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00081">81</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
 
 </div>
 </div>
@@ -345,10 +264,25 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <pre class="fragment">Activate or desactivate automatic wind.
 
+Auto-wind is proportional to the drone X position.
+
 Args:
     activate (bool): Activate auto wind if True.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00066">66</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_commander_8py_source.html#l00088">88</a> of file <a class="el" href="_commander_8py_source.html">Commander.py</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classwindshape_1_1_commander_1_1_commander_af0101ad8065016c602ceaf665ab63d6f_cgraph.png" border="0" usemap="#classwindshape_1_1_commander_1_1_commander_af0101ad8065016c602ceaf665ab63d6f_cgraph" alt=""/></div>
+<map name="classwindshape_1_1_commander_1_1_commander_af0101ad8065016c602ceaf665ab63d6f_cgraph" id="classwindshape_1_1_commander_1_1_commander_af0101ad8065016c602ceaf665ab63d6f_cgraph">
+<area shape="rect" id="node2" href="classwindshape_1_1_commander_1_1_commander.html#a6918c145da043fe28bfea9a38a7822db" title="windshape.Commander.Commander.\l__onTrackChange" alt="" coords="309,5,548,47"/>
+<area shape="rect" id="node3" href="classwindshape_1_1_commander_1_1_commander.html#a21282224af367f3b2c59576f89f62ca0" title="windshape.Commander.Commander.\l__onTargetTrackingChange" alt="" coords="309,71,548,112"/>
+<area shape="rect" id="node4" href="classwindshape_1_1_commander_1_1_commander.html#aace2e4d8325326f0821f4088dccf81a8" title="windshape.Commander.Commander.\l__onConnectionChange" alt="" coords="309,136,548,177"/>
+<area shape="rect" id="node5" href="classwindshape_1_1_commander_1_1_commander.html#a93be4bad5a552f9cf594e2dcd7403c37" title="windshape.Commander.Commander.\l__onArmingChange" alt="" coords="309,201,548,243"/>
+<area shape="rect" id="node6" href="classwindshape_1_1_commander_1_1_commander.html#acc93b3658e7140a7366bb9ad8c2c2e8e" title="windshape.Commander.Commander.\l__onModeChange" alt="" coords="309,267,548,308"/>
+<area shape="rect" id="node7" href="classwindshape_1_1_commander_1_1_commander.html#a137ca2dadfe75ed6aeaebb6e0363cb70" title="windshape.Commander.Commander.\l__startTimer" alt="" coords="309,332,548,373"/>
+</map>
+</div>
 
 </div>
 </div>

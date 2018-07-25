@@ -79,32 +79,28 @@ $(function() {
 Inheritance diagram for windshape.drone.common.MovingAverage.MovingAverage:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average__inherit__graph.png" border="0" usemap="#windshape_8drone_8common_8_moving_average_8_moving_average_inherit__map" alt="Inheritance graph"/></div>
-<map name="windshape_8drone_8common_8_moving_average_8_moving_average_inherit__map" id="windshape_8drone_8common_8_moving_average_8_moving_average_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for windshape.drone.common.MovingAverage.MovingAverage:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average__coll__graph.png" border="0" usemap="#windshape_8drone_8common_8_moving_average_8_moving_average_coll__map" alt="Collaboration graph"/></div>
-<map name="windshape_8drone_8common_8_moving_average_8_moving_average_coll__map" id="windshape_8drone_8common_8_moving_average_8_moving_average_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac088c972b5486cb25ffe3e9de05e3877"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average.html#ac088c972b5486cb25ffe3e9de05e3877">__init__</a> (self, n, initValue)</td></tr>
-<tr class="memdesc:ac088c972b5486cb25ffe3e9de05e3877"><td class="mdescLeft">&#160;</td><td class="mdescRight">INITIALIZER, DESTRUCTOR #####################.  <a href="#ac088c972b5486cb25ffe3e9de05e3877">More...</a><br /></td></tr>
 <tr class="separator:ac088c972b5486cb25ffe3e9de05e3877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74d7a24f0c993bc6ac175ec5280b1411"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average.html#a74d7a24f0c993bc6ac175ec5280b1411">__del__</a> (self)</td></tr>
 <tr class="separator:a74d7a24f0c993bc6ac175ec5280b1411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc79175d843a7cb13f870a75cdb65648"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average.html#adc79175d843a7cb13f870a75cdb65648">__call__</a> (self, x)</td></tr>
-<tr class="memdesc:adc79175d843a7cb13f870a75cdb65648"><td class="mdescLeft">&#160;</td><td class="mdescRight">CALLER ###############################.  <a href="#adc79175d843a7cb13f870a75cdb65648">More...</a><br /></td></tr>
 <tr class="separator:adc79175d843a7cb13f870a75cdb65648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ab8f769d43e4da70a42f0f7244c0413"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_moving_average_1_1_moving_average.html#a3ab8f769d43e4da70a42f0f7244c0413">reset</a> (self)</td></tr>
 <tr class="separator:a3ab8f769d43e4da70a42f0f7244c0413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Simple moving average filter.
+
+The filter is called as a function.
 
 The response y of a signal x is based on the following relationship:
 
@@ -149,8 +145,6 @@ Overrides: __init__, __del__, __call__.
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>INITIALIZER, DESTRUCTOR #####################. </p>
 <pre class="fragment">Stores a and initializes previous value.
 
 Arg:
@@ -177,7 +171,7 @@ Arg:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Does nothing special.</pre> 
-<p class="definition">Definition at line <a class="el" href="_moving_average_8py_source.html#l00041">41</a> of file <a class="el" href="_moving_average_8py_source.html">MovingAverage.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_moving_average_8py_source.html#l00040">40</a> of file <a class="el" href="_moving_average_8py_source.html">MovingAverage.py</a>.</p>
 
 </div>
 </div>
@@ -207,14 +201,12 @@ Arg:
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>CALLER ###############################. </p>
 <pre class="fragment">Applies the filter on the given point.
 
 Arg:
     x (object with __add__): Current point of the input signal
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_moving_average_8py_source.html#l00047">47</a> of file <a class="el" href="_moving_average_8py_source.html">MovingAverage.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_moving_average_8py_source.html#l00044">44</a> of file <a class="el" href="_moving_average_8py_source.html">MovingAverage.py</a>.</p>
 
 </div>
 </div>
@@ -234,7 +226,7 @@ Arg:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Resets the memory to init value.</pre> 
-<p class="definition">Definition at line <a class="el" href="_moving_average_8py_source.html#l00063">63</a> of file <a class="el" href="_moving_average_8py_source.html">MovingAverage.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_moving_average_8py_source.html#l00061">61</a> of file <a class="el" href="_moving_average_8py_source.html">MovingAverage.py</a>.</p>
 
 </div>
 </div>

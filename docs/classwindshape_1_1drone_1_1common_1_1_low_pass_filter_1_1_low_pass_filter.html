@@ -79,15 +79,11 @@ $(function() {
 Inheritance diagram for windshape.drone.common.LowPassFilter.LowPassFilter:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter__inherit__graph.png" border="0" usemap="#windshape_8drone_8common_8_low_pass_filter_8_low_pass_filter_inherit__map" alt="Inheritance graph"/></div>
-<map name="windshape_8drone_8common_8_low_pass_filter_8_low_pass_filter_inherit__map" id="windshape_8drone_8common_8_low_pass_filter_8_low_pass_filter_inherit__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for windshape.drone.common.LowPassFilter.LowPassFilter:</div>
 <div class="dyncontent">
 <div class="center"><img src="classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter__coll__graph.png" border="0" usemap="#windshape_8drone_8common_8_low_pass_filter_8_low_pass_filter_coll__map" alt="Collaboration graph"/></div>
-<map name="windshape_8drone_8common_8_low_pass_filter_8_low_pass_filter_coll__map" id="windshape_8drone_8common_8_low_pass_filter_8_low_pass_filter_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -96,13 +92,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aec2612729f5fd2c71dbbdb0780b0dd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f9d1dd9254ed3a0f2db3e56018039c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter.html#ae6f9d1dd9254ed3a0f2db3e56018039c">__del__</a> (self)</td></tr>
 <tr class="separator:ae6f9d1dd9254ed3a0f2db3e56018039c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7524c63f98753225a2ed9b8af5740778"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter.html#a7524c63f98753225a2ed9b8af5740778">reset</a> (self, value)</td></tr>
-<tr class="separator:a7524c63f98753225a2ed9b8af5740778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affefdaba14cb9cd690ae7ab9881cc16c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter.html#affefdaba14cb9cd690ae7ab9881cc16c">__call__</a> (self, x)</td></tr>
 <tr class="separator:affefdaba14cb9cd690ae7ab9881cc16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7524c63f98753225a2ed9b8af5740778"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classwindshape_1_1drone_1_1common_1_1_low_pass_filter_1_1_low_pass_filter.html#a7524c63f98753225a2ed9b8af5740778">reset</a> (self, value)</td></tr>
+<tr class="separator:a7524c63f98753225a2ed9b8af5740778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Simple low-pass filter.
+
+The filter is called as a function.
 
 The response y of a signal x is based on the following relationship:
 
@@ -153,7 +151,7 @@ Arg:
     a (float): Weight of x[n-1] (a in description)
     initValue (object with __add__): Inititalization of y[n-1]
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00022">22</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00021">21</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
 
 </div>
 </div>
@@ -173,7 +171,7 @@ Arg:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Does nothing special.</pre> 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00039">39</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00037">37</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
 
 </div>
 </div>
@@ -208,7 +206,7 @@ Arg:
 Arg:
     x (object with __add__): Current point of the input signal
 </pre> 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00053">53</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00041">41</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
 
 </div>
 </div>
@@ -238,7 +236,7 @@ Arg:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Resets the memory to init value or given one.</pre> 
-<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00046">46</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_low_pass_filter_8py_source.html#l00062">62</a> of file <a class="el" href="_low_pass_filter_8py_source.html">LowPassFilter.py</a>.</p>
 
 </div>
 </div>
