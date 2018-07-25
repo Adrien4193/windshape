@@ -19,7 +19,7 @@ import windshape
 app = QApplication(['Replay'])
 
 # Replay window
-replay = Replay()
+replay = windshape.Replay()
 
 # Exits after closing window
 sys.exit(app.exec_())

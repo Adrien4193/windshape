@@ -49,18 +49,21 @@ class FansArray(threading.Thread):
 		"""Set PWM to 0 and switch off the power supply."""
 		rospy.logdebug('FansArray destruction')
 		
+		if self.__serverIP is None:
+			return
+		
+		con, cur = self.__openDB()
 		self.setPWM(0)
 		self.turnOnPSU(False)
-		
-		# Updates DB manually because thread is not running any more
-		con, cur = self.__openDB()
 		self.__updateAttribute(con, cur, 'pwm')
 		self.__updateAttribute(con, cur, 'isPowered')
 	
 	def __str__(self):
 		"""Returns a summary of the fans array status."""
-		return '\n'.join([	'Host: {}'.format(self.__serverIP),
-					'Modules {}'.format(len(self.__modules)),
+		return '\n'.join([
+					'Host: {}'.format(self.__serverIP),
+					'Modules: {}'.format(len(self.__modules)),
+					'Connected: {}'.format(self.isConnected()),
 					'Powered: {}'.format(self.isPowered()),
 					'PWM: {}'.format(self.getPWM())
 					])
@@ -78,6 +81,10 @@ class FansArray(threading.Thread):
 			return int(string.split(',', 2)[0])
 		
 		return 0
+		
+	def isConnected(self):
+		"""Returns True if connected to database."""
+		return self.__serverIP is not None
 		
 	def isPowered(self):
 		"""Returns True if the power supply is on."""
@@ -98,7 +105,7 @@ class FansArray(threading.Thread):
 		rospy.loginfo('Turn on PSU: '+str(powered))
 		for module in self.__modules.values():
 			module.setAttribute('isPowered', int(powered))
-		
+	
 	#
 	# Private methods
 	#
@@ -118,6 +125,7 @@ class FansArray(threading.Thread):
 					self.__updateDB(con, cur)
 				except MySQLdb.Error as e:
 					rospy.logerr(e)
+					self.__serverIP = None
 					break
 				rate.sleep()
 		
@@ -136,8 +144,6 @@ class FansArray(threading.Thread):
 		sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 		sock.setblocking(True)
 		sock.bind(('', port))
-		
-		message, sAddr = sock.recvfrom(256)
 		
 		while not rospy.is_shutdown():
 			
@@ -190,8 +196,6 @@ class FansArray(threading.Thread):
 		
 		Returns a MySQLConnection and a MySQLCursor (two objects).
 		"""
-		if self.__serverIP == None:
-			rospy.logfatal('No server to open DB')
 
 		con = MySQLdb.connect(	host=self.__serverIP,
 								user="ws_user",

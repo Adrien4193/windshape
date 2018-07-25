@@ -110,11 +110,11 @@ class Drone(object):
 		ctrl = ctrl.replace('\n', '\n    ')
 		
 		return '\n'.join([fcu, mocap, ctrl])
-		
+	
 	#
 	# Public methods to send commands and get informations.
 	#
-		
+	
 	def arm(self, cmd):
 		"""Arms or disarms the drone.
 		

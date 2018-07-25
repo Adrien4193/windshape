@@ -48,14 +48,14 @@ control:
     roll:
       kp: 0.8
       ki: 0.1
-      kd: 0.2
+      kd: 0.35
       min: deg(-30)
       max: deg(30)
       ff: deg(0)
     pitch:
       kp: 0.8
       ki: 0.1
-      kd: 0.15
+      kd: 0.35
       min: deg(-30)
       max: deg(30)
       ff: deg(0)
@@ -69,7 +69,7 @@ control:
     thrust:
       kp: 1.5
       ki: 0.1
-      kd: 0.1
+      kd: 0.2
       min: 0.0
       max: 0.8
       ff: 0.35
