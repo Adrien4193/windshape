@@ -29,7 +29,7 @@ update:
 control:
 
   # Wind
-  pwm_gain: 50
+  pwm_gain: 100
   min_wind: 5
   max_wind: 60
   

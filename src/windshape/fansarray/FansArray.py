@@ -1,7 +1,8 @@
 import socket
 import MySQLdb
 import threading
-import random
+from random import random
+from math import cos, sin, pi
 
 # ROS main library
 import rospy

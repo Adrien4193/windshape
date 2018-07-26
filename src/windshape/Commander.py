@@ -218,8 +218,8 @@ class Commander(object):
 			min_ = rospy.get_param('~control/min_wind')
 			max_ = rospy.get_param('~control/max_wind')
 			
-			x = self.__drone.getPoseMocap().getX()
-			pwm = int(gain * x)
+			pitch = self.__drone.getPoseMocap().getPitch()
+			pwm = int(gain * pitch)
 			
 			if pwm > max_:
 				pwm = max_

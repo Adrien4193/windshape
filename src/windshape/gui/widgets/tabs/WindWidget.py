@@ -34,7 +34,7 @@ class WindWidget(QWidget):
 		# Creates PWM input
 		val = None
 		label = QLabel('Wind function (%):')
-		self.pwm = EditInput(self, val)
+		self.pwm = EditInput(self, val, 100)
 		self.layout.addWidget(label, 0, 0)
 		self.layout.addWidget(self.pwm, 0, 1)
 		
@@ -45,7 +45,7 @@ class WindWidget(QWidget):
 		
 		# Stretch
 		self.layout.setRowStretch(self.layout.rowCount(), 1)
-		self.layout.setColumnStretch(self.layout.columnCount(), 1)
+		#self.layout.setColumnStretch(self.layout.columnCount(), 1)
 	
 	def getAutoWind(self):
 		"""Returns True if auto-wind is checked."""
