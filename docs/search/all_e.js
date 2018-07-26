@@ -1,6 +1,7 @@
 var searchData=
 [
   ['pages_5f0_2ejs',['pages_0.js',['../pages__0_8js.html',1,'']]],
+  ['pages_5f1_2ejs',['pages_1.js',['../pages__1_8js.html',1,'']]],
   ['pidcontroller',['PIDController',['../classwindshape_1_1drone_1_1control_1_1_p_i_d_controller_1_1_p_i_d_controller.html',1,'windshape::drone::control::PIDController']]],
   ['pidcontroller_2epy',['PIDController.py',['../_p_i_d_controller_8py.html',1,'']]],
   ['pitch',['pitch',['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_attitude_widget_1_1_attitude_widget.html#a3d8e45fda3f0e476e772fe5f6e91d862',1,'windshape.gui.widgets.tabs.AttitudeWidget.AttitudeWidget.pitch()'],['../classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_settings_widget_1_1_settings_widget.html#ad0fcb5d969b51d751906353d14ac2869',1,'windshape.gui.widgets.tabs.SettingsWidget.SettingsWidget.pitch()']]],
