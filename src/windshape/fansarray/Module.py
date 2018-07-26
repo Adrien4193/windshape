@@ -1,3 +1,7 @@
+# ROS main library
+import rospy
+
+
 class Module(dict):
 	"""Class for modules representation.
 	
@@ -57,13 +61,19 @@ class Module(dict):
 		self['isRebooting'] = module[13]
 		self['isSendingRPM'] = module[14]
 		
+		# Attributes that can be set from this program
+		self.__permitted = ['pwm', 'isPowered']
+		
+		# Ask DB update of attribute if True
 		self.__update = {}
 		for key in self.keys():
 			self.__update[key] = False
 		
+		rospy.logdebug('Module %s loaded', self['modID'])
+		
 	def __del__(self):
 		"""Does nothing special."""
-		pass
+		rospy.logdebug('Module %s destruction', self['modID'])
 		
 	def __str__(self):
 		"""Display the modules attributes."""
@@ -78,11 +88,14 @@ class Module(dict):
 	# Public methods to update attributes.
 	#
 	
+	def isPermitted(self, attribute):
+		"""Returns True if the attribute (str) can be written in DB."""
+		return attribute in self.__permitted
+	
 	def needsUpdate(self, attribute):
 		"""Returns True if the attribute (str) needs to be updated."""
 		if attribute not in self.keys():
 			rospy.logerr('Wrong attribute: %s', attribute)
-			
 		elif self.__update[attribute]:
 			self.__update[attribute] = False
 			return True
@@ -90,10 +103,9 @@ class Module(dict):
 		return False
 		
 	def setAttribute(self, attribute, value):
-		"""Writes module in database."""
-		if attribute not in self.keys():
-			rospy.logerr('Wrong attribute: %s', attribute)
-			return
-		
-		self[attribute] = value
-		self.__update[attribute] = True
+		"""Writes module attribute in DB if new."""
+		if attribute not in self.__permitted:
+			rospy.logerr('Wrong attribute to set: %s', attribute)
+		elif self[attribute] != value:
+			self[attribute] = value
+			self.__update[attribute] = True

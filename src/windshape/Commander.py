@@ -93,6 +93,9 @@ class Commander(object):
 		Args:
 			activate (bool): Activate auto wind if True.
 		"""
+		if not activate and self.__autoWind:
+			self.__fansArray.setPWM(0)
+		
 		self.__autoWind = activate
 	
 	#	
@@ -122,9 +125,8 @@ class Commander(object):
 		"""Checks drone state and generates wind (weakref)."""
 		if com() is not None:
 			com().__checkState()
-			if com().__autoWind:
-				com().__sendPWM()
-				
+			com().__sendPWM()
+	
 	def __checkState(self):
 		"""Checks if drone state has changed."""
 		drone = self.__drone
@@ -162,14 +164,28 @@ class Commander(object):
 		# Safety
 		rospy.on_shutdown(lambda: Commander.__close(com))
 		
-	def __onTrackChange(self):
-		"""Action to perform if drone tracking has changed."""
-		self.__tracked = not self.__tracked
+	def __onArmingChange(self):
+		"""Action to perform if drone armed or disarmed."""
+		self.__armed = not self.__armed
 		
-		if self.__tracked:
-			rospy.loginfo('Drone tracked')
+		if self.__armed:
+			rospy.loginfo('Drone armed')
 		else:
-			rospy.logwarn('Drone tracking lost')
+			rospy.loginfo('Drone disarmed')
+			
+	def __onConnectionChange(self):
+		"""Action to perform if drone connection has changed."""
+		self.__connected = not self.__connected
+		
+		if self.__connected:
+			rospy.loginfo('Drone connected')
+		else:
+			rospy.logwarn('Drone disconnected')
+			
+	def __onModeChange(self):
+		"""Action to perform if drone flight mode has changed."""
+		self.__mode = self.__drone.getFlightMode()
+		rospy.loginfo('New flight mode: %s', self.__mode)
 		
 	def __onTargetTrackingChange(self):
 		"""Action to perform if target has changed."""
@@ -179,48 +195,38 @@ class Commander(object):
 			rospy.loginfo('Target tracked')
 		else:
 			rospy.logwarn('Target tracking lost')
+	
+	def __onTrackChange(self):
+		"""Action to perform if drone tracking has changed."""
+		self.__tracked = not self.__tracked
 		
-	def __onConnectionChange(self):
-		"""Action to perform if drone connection has changed."""
-		self.__connected = not self.__connected
-		
-		if self.__connected:
-			rospy.loginfo('Drone connected')
+		if self.__tracked:
+			rospy.loginfo('Drone tracked')
 		else:
-			rospy.logwarn('Drone disconnected')
-		
-	def __onArmingChange(self):
-		"""Action to perform if drone armed or disarmed."""
-		self.__armed = not self.__armed
-		
-		if self.__armed:
-			rospy.loginfo('Drone armed')
-		else:
-			rospy.loginfo('Drone disarmed')
-		
-	def __onModeChange(self):
-		"""Action to perform if drone flight mode has changed."""
-		self.__mode = self.__drone.getFlightMode()
-		rospy.loginfo('New flight mode: %s', self.__mode)
+			rospy.logwarn('Drone tracking lost')
 	
 	def __sendPWM(self):
 		"""Sends a PWM value from drone pose."""
-		if not self.__drone.isTracked():
-			return
-			
 		if not self.__fansArray.isPowered():
 			return
 		
-		gain = rospy.get_param('~control/pwm_gain')
-		min_ = rospy.get_param('~control/min_wind')
-		max_ = rospy.get_param('~control/max_wind')
+		if not self.__autoWind:
+			return
 		
-		x = self.__drone.getPoseMocap().getX()
-		pwm = int(gain * x)
-		if pwm > max_:
-			pwm = max_
-		elif pwm < min_:
-			pwm = min_
+		if self.__drone.isTracked():
+			gain = rospy.get_param('~control/pwm_gain')
+			min_ = rospy.get_param('~control/min_wind')
+			max_ = rospy.get_param('~control/max_wind')
+			
+			x = self.__drone.getPoseMocap().getX()
+			pwm = int(gain * x)
+			
+			if pwm > max_:
+				pwm = max_
+			elif pwm < min_:
+				pwm = min_
+		else:
+			pwm = 0
 		
 		self.__fansArray.setPWM(pwm)
 		

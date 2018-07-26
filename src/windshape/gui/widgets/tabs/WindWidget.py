@@ -31,10 +31,8 @@ class WindWidget(QWidget):
 		self.layout = QGridLayout()
 		self.setLayout(self.layout)
 		
-		# Only integer from 0 % to 100 %
-		val = QIntValidator(0, 100)
-		
 		# Creates PWM input
+		val = None#QIntValidator(0, 100)
 		label = QLabel('PWM (%):')
 		self.pwm = EditInput(self, val)
 		self.layout.addWidget(label, 0, 0)
@@ -55,7 +53,7 @@ class WindWidget(QWidget):
 	
 	def getValue(self):
 		""" Return the PWM value in % (float) """
-		return int(self.pwm.getValue())
+		return self.pwm.getValue()
 		
 	def isValid(self):
 		""" Return True if the input is valid. """

@@ -1,6 +1,7 @@
 import socket
 import MySQLdb
 import threading
+import random
 
 # ROS main library
 import rospy
@@ -10,17 +11,21 @@ from Module import Module
 
 
 class FansArray(threading.Thread):
-	"""Send PWM values to the fans array.
+	"""Communicates with the fans array.
 	
-	Communicates with the fans array server that hosts a database. Uses
-	MySQL requests to write into the database that the server reads in
-	loop and sends the PWM values to the fans.
+	Communicates with the fans array server hosting a database. Uses
+	MySQL requests to write and read into the database. The server
+	reads the DB in loop and sends the PWM values to the fans.
 	
-	Structure: Module = 2 layers of 9 fans = 18 fans.
+	Module = 2 layers of 9 fans = 18 fans.
 	
-	Written in Module: "pwm" field: "PWM1, PWM2, ..., PWM18"
-	
+	Written in Module: "pwm" field: "PWM0, PWM1, ..., PWM17".
 	Can also power on or off a Module using "isPowered" field.
+	
+	Other fields (RPM, isConnected, ...) are read from DB regularly
+	but not written.
+	
+	Main loop = write commands in DB and read attributes from DB.
 	
 	Inherits from: threading.Thread.
 	
@@ -39,6 +44,10 @@ class FansArray(threading.Thread):
 		# Modules
 		self.__modules = {}
 		
+		# Wind function
+		self.__windFunction = None
+		self.__ref = rospy.get_time()
+		
 		# Run main loop
 		self.setDaemon(True)
 		self.start()
@@ -55,8 +64,8 @@ class FansArray(threading.Thread):
 		con, cur = self.__openDB()
 		self.setPWM(0)
 		self.turnOnPSU(False)
-		self.__updateAttribute(con, cur, 'pwm')
-		self.__updateAttribute(con, cur, 'isPowered')
+		self.__writeToDB(con, cur, 'pwm')
+		self.__writeToDB(con, cur, 'isPowered')
 	
 	def __str__(self):
 		"""Returns a summary of the fans array status."""
@@ -64,8 +73,7 @@ class FansArray(threading.Thread):
 					'Host: {}'.format(self.__serverIP),
 					'Modules: {}'.format(len(self.__modules)),
 					'Connected: {}'.format(self.isConnected()),
-					'Powered: {}'.format(self.isPowered()),
-					'PWM: {}'.format(self.getPWM())
+					'Powered: {}'.format(self.isPowered())
 					])
 	
 	#
@@ -73,14 +81,13 @@ class FansArray(threading.Thread):
 	#
 	
 	def getPWM(self):
-		"""Returns the current PWM value (int) of the fans."""
-		if self.__modules:
-			modID = self.__modules.keys()[0]  # Takes a random module
-			string = self.__modules[modID]['pwm']
-			
-			return int(string.split(',', 2)[0])
+		"""Returns the current PWM values (str)."""
+		pwms = []
 		
-		return 0
+		for module in self.__modules.values():
+			pwms.append(str(module['pwm']))
+		
+		return '\n'.join(pwms)
 		
 	def isConnected(self):
 		"""Returns True if connected to database."""
@@ -95,11 +102,65 @@ class FansArray(threading.Thread):
 		return False
 		
 	def setPWM(self, pwm):
-		"""Assigns a PWM value to all modules."""
+		"""Set a PWM value (int) to all fans."""
+		self.__windFunction = None
+		pwm = self.__validatePWM(pwm)
+		
 		for module in self.__modules.values():
 			pwm_str = ','.join(len(self.__modules)*[str(int(pwm))])
 			module.setAttribute('pwm', pwm_str)
-
+	
+	def setWindFunction(self, windFunction):
+		"""Run a wind function on the fans (str).
+		
+		Variables are x, y and t.
+		"""
+		self.__windFunction = windFunction
+		self.__ref = rospy.get_time()
+		
+	def __runWindFunction(self):
+		"""Evaluates wind function and sends PWM values."""
+		if self.__windFunction is None:
+			return
+		
+		windFunction = self.__windFunction
+		
+		# Time
+		t = rospy.get_time() - self.__ref
+		
+		for module in self.__modules.values():
+			cmds = []
+			
+			# Module info
+			modID = int(module['modID'])
+			posX = int(module['posX'])
+			posY = int(module['posY'])
+			
+			# Get pwm of each fan from XY position (2*9 commands)
+			for j in range(3):
+				for i in range(3):
+					
+					# XY position
+					x = (3*(posX-1) + i) * 0.08
+					y = (3*(posY-1) + j) * 0.08
+					
+					# Evaluates wind function
+					try:
+						pwm = int(eval(str(self.__windFunction)))
+					except Exception as e:
+						rospy.logerr(e)
+						return
+					
+					pwm = self.__validatePWM(pwm, 0, 50)
+					
+					# Add current fans (front + rear) to module command
+					cmds.append(str(int(pwm)))
+					cmds.append(str(int(pwm)))
+			
+			# Store in modules dict
+			pwm_str = ','.join(cmds)
+			module.setAttribute('pwm', pwm_str)
+	
 	def turnOnPSU(self, powered):
 		"""Turns on Power Supply Units if powered is True."""
 		rospy.loginfo('Turn on PSU: '+str(powered))
@@ -122,10 +183,12 @@ class FansArray(threading.Thread):
 			# Update DB in loop
 			while not rospy.is_shutdown():
 				try:
+					self.__runWindFunction()
 					self.__updateDB(con, cur)
 				except MySQLdb.Error as e:
 					rospy.logerr(e)
 					self.__serverIP = None
+					self.__modules = {}
 					break
 				rate.sleep()
 		
@@ -174,7 +237,6 @@ class FansArray(threading.Thread):
 		for module in modules:
 			modID = module[0]
 			self.__modules[modID] = Module(module)
-			rospy.logdebug('Module loaded: %s', self.__modules[modID])
 			
 	def __connectToDB(self):
 		"""Fetches modules in DB and stores them as Module instances."""
@@ -196,7 +258,6 @@ class FansArray(threading.Thread):
 		
 		Returns a MySQLConnection and a MySQLCursor (two objects).
 		"""
-
 		con = MySQLdb.connect(	host=self.__serverIP,
 								user="ws_user",
 								passwd="Aero-1234",
@@ -205,7 +266,50 @@ class FansArray(threading.Thread):
 		
 		return con, cur
 		
-	def __updateAttribute(self, con, cur, attribute):
+	def __readFromDB(self, con, cur, attribute):
+		"""Reads an attribute from DB and updates modules."""
+		# Fetches attribute for all modules with modID
+		with con:
+			cur.execute('SELECT modID, '+attribute+' FROM modules')
+		
+		# 2 values per module (0=modID, 1=value of attribute)
+		modules = cur.fetchall()
+		
+		# Updates attribute for all modules
+		for module in modules:
+			modID = module[0]
+			self.__modules[modID][attribute] = module[1]
+		
+	def __updateDB(self, con, cur):
+		"""Updates the DB and the modules in memory."""
+		if self.__modules:
+			module = self.__modules.values()[0]  # Takes random module
+			
+			for attribute in module.keys():
+				if module.isPermitted(attribute):
+					self.__writeToDB(con, cur, attribute)
+				else:
+					self.__readFromDB(con, cur, attribute)
+	
+	def __validatePWM(self, pwm, min_=0, max_=100):
+		"""Resets a PWM value as an integer between 0 and 100."""
+		pwm = int(pwm)
+		
+		# Manual limits
+		if pwm > max_:
+			pwm = int(max_)
+		elif pwm < min_:
+			pwm = int(min_)
+		
+		# Physical limits
+		if pwm < 5:
+			pwm = 0
+		elif pwm > 100:
+			pwm = 100
+		
+		return pwm
+		
+	def __writeToDB(self, con, cur, attribute):
 		"""Updates an attribute of the modules.
 		
 		Query structure:
@@ -222,10 +326,10 @@ class FansArray(threading.Thread):
 		# Updates attribute as a function of modID
 		cmd = 'UPDATE modules SET '+attribute+'=CASE modID '
 		
-		# commandes: WHEN modID THEN value
 		cmds = []
 		values = []
 		
+		# commands: WHEN modID THEN value
 		for modID, module in self.__modules.items():
 			if module.needsUpdate(attribute):
 				cmds.append('WHEN %s THEN %s')
@@ -242,12 +346,3 @@ class FansArray(threading.Thread):
 		if values:
 			with con:
 				cur.execute(cmd, values)
-			
-	def __updateDB(self, con, cur):
-		"""Updates the DB from the modules in memory."""
-		if self.__modules:
-			modID = self.__modules.keys()[0]  # Takes random module
-			
-			for attribute in self.__modules[modID].keys():
-				self.__updateAttribute(con, cur, attribute)
-			

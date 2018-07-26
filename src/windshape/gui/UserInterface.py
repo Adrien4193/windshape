@@ -499,6 +499,6 @@ class UserInterface(QMainWindow):
 		if self.controlPanel.pwmValid():
 			pwm = self.controlPanel.getPWM()
 			self.showMessage('PWM sent: '+str(pwm))
-			self.fansArray.setPWM(pwm)
+			self.fansArray.setWindFunction(pwm)
 		else:
 			self.showMessage('Invalid PWM')

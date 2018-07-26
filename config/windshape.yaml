@@ -8,7 +8,7 @@ max_files: 10
 
 # Fans array
 fansarray:
-  db_update_rate: 10
+  db_update_rate: 10.0
   broadcast_port: 58084
   auto_wind: False
 

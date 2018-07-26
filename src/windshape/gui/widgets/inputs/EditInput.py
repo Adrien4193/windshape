@@ -13,25 +13,26 @@ class EditInput(QLineEdit):
 	Overrides: __init__
 	"""
 	
-	def __init__(self, parent, validator, max_len=20):
+	def __init__(self, parent, validator=None, max_len=20):
 		"""Creates edit text and set 0 as value.
 		
 		Args:
 			parent (QWidget): The parent widget to insert instance
-			validator (QValidator): Validator used to restrict inputs
+			validator=None (QValidator): Validator used for inputs
 			max_len=20 (int): Maximum number of digits
 		"""
-		
 		super(EditInput, self).__init__(parent)
 		
-		# Initialize to 0 and validity
+		# Initializes to 0 and validity
 		self.setText('0')
 		self.valid = True
 		
-		# Apply max_len parameter and validator with callback
+		# Applies max_len parameter and validator with callback
 		self.setMaxLength(max_len)
-		self.setValidator(validator)
-		self.textChanged.connect(self.__checkValue)
+		
+		if validator is not None:
+			self.setValidator(validator)
+			self.textChanged.connect(self.__checkValue)
 		
 	def getValue(self):
 		"""Returns the current value of the input (str)."""
@@ -51,7 +52,6 @@ class EditInput(QLineEdit):
 		
 	def __checkValue(self, *args, **kwargs):
 		"""Called when text is modified to check validity."""
-
 		# Validate input
 		state = self.validator().validate(self.text(), 0)[0]
 		
