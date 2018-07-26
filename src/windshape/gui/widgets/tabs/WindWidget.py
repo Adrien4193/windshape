@@ -32,8 +32,8 @@ class WindWidget(QWidget):
 		self.setLayout(self.layout)
 		
 		# Creates PWM input
-		val = None#QIntValidator(0, 100)
-		label = QLabel('PWM (%):')
+		val = None
+		label = QLabel('Wind function (%):')
 		self.pwm = EditInput(self, val)
 		self.layout.addWidget(label, 0, 0)
 		self.layout.addWidget(self.pwm, 0, 1)
