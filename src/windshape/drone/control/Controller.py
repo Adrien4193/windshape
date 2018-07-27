@@ -39,7 +39,8 @@ class Controller(object):
 		self.__parameters = ControlParameters()
 		
 		# Filter for manual position setpoint
-		self.__filter = LowPassFilter(200, numpy.zeros(6))
+		par = rospy.get_param('~control/sp_filter')
+		self.__filter = LowPassFilter(par, numpy.zeros(6))
 		
 		# Loads PID parameters
 		pars = rospy.get_param('~control/pid')

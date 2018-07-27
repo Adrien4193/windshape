@@ -44,6 +44,9 @@ control:
   mask: [False, False, False, False]
 
 # Drone offboard PID attitude control
+  sp_filter: 200
+  d_filter: 0.5
+
   pid:
     roll:
       kp: 0.8
@@ -68,7 +71,7 @@ control:
       ff: deg(0)
     thrust:
       kp: 1.5
-      ki: 0.1
+      ki: 0.2
       kd: 0.2
       min: 0.0
       max: 0.8

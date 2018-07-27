@@ -44,7 +44,8 @@ class PIDController(object):
 		self.__feedForward = ff
 		
 		# Derivative filter
-		self.__filter = LowPassFilter(0.5, 0.0)
+		par = rospy.get_param('~control/d_filter')
+		self.__filter = LowPassFilter(par, 0.0)
 		
 		# For integral and derivative computation
 		self.__integral = 0.0
