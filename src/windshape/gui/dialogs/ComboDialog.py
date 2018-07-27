@@ -2,8 +2,9 @@ import os
 import time
 
 # QT
+from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import *
 
 # Custom combo
 from ..widgets.inputs.ComboInput import ComboInput
@@ -78,5 +79,5 @@ class ComboDialog(QDialog):
 			self.accept()
 		
 		# Escape
-		if even.key() == Qt.Key_Escape:
+		if event.key() == Qt.Key_Escape:
 			self.reject()
