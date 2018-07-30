@@ -6,7 +6,7 @@ import timecode
 from threading import Thread
 
 def trace(*args):
-    pass#print(*args)
+    pass#' '.join([str(arg) for arg in args])
 
 # Create structs for reading various object types to speed up parsing.
 ShortValue = struct.Struct('<h')
