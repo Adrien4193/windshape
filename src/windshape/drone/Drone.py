@@ -31,10 +31,10 @@ class Drone(object):
 	See wiki.ros.org/mavros and http://wiki.ros.org/vrpn_client_ros for
 	more information about how these ROS pacakges are working.
 	
-	The control is performed in separated threads using a custom
-	positon controller. The attitude control is done onboard.
+	The position control is performed in separated threads using a
+	custom controller. The attitude control is done onboard.
 	
-	See ControlParameters for control parameters description.
+	See ControlParameters to change the drone's behaviour.
 	
 	Notes:
 		- Units are always [m], [rad], [0-1].

@@ -9,7 +9,5 @@ var searchData=
   ['droneattitude',['DroneAttitude',['../classwindshape_1_1drone_1_1common_1_1_drone_attitude_1_1_drone_attitude.html',1,'windshape::drone::common::DroneAttitude']]],
   ['droneattitude_2epy',['DroneAttitude.py',['../_drone_attitude_8py.html',1,'']]],
   ['dronepose',['DronePose',['../classwindshape_1_1drone_1_1common_1_1_drone_pose_1_1_drone_pose.html',1,'windshape::drone::common::DronePose']]],
-  ['dronepose_2epy',['DronePose.py',['../_drone_pose_8py.html',1,'']]],
-  ['dynsections_2ejs',['dynsections.js',['../dynsections_8js.html',1,'']]],
-  ['drone_20control_20in_20a_20wind_20test_20environment',['Drone control in a wind test environment',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['dronepose_2epy',['DronePose.py',['../_drone_pose_8py.html',1,'']]]
 ];

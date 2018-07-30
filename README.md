@@ -22,7 +22,7 @@ To run this program, you will need:
 
 3. A drone equipped of a PixHawk running PX4 auto-pilot.
 
-4. A WiFi card or dongle to connect to the drone's WiFi access point.
+4. A WiFi card or dongle on the Ubuntu computer to connect to the drone's WiFi access point.
 
 5. A WindShape fans array connected on the same network as the Ubuntu computer.
 
