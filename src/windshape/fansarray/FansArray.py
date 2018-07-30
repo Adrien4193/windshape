@@ -74,7 +74,8 @@ class FansArray(threading.Thread):
 					'Host: {}'.format(self.__serverIP),
 					'Modules: {}'.format(len(self.__modules)),
 					'Connected: {}'.format(self.isConnected()),
-					'Powered: {}'.format(self.isPowered())
+					'Powered: {}'.format(self.isPowered()),
+					'WindFunction: {}'.format(self.__windFunction)
 					])
 	
 	#
@@ -95,12 +96,12 @@ class FansArray(threading.Thread):
 		return self.__serverIP is not None
 		
 	def isPowered(self):
-		"""Returns True if the power supply is on."""
-		if self.__modules:
-			modID = self.__modules.keys()[0]  # Takes a random module
-			return bool(self.__modules[modID]['isPowered'])
+		"""Returns True if all power supplies are on."""
+		for module in self.__modules.values():
+			if not bool(module['isPowered']):
+				return False
 		
-		return False
+		return bool(self.__modules)
 		
 	def setPWM(self, pwm):
 		"""Set a PWM value (int) to all fans."""
@@ -150,6 +151,7 @@ class FansArray(threading.Thread):
 						pwm = int(eval(str(self.__windFunction)))
 					except Exception as e:
 						rospy.logerr(e)
+						self.__windFunction = None
 						return
 					
 					pwm = self.__validatePWM(pwm, 0, 50)
@@ -215,7 +217,7 @@ class FansArray(threading.Thread):
 			message, sAddr = sock.recvfrom(256)
 			rospy.logdebug('Message received: %s', message)
 			
-			# Checks message received is the server broadcast
+			# Checks if message received is the server broadcast
 			if message == 'WINDSHAPE':
 				rospy.loginfo('Server found at %s', sAddr[0])
 				self.__serverIP = sAddr[0]
@@ -332,7 +334,7 @@ class FansArray(threading.Thread):
 		
 		# commands: WHEN modID THEN value
 		for modID, module in self.__modules.items():
-			if module.needsUpdate(attribute):
+			if module.needsToUpdate(attribute):
 				cmds.append('WHEN %s THEN %s')
 				values.append(modID)
 				values.append(module[attribute])

@@ -12,9 +12,25 @@ Check doxygen documentation [here](https://adrien4193.github.io/windshape/index.
 
 This package has been tested on Ubuntu 16.04 in native and Virtual Machine with ROS Kinetic but other Linux and ROS configurations may work as well.
 
+#### Hardware
+
+To run this program, you will need:
+
+1. A Windows computer connected to the OptiTrack cameras running Motive.
+
+2. An Ubuntu computer (or Virtual Machine) connected on the same network as the Windows one.
+
+3. A drone equipped of a PixHawk running PX4 auto-pilot.
+
+4. A WiFi card or dongle to connect to the drone's WiFi access point.
+
+5. A WindShape fans array connected on the same network as the Ubuntu computer.
+
+#### Software
+
 1. Install Ubuntu 16.04 ([download](http://releases.ubuntu.com/16.04)).
 
-2. Install ROS Kinetic using [this tutorial](http://wiki.ros.org/kinetic/Installation/Ubuntu).
+2. Install ROS Kinetic as described in [this tutorial](http://wiki.ros.org/kinetic/Installation/Ubuntu).
 
 3. Configure your ROS environment as described [here](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment).
 
@@ -92,6 +108,8 @@ Run the GUI using roslaunch command:
 `roslaunch windshape control.launch`
 
 You should see the interface.
+
+The parameters can be edited in windshape.yaml.
 
 ## Authors
 

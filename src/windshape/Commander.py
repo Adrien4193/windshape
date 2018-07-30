@@ -95,6 +95,9 @@ class Commander(object):
 		"""
 		if not activate and self.__autoWind:
 			self.__fansArray.setPWM(0)
+			
+		if activate and not self.__autoWind:
+			self.__fansArray.setWindFunction(None)
 		
 		self.__autoWind = activate
 	

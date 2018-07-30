@@ -52,7 +52,8 @@ class ControlParameters(object):
 		self.__mimic = rospy.get_param('~control/mimic')
 		
 		# Manual pose and attitude to reach
-		self.__setpoint = DronePose()
+		setpoint = rospy.get_param('~control/setpoint')
+		self.__setpoint = DronePose(*setpoint)
 		self.__attitude = DroneAttitude()
 		
 		# Use or not offboard position controller

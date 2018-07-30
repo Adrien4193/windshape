@@ -92,7 +92,7 @@ class Module(dict):
 		"""Returns True if the attribute (str) can be written in DB."""
 		return attribute in self.__permitted
 	
-	def needsUpdate(self, attribute):
+	def needsToUpdate(self, attribute):
 		"""Returns True if the attribute (str) needs to be updated."""
 		if attribute not in self.keys():
 			rospy.logerr('Wrong attribute: %s', attribute)

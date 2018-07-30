@@ -72,9 +72,6 @@ class RigidBody(object):
 		self.__topic = '/vrpn_client_node/'+label+'/pose'
 		self.__sub = MySubscriber(self.__topic, PoseStamped)
 		
-		# Heartbeat timeout (lost if no publication since...)
-		self.__timeout = rospy.get_param('~tracking/timeout')
-		
 		rospy.logdebug('RigidBody count: %d', RigidBody.__count)
 		
 	def __del__(self):
@@ -134,7 +131,4 @@ class RigidBody(object):
 		timestamp = self.getPoseStamped().header.stamp.to_sec()
 		dt = rospy.get_time() - timestamp
 		
-		if dt < self.__timeout:
-			return True
-			
-		return False
+		return dt < rospy.get_param('~tracking/timeout')

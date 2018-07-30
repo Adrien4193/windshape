@@ -1,0 +1,27 @@
+# Miscellaneaous files
+
+## Clients
+
+OptiTrack clients to collect motion capture data.
+
+### Direct
+
+Direct depacketization in C++ from NatNet 3.0 or older. The .cpp file is all you need to make it work on Visual Studio 2017.
+
+### NatNet
+
+Depacketization using NatNet SDK (32 bits). Includes the SDK header files, the static and dynamic libraries and the source file. Tested on Visual Studio 2017.
+
+You have to put the .dll beside the executable and the .lib beside the source file (.cpp). The include directory must be specified under project properties (C/C++ tab).
+
+### Python
+
+NatNetClient Python class to unpack directly the NatNet 3.0 stream. Run client.py with NatNetClient.py in the same directory.
+
+### VRPN
+
+VRPN C++ client that can re-stream the data in TCP. Same installation as NatNet but without the .dll file.
+
+## Server
+
+WindShape fans array Python code that runs on the wind tunnel server (runs main.py).
