@@ -51,6 +51,7 @@ class UserInterface(QMainWindow):
 		self.armed = False
 		self.tracked = False
 		self.powered = False
+		self.faconnected = False
 		
 		# Setup UI
 		self.setupUI()
@@ -319,6 +320,10 @@ class UserInterface(QMainWindow):
 		if self.powered != self.fansArray.isPowered():
 			self.powered = self.fansArray.isPowered()
 			self.updateToolbar = True
+			
+		if self.faconnected != self.fansArray.isConnected():
+			self.faconnected = self.fansArray.isConnected()
+			self.updateToolbar = True
 	
 	def updateStatusBar(self):
 		"""Updates the status bar message."""
@@ -359,11 +364,14 @@ class UserInterface(QMainWindow):
 		
 	def updateToggleAction(self):
 		"""Change fans array power supply icon."""
-		if self.fansArray.isPowered():
+		if self.fansArray.isConnected():
 			self.toggleAction.setIcon(self.icon_green)
-			self.toggleAction.setToolTip('PSU on')
 		else:
 			self.toggleAction.setIcon(self.icon_red)
+			
+		if self.fansArray.isPowered():
+			self.toggleAction.setToolTip('PSU on')
+		else:
 			self.toggleAction.setToolTip('PSU off')
 		
 	def updateTrackAction(self):

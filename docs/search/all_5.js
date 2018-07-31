@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['faconnected',['faconnected',['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#af8f7a87cea85dbc6c222675f7af560bd',1,'windshape::gui::UserInterface::UserInterface']]],
   ['fansarray',['FansArray',['../classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html',1,'windshape.fansarray.FansArray.FansArray'],['../classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a62d63ed0c4f9309cce4154decfb5df10',1,'windshape.gui.UserInterface.UserInterface.fansArray()']]],
   ['fansarray_2epy',['FansArray.py',['../_fans_array_8py.html',1,'']]],
   ['figure',['figure',['../classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a15c1ec8b8d8490656251af8b7c5ee0d0',1,'windshape::gui::widgets::plots::PlotWidget::PlotWidget']]],

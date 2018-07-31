@@ -21,6 +21,7 @@ var searchData=
   ['initui',['initUI',['../classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html#a802c62de1cf00313fb8cac28b298ef89',1,'windshape::gui::widgets::plots::PlotWidget::PlotWidget']]],
   ['isarmed',['isArmed',['../classwindshape_1_1drone_1_1_drone_1_1_drone.html#a161d7774319e5de5dd7f13f5c66b64a3',1,'windshape::drone::Drone::Drone']]],
   ['isconnected',['isConnected',['../classwindshape_1_1drone_1_1_drone_1_1_drone.html#a0d6c9c56fd735733f4a2268896c30d37',1,'windshape.drone.Drone.Drone.isConnected()'],['../classwindshape_1_1fansarray_1_1_fans_array_1_1_fans_array.html#a3f362f3af198dd178fa5aaf593f525bb',1,'windshape.fansarray.FansArray.FansArray.isConnected()']]],
+  ['iscontrolled',['isControlled',['../classwindshape_1_1drone_1_1_drone_1_1_drone.html#ad62bbefe97bddeef79066e1355204b6b',1,'windshape::drone::Drone::Drone']]],
   ['isfollowingtarget',['isFollowingTarget',['../classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#afd4d96aa53b5b60987a8b97fcaed2e92',1,'windshape::drone::control::ControlParameters::ControlParameters']]],
   ['ismimingtarget',['isMimingTarget',['../classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#a5c55403f152d45380fadd7b2fbabb998',1,'windshape::drone::control::ControlParameters::ControlParameters']]],
   ['ispermitted',['isPermitted',['../classwindshape_1_1fansarray_1_1_module_1_1_module.html#a70a79aebd56f7a6e3ef75f492164c73a',1,'windshape::fansarray::Module::Module']]],

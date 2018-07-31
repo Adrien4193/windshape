@@ -29,7 +29,7 @@ class Drone(object):
 	and the motion capture system.
 	
 	See wiki.ros.org/mavros and http://wiki.ros.org/vrpn_client_ros for
-	more information about how these ROS pacakges are working.
+	more information about how these ROS packages are working.
 	
 	The position control is performed in separated threads using a
 	custom controller. The attitude control is done onboard.
@@ -96,7 +96,8 @@ class Drone(object):
 				'FCU:',
 				'Connected: {}'.format(self.isConnected()),
 				'Armed: {}'.format(self.isArmed()),
-				'Mode: {}'.format(self.getFlightMode())
+				'Mode: {}'.format(self.getFlightMode()),
+				'Controlled: {}'.format(self.isControlled())
 				])
 			
 		mocap = '\n    '.join([
@@ -193,6 +194,14 @@ class Drone(object):
 		"""
 		return self.__listener.getState().connected
 		
+	def isControlled(self):
+		"""Returns True if the offboard control can be performed.
+		
+		The drone will respond to control only if True.
+		"""
+		return (self.isConnected() and self.isArmed() and
+				self.getFlightMode() == 'OFFBOARD')
+		
 	def isTracked(self):
 		"""Returns True if the drone is tracked by the mocap system.
 		
@@ -263,26 +272,25 @@ class Drone(object):
 		"""Performs position control on drone (weakref).
 		
 		Notes:
-			- Must always send something to enable OFFBOARD mode.
+			- Musts always send something to enable OFFBOARD mode.
 		"""
 		if drone() is None:
 			return
 		
 		control = drone().getControlParameters()
-		pose = drone().getPoseMocap().toArray()
-		estimate = drone().getPoseEstimate().toArray()
-		flightMode = drone().getFlightMode()
 		publisher = drone().__publisher
 		
 		# Control is done offboard -> Sends attitude to reach setpoint
 		if control.isUsingOffboardControl():
 			
-			if not drone().isArmed() or flightMode != 'OFFBOARD':
-				drone().__controller.reset()
-				attitude = DroneAttitude()
-			else:
+			if drone().isControlled():
+				pose = drone().getPoseMocap().toArray()
+				estimate = drone().getPoseEstimate().toArray()
 				controlInput = drone().__controller(pose, estimate)
 				attitude = DroneAttitude(*controlInput)
+			else:
+				drone().__controller.reset()
+				attitude = DroneAttitude()
 			
 			publisher.sendSetpointAttitude(attitude.toPoseStamped())
 			publisher.sendSetpointThrust(attitude.getThrust())
@@ -290,8 +298,8 @@ class Drone(object):
 		# Control is done onboard -> Just sends pose to reach
 		else:
 			drone().__controller.reset()
-			setpoint = control.getSetpoint().toPoseStamped()
-			publisher.sendSetpointPosition(setpoint)
+			setpoint = control.getSetpoint()
+			publisher.sendSetpointPosition(setpoint.toPoseStamped())
 			
 	def __getMeasurements(self):
 		"""Create measurements string (str)."""

@@ -59,12 +59,16 @@ class FansArray(threading.Thread):
 		"""Set PWM to 0 and switch off the power supply."""
 		rospy.logdebug('FansArray destruction')
 		
-		if self.__serverIP is None:
+		# Safety
+		if not self.isConnected():
 			return
 		
+		# Access from outside thread
 		con, cur = self.__openDB()
 		self.setPWM(0)
 		self.turnOnPSU(False)
+		
+		# Force DB update as not running any more
 		self.__writeToDB(con, cur, 'pwm')
 		self.__writeToDB(con, cur, 'isPowered')
 	
@@ -119,7 +123,139 @@ class FansArray(threading.Thread):
 		"""
 		self.__windFunction = windFunction
 		self.__ref = rospy.get_time()
+	
+	def turnOnPSU(self, powered):
+		"""Turns on Power Supply Units if powered is True."""
+		rospy.loginfo('Turn on PSU: '+str(powered))
+		for module in self.__modules.values():
+			module.setAttribute('isPowered', int(powered))
+	
+	#
+	# Private methods
+	#
+	
+	def run(self):
+		"""Updates the database at defined rate."""
+		rate = rospy.Rate(rospy.get_param('~fansarray/db_update_rate'))
 		
+		while not rospy.is_shutdown():
+		
+			# Wait for server connection
+			con, cur = self.__connectToDB()
+			
+			if con is None or cur is None:
+				continue
+			
+			# Update DB in loop
+			while not rospy.is_shutdown():
+				try:
+					self.__runWindFunction()
+					self.__updateDB(con, cur)
+				except MySQLdb.Error as e:
+					rospy.logerr(e)
+					self.__serverIP = None
+					self.__modules = {}
+					break
+				rate.sleep()
+	
+	def __connectToDB(self):
+		"""Fetches modules in DB and stores them as Module instances."""
+		rospy.loginfo('Loading modules from database')
+		
+		# Blocks until DB host found
+		self.__findServer()
+		
+		# Connects to DB
+		con, cur = self.__openDB()
+		
+		# Loads modules
+		if con is not None or cur is not None:
+			self.__loadModules(con, cur)
+			rospy.loginfo('Modules successfully loaded')
+		
+		return con, cur
+		
+	def __findServer(self):
+		"""Returns DB host IP (str) if server is broadcasting.
+		
+		Notes:
+			Blocks until message received.
+		"""
+		port = rospy.get_param('~fansarray/broadcast_port')
+		rospy.loginfo('Waiting for server broadcast on port %d', port)
+		
+		# Client socket on known port
+		sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+		sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+		sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+		sock.setblocking(False)
+		sock.bind(('', port))
+		
+		while not rospy.is_shutdown():
+			rospy.sleep(0.1)
+			
+			# Listens for broadcasts from database host
+			try:
+				message, sAddr = sock.recvfrom(256)
+				rospy.logdebug('Message received: %s', message)
+			except socket.error as e:
+				#rospy.logdebug(e)
+				continue
+			
+			# Checks if message received is the server broadcast
+			if message == 'WINDSHAPE':
+				rospy.loginfo('Server found at %s', sAddr[0])
+				self.__serverIP = sAddr[0]
+				break
+		
+	def __loadModules(self, con, cur):
+		"""Get modules list from database."""
+		# Fetches modules (list of tuples)
+		with con:
+			cur.execute("""
+						SELECT modID, macAddr, ipAddr, posX, posY,
+								nFans, nLayers, pwm, rpm, 
+								isConnected, isFlashing, isPowered,
+								lifePoints, isRebooting, isSendingRPM 
+						FROM  modules
+						""")
+		modules = cur.fetchall()
+		
+		# Stores modules
+		for module in modules:
+			modID = module[0]
+			self.__modules[modID] = Module(module)
+		
+	def __openDB(self):
+		"""Open a MySQL connection at given IP (str).
+		
+		Returns a MySQLConnection and a MySQLCursor (two objects).
+		"""
+		if not self.isConnected():
+			return None, None
+		
+		con = MySQLdb.connect(	host=self.__serverIP,
+								user="ws_user",
+								passwd="Aero-1234",
+								db="mysql")
+		cur = con.cursor()
+		
+		return con, cur
+		
+	def __readFromDB(self, con, cur, attribute):
+		"""Reads an attribute from DB and updates modules."""
+		# Fetches attribute for all modules with modID
+		with con:
+			cur.execute('SELECT modID, '+attribute+' FROM modules')
+		
+		# 2 values per module (0=modID, 1=value of attribute)
+		modules = cur.fetchall()
+		
+		# Updates attribute for all modules
+		for module in modules:
+			modID = module[0]
+			self.__modules[modID][attribute] = module[1]
+	
 	def __runWindFunction(self):
 		"""Evaluates wind function and sends PWM values."""
 		if self.__windFunction is None:
@@ -163,136 +299,19 @@ class FansArray(threading.Thread):
 			# Store in modules dict
 			pwm_str = ','.join(cmds)
 			module.setAttribute('pwm', pwm_str)
-	
-	def turnOnPSU(self, powered):
-		"""Turns on Power Supply Units if powered is True."""
-		rospy.loginfo('Turn on PSU: '+str(powered))
-		for module in self.__modules.values():
-			module.setAttribute('isPowered', int(powered))
-	
-	#
-	# Private methods
-	#
-	
-	def run(self):
-		"""Updates the database at given rate."""
-		rate = rospy.Rate(rospy.get_param('~fansarray/db_update_rate'))
-		
-		while not rospy.is_shutdown():
-		
-			# Wait for server connection
-			con, cur = self.__connectToDB()
-			
-			# Update DB in loop
-			while not rospy.is_shutdown():
-				try:
-					self.__runWindFunction()
-					self.__updateDB(con, cur)
-				except MySQLdb.Error as e:
-					rospy.logerr(e)
-					self.__serverIP = None
-					self.__modules = {}
-					break
-				rate.sleep()
-		
-	def __findServer(self):
-		"""Returns DB host IP (str) if server is broadcasting.
-		
-		Notes:
-			Blocks until message received.
-		"""
-		port = rospy.get_param('~fansarray/broadcast_port')
-		rospy.loginfo('Waiting for server broadcast on port %d', port)
-		
-		# Client socket on known port
-		sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-		sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-		sock.setblocking(True)
-		sock.bind(('', port))
-		
-		while not rospy.is_shutdown():
-			
-			# Listens for broadcasts from database host
-			message, sAddr = sock.recvfrom(256)
-			rospy.logdebug('Message received: %s', message)
-			
-			# Checks if message received is the server broadcast
-			if message == 'WINDSHAPE':
-				rospy.loginfo('Server found at %s', sAddr[0])
-				self.__serverIP = sAddr[0]
-				break
-		
-	def __loadModules(self, con, cur):
-		"""Get modules list from database."""
-		# Fetches modules (list of tuples)
-		with con:
-			cur.execute("""
-						SELECT modID, macAddr, ipAddr, posX, posY,
-								nFans, nLayers, pwm, rpm, 
-								isConnected, isFlashing, isPowered,
-								lifePoints, isRebooting, isSendingRPM 
-						FROM  modules
-						""")
-		modules = cur.fetchall()
-		
-		# Stores modules
-		for module in modules:
-			modID = module[0]
-			self.__modules[modID] = Module(module)
-			
-	def __connectToDB(self):
-		"""Fetches modules in DB and stores them as Module instances."""
-		rospy.loginfo('Loading modules from database')
-		
-		# Block until DB host found
-		self.__findServer()
-		
-		# Loads modules from DB
-		con, cur = self.__openDB()
-		self.__loadModules(con, cur)
-		
-		rospy.loginfo('Modules successfully loaded')
-		
-		return con, cur
-			
-	def __openDB(self):
-		"""Open a MySQL connection at given IP (str).
-		
-		Returns a MySQLConnection and a MySQLCursor (two objects).
-		"""
-		con = MySQLdb.connect(	host=self.__serverIP,
-								user="ws_user",
-								passwd="Aero-1234",
-								db="mysql")
-		cur = con.cursor()
-		
-		return con, cur
-		
-	def __readFromDB(self, con, cur, attribute):
-		"""Reads an attribute from DB and updates modules."""
-		# Fetches attribute for all modules with modID
-		with con:
-			cur.execute('SELECT modID, '+attribute+' FROM modules')
-		
-		# 2 values per module (0=modID, 1=value of attribute)
-		modules = cur.fetchall()
-		
-		# Updates attribute for all modules
-		for module in modules:
-			modID = module[0]
-			self.__modules[modID][attribute] = module[1]
 		
 	def __updateDB(self, con, cur):
 		"""Updates the DB and the modules in memory."""
-		if self.__modules:
-			module = self.__modules.values()[0]  # Takes random module
+		if not self.__modules:
+			return
 			
-			for attribute in module.keys():
-				if module.isPermitted(attribute):
-					self.__writeToDB(con, cur, attribute)
-				else:
-					self.__readFromDB(con, cur, attribute)
+		module = self.__modules.values()[0]  # Takes random module
+		
+		for attribute in module.keys():
+			if module.isPermitted(attribute):
+				self.__writeToDB(con, cur, attribute)
+			else:
+				self.__readFromDB(con, cur, attribute)
 	
 	def __validatePWM(self, pwm, min_=0, max_=100):
 		"""Resets a PWM value as an integer between 0 and 100."""
