@@ -1,5 +1,9 @@
 # Miscellaneaous files
 
+## Alternatives
+
+Alternatives to MAVROS code samples using Dronecore (cpp) and DroneKit (py).
+
 ## Clients
 
 OptiTrack clients to collect motion capture data.
