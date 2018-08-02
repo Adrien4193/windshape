@@ -1,5 +1,7 @@
 # Miscellaneaous files
 
+These files are not part of the ROS package but available for additional informations.
+
 ## Alternatives
 
 Alternatives to MAVROS code samples using Dronecore (cpp) and DroneKit (py).
