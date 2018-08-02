@@ -28,6 +28,10 @@ NatNetClient Python class to unpack directly the NatNet 3.0 stream. Run client.p
 
 VRPN C++ client that can re-stream the data in TCP. Same installation as NatNet but without the .dll file.
 
+## Parameters
+
+QGroundControl parameters used for this project (perso.params) and originally set by manufacturer (intel_default.params). CAUTION: The default are for a 3S LiPo battery.
+
 ## Server
 
 WindShape fans array Python code that runs on the wind tunnel server (runs main.py).
