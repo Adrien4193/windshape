@@ -15,13 +15,16 @@
 	<arg name="server" default="192.168.56.1" />
 	<arg name="port" default="3883" />
 	
-	<!-- Connection to PixHawk (default = Intel Aero in UDP)
+	<!-- Connection URL to PX4 device
 		- Connection through serial port (Unix):
 			"/dev/ttyACM0:[baudrate]"
 		- Connection through UDP:
 			"udp://[host_ip]:[host_port]@[remote_ip]:[remote_port]"
+			
+			Default host is localhost and remote IP is auto-discovered
+			if the default QGC ports are defined (14550 and 14555).
 	-->
-	<arg name="fcu_url" default="udp://:14550@192.168.8.1:14555" />
+	<arg name="fcu_url" default="udp://:14550@:14555" />
 	
 	<!-- ========================== NODES ========================== -->
 	
