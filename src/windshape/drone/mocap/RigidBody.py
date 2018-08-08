@@ -45,7 +45,7 @@ class RigidBody(object):
 		
 		# Extracts names of the rigid bodies from topic names
 		for topic in topics:
-			if 'pose' in topic:
+			if 'pose' in topic[0]:
 				label = topic[0].split('/')[-2]
 				labels.append(label)
 		labels.sort()

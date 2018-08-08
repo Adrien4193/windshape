@@ -75,7 +75,7 @@ control:
     thrust:
       kp: 1.5
       ki: 0.2
-      kd: 0.2
+      kd: 0.1
       min: 0.0
       max: 0.8
       ff: 0.35
