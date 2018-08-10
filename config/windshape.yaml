@@ -31,7 +31,7 @@ control:
   # Wind
   pwm_gain: 100
   min_wind: 5
-  max_wind: 60
+  max_wind: 100
   
   # Setpoint
   setpoint: [0, 0, 0.5, 0]
@@ -46,7 +46,7 @@ control:
   offboard: True
   mask: [False, False, False, False]
 
-# Drone offboard PID attitude control
+  # Drone offboard PID attitude control
   sp_filter: 200
   d_filter: 0.5
 
@@ -73,9 +73,9 @@ control:
       max: deg(180)
       ff: deg(0)
     thrust:
-      kp: 1.5
-      ki: 0.2
-      kd: 0.1
+      kp: 1.0
+      ki: 0.35
+      kd: 0.15
       min: 0.0
       max: 0.8
       ff: 0.35

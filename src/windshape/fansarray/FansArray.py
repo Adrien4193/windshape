@@ -290,7 +290,7 @@ class FansArray(threading.Thread):
 						self.__windFunction = None
 						return
 					
-					pwm = self.__validatePWM(pwm, 0, 50)
+					pwm = self.__validatePWM(pwm, 0, 100)
 					
 					# Add current fans (front + rear) to module command
 					cmds.append(str(int(pwm)))
