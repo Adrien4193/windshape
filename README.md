@@ -111,6 +111,20 @@ You should see the interface.
 
 The parameters can be edited in windshape.yaml.
 
+## Video
+
+Drone control in mode "follow target": [video here](https://drive.google.com/open?id=1739lTYdr3A3ERDlvbINxapeQnbph3eQg).
+
+Drone control using attitude of the target: [video here](https://drive.google.com/open?id=1CpWrYsjDy3I_B_7iK03V-LxNd--XeB8Q).
+
+Drone control using a static setpoint: [video here](https://drive.google.com/open?id=1SVKOROsadPDNJ22xZDzd3Sw2hg5H9TJ7).
+
+Wind control using drone pitch (better with sound): [video here](https://drive.google.com/open?id=1Drrw3u30u8EaXehTX62B3-S0HLGWBAgt).
+
+Wind function: [video here](https://drive.google.com/open?id=1pshqk90JXQU0623GQq7QOQQnzgkKgJDV).
+
+Drone and wind: [video here](https://drive.google.com/open?id=1b6yyCfbO6iSfz79UblGvRwTAiixKAUkF).
+
 ## Authors
 
 * **Adrien Fleury** - *Package creation* - [Adrien4193](https://github.com/Adrien4193)
