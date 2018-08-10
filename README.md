@@ -107,9 +107,15 @@ Run the GUI using roslaunch command:
 
 `roslaunch windshape control.launch`
 
-You should see the interface.
+You should see the interface and the drone will be automatically detected.
 
 The parameters can be edited in windshape.yaml.
+
+To see the replay of the plots:
+
+`rosrun windshape replay`
+
+You will have an interface to choose the log file (.txt).
 
 ## Video
 
