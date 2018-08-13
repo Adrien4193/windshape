@@ -35,3 +35,7 @@ QGroundControl parameters used for this project (perso.params) and originally se
 ## Server
 
 WindShape fans array Python code that runs on the wind tunnel server (runs main.py).
+
+## Matlab
+
+Simple MATLAB script to see the step response of a low-pass filter as a function of its parameter.
