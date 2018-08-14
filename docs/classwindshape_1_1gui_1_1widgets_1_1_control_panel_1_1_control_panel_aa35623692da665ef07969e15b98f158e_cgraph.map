@@ -1,8 +1,0 @@
-<map id="windshape.gui.widgets.ControlPanel.ControlPanel.__init__" name="windshape.gui.widgets.ControlPanel.ControlPanel.__init__">
-<area shape="rect" id="node2" href="$classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#a737c867fe353e2aa44e064cd46633d21" title="windshape.gui.widgets.Control\lPanel.ControlPanel.createSetpointTab" alt="" coords="253,5,497,47"/>
-<area shape="rect" id="node3" href="$classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#a60f1e1548d1f79aac6f474c0beaabbfa" title="windshape.gui.widgets.Control\lPanel.ControlPanel.createAttitudeTab" alt="" coords="255,71,496,112"/>
-<area shape="rect" id="node4" href="$classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#a354b1be4355bbb095dca97edfdc64b0a" title="windshape.gui.widgets.Control\lPanel.ControlPanel.createWindTab" alt="" coords="262,136,489,177"/>
-<area shape="rect" id="node5" href="$classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#af7ffe8727031aa36ee612fe6b2e44e8f" title="windshape.gui.widgets.Control\lPanel.ControlPanel.createInfoTab" alt="" coords="266,201,485,243"/>
-<area shape="rect" id="node6" href="$classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#a399541328b581ef0ba6a56fa7309b3d4" title="windshape.gui.widgets.Control\lPanel.ControlPanel.createPlotTab" alt="" coords="266,267,485,308"/>
-<area shape="rect" id="node7" href="$classwindshape_1_1gui_1_1widgets_1_1_control_panel_1_1_control_panel.html#afac9dab02e9d0ffaa5f6e6df0c2cd9dd" title="windshape.gui.widgets.Control\lPanel.ControlPanel.createSettingsTab" alt="" coords="253,332,497,373"/>
-</map>

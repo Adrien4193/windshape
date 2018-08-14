@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['_5f_5finit_5f_5f_2epy',['__init__.py',['../____init_____8py.html',1,'(Global Namespace)'],['../drone_2____init_____8py.html',1,'(Global Namespace)'],['../drone_2common_2____init_____8py.html',1,'(Global Namespace)'],['../drone_2control_2____init_____8py.html',1,'(Global Namespace)'],['../drone_2fcu_2____init_____8py.html',1,'(Global Namespace)'],['../drone_2mocap_2____init_____8py.html',1,'(Global Namespace)'],['../fansarray_2____init_____8py.html',1,'(Global Namespace)'],['../gui_2____init_____8py.html',1,'(Global Namespace)'],['../gui_2dialogs_2____init_____8py.html',1,'(Global Namespace)'],['../gui_2widgets_2____init_____8py.html',1,'(Global Namespace)'],['../gui_2widgets_2inputs_2____init_____8py.html',1,'(Global Namespace)'],['../gui_2widgets_2plots_2____init_____8py.html',1,'(Global Namespace)'],['../gui_2widgets_2tabs_2____init_____8py.html',1,'(Global Namespace)'],['../log_2____init_____8py.html',1,'(Global Namespace)']]]
-];

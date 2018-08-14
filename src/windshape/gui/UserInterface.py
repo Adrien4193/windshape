@@ -434,8 +434,8 @@ class UserInterface(QMainWindow):
 		
 	def updatePlot(self):
 		"""Plots drone pose (mocap, FCU, setpoint)."""
-		mocap = self.drone.getPoseMocap()
-		estimated = self.drone.getPoseEstimate()
+		mocap = self.drone.getPose()
+		estimated = self.drone.getEstimate()
 		setpoint = self.drone.getControlParameters().getSetpoint()
 		
 		# Send to control panel as list with source label
@@ -448,7 +448,7 @@ class UserInterface(QMainWindow):
 		body, target = self.controlPanel.getMocapParameters()
 		
 		if body != self.drone.getMocapLabel():
-			self.drone.setMocapLabel(body)
+			self.drone.setRigidBody(body)
 			self.showMessage('Drone tracker set to '+str(body))
 			
 		if target != self.control.getTarget().getLabel():

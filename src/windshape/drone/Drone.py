@@ -40,8 +40,8 @@ class Drone(object):
 		- Units are always [m], [rad], [0-1].
 		- The global frame coordinate used is the mocap one.
 		- The drone must be aligned with the X axis of the global frame
-			BEFORE creating its rigid body to have its real body frame
-			aligned with its mocap body frame.
+			BEFORE creating its rigid body to have the same reference
+			as the mocap.
 	
 	Inherits from: object.
 	
@@ -164,7 +164,7 @@ class Drone(object):
 		"""
 		return self.__getMeasurements()
 		
-	def getPoseEstimate(self):
+	def getEstimate(self):
 		"""Returns the drone pose estimated by the FCU (DronePose).
 		
 		Note:
@@ -172,11 +172,11 @@ class Drone(object):
 		"""
 		return DronePose.fromPoseStamped(self.__listener.getPose())
 		
-	def getPoseMocap(self):
+	def getPose(self):
 		"""Returns the drone pose from the mocap system (DronePose).
 		
 		Corresponds to the pose of the rigid body associated to the
-		drone using setMocapLabel method.
+		drone using setRigidBody method.
 		"""
 		return self.__body.getPose()
 		
@@ -229,7 +229,7 @@ class Drone(object):
 		"""
 		self.__client.callSetMode(mode)
 	
-	def setMocapLabel(self, label):
+	def setRigidBody(self, label):
 		"""Assigns a rigid body to the drone to measure its pose.
 		
 		Args:
@@ -284,8 +284,8 @@ class Drone(object):
 		if control.isUsingOffboardControl():
 			
 			if drone().isControlled():
-				pose = drone().getPoseMocap().toArray()
-				estimate = drone().getPoseEstimate().toArray()
+				pose = drone().getPose().toArray()
+				estimate = drone().getEstimate().toArray()
 				controlInput = drone().__controller(pose, estimate)
 				attitude = DroneAttitude(*controlInput)
 			else:
@@ -306,8 +306,8 @@ class Drone(object):
 		control = self.getControlParameters()
 		
 		setpoint = control.getSetpoint().toString('Setpoint')
-		mocap = self.getPoseMocap().toString('Mocap')
-		estimate = self.getPoseEstimate().toString('Estimate')
+		mocap = self.getPose().toString('Mocap')
+		estimate = self.getEstimate().toString('Estimate')
 		
 		return '\n\n'.join([setpoint, mocap, estimate])
 	

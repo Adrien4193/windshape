@@ -1,5 +1,0 @@
-<map id="windshape.drone.mocap.RigidBody.RigidBody.getPoseStamped" name="windshape.drone.mocap.RigidBody.RigidBody.getPoseStamped">
-<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#a253804cb7092d4e5084ba1312dc7219a" title="windshape.drone.mocap.Rigid\lBody.RigidBody.getPose" alt="" coords="273,5,471,47"/>
-<area shape="rect" id="node4" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#ad094c24d63255feeb6280825e7731596" title="windshape.drone.mocap.Rigid\lBody.RigidBody.isTracked" alt="" coords="273,71,471,112"/>
-<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#afdba89fb5adee293cf44812c6887dc1a" title="windshape.drone.mocap.Rigid\lBody.RigidBody.__str__" alt="" coords="519,39,716,80"/>
-</map>

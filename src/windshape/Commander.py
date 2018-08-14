@@ -20,7 +20,7 @@ class Commander(object):
 	See Drone and FansArray to communicate with them.
 	
 	Uses separated threads to record the drone status, pose and control
-	inputs, warn user about changes and control the wind as a function
+	inputs, warn user about changes and controls the wind as a function
 	of the drone pose.
 	
 	Inherits from: object.
@@ -70,7 +70,7 @@ class Commander(object):
 	# Public methods to access drone and fans array interfaces and
 	# activate the wind as a function of the drone pose.
 	#
-		
+	
 	def getDrone(self):
 		"""Returns the drone interface (Drone).
 		
@@ -88,10 +88,10 @@ class Commander(object):
 	def setAutoWind(self, activate):
 		"""Activate or desactivate automatic wind.
 		
-		Auto-wind is proportional to the drone X position.
+		Auto-wind is proportional one the drone pose coordinates.
 		
 		Args:
-			activate (bool): Activate auto wind if True.
+			activate (bool): Activates auto wind if True.
 		"""
 		if not activate and self.__autoWind:
 			self.__fansArray.setPWM(0)
@@ -213,15 +213,17 @@ class Commander(object):
 		if not self.__fansArray.isPowered():
 			return
 		
+		# Do not perturbate the wind function
 		if not self.__autoWind:
 			return
 		
+		# Overrides wind function
 		if self.__drone.isTracked():
 			gain = rospy.get_param('~control/pwm_gain')
 			min_ = rospy.get_param('~control/min_wind')
 			max_ = rospy.get_param('~control/max_wind')
 			
-			pitch = self.__drone.getPoseMocap().getPitch()
+			pitch = self.__drone.getPose().getPitch()
 			pwm = int(gain * pitch)
 			
 			if pwm > max_:
