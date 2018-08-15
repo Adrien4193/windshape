@@ -16,6 +16,7 @@ fansarray:
 tracking:
   timeout: 0.1
   tracker: "drone"
+  refresh: 1.0
 
 # Drone real time management
 update:

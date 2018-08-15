@@ -290,7 +290,7 @@ class FansArray(threading.Thread):
 						self.__windFunction = None
 						return
 					
-					pwm = self.__validatePWM(pwm, 0, 100)
+					pwm = self.__validatePWM(pwm)
 					
 					# Add current fans (front + rear) to module command
 					cmds.append(str(int(pwm)))
@@ -313,9 +313,12 @@ class FansArray(threading.Thread):
 			else:
 				self.__readFromDB(con, cur, attribute)
 	
-	def __validatePWM(self, pwm, min_=0, max_=100):
+	def __validatePWM(self, pwm):
 		"""Resets a PWM value as an integer between 0 and 100."""
 		pwm = int(pwm)
+		
+		min_ = rospy.get_param('~control/min_wind')
+		max_ = rospy.get_param('~control/max_wind')
 		
 		# Manual limits
 		if pwm > max_:

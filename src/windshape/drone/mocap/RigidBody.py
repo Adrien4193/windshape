@@ -24,6 +24,10 @@ class RigidBody(object):
 	## Total number of class instances.
 	__count = 0
 	
+	## Trackers list on the VRPN stream
+	__trackers = []
+	__lastRefresh = 0.0
+	
 	@staticmethod
 	def getCount():
 		"""Returns the number of RigidBody instances."""
@@ -38,19 +42,14 @@ class RigidBody(object):
 		
 		Structure of topic name: "/vrpn_client_node/<label>/pose"
 		"""
-		labels = []
-
-		# Gets all topics published by ROS VRPN driver
-		topics = rospy.get_published_topics('/vrpn_client_node')
+		timeout = 1.0/rospy.get_param('~tracking/refresh')
+		dt = rospy.get_time() - RigidBody.__lastRefresh
 		
-		# Extracts names of the rigid bodies from topic names
-		for topic in topics:
-			if 'pose' in topic[0]:
-				label = topic[0].split('/')[-2]
-				labels.append(label)
-		labels.sort()
+		# Refresh is slow so it is not done at each call
+		if dt > timeout:
+			RigidBody.__refreshTrackers()
 		
-		return labels
+		return RigidBody.__trackers
 	
 	def __init__(self, label):
 		"""Stores parameters and starts updating pose.
@@ -132,3 +131,24 @@ class RigidBody(object):
 		dt = rospy.get_time() - timestamp
 		
 		return dt < rospy.get_param('~tracking/timeout')
+	
+	#
+	# Private methods to update trackers list
+	#
+	
+	@staticmethod
+	def __refreshTrackers():
+		"""Refreshes the VRPN trackers list (slow)."""
+		labels = []
+
+		# Gets all topics published by ROS VRPN driver
+		topics = rospy.get_published_topics('/vrpn_client_node')
+		
+		# Extracts names of the rigid bodies from topic names
+		for topic in topics:
+			if 'pose' in topic[0]:
+				label = topic[0].split('/')[-2]
+				labels.append(label)
+		labels.sort()
+		
+		RigidBody.__trackers = labels

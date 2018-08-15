@@ -9,6 +9,8 @@ from drone.Drone import Drone
 from fansarray.FansArray import FansArray
 # Record information in files
 from log.Recorder import Recorder
+# Motion capture
+from drone.mocap.RigidBody import RigidBody
 
 
 class Commander(object):
@@ -127,28 +129,7 @@ class Commander(object):
 	def __update(com):
 		"""Checks drone state and generates wind (weakref)."""
 		if com() is not None:
-			com().__checkState()
 			com().__sendPWM()
-	
-	def __checkState(self):
-		"""Checks if drone state has changed."""
-		drone = self.__drone
-		target = drone.getControlParameters().getTarget()
-		
-		if self.__tracked != drone.isTracked():
-			self.__onTrackChange()
-				
-		if self.__targetTracked != target.isTracked():
-			self.__onTargetTrackingChange()
-				
-		if self.__connected != drone.isConnected():
-			self.__onConnectionChange()
-				
-		if self.__armed != drone.isArmed():
-			self.__onArmingChange()
-		
-		if self.__mode != drone.getFlightMode():
-			self.__onModeChange()
 	
 	def __initTimers(self):
 		"""Starts ROS timers for real-time updates."""
@@ -166,47 +147,6 @@ class Commander(object):
 		
 		# Safety
 		rospy.on_shutdown(lambda: Commander.__close(com))
-		
-	def __onArmingChange(self):
-		"""Action to perform if drone armed or disarmed."""
-		self.__armed = not self.__armed
-		
-		if self.__armed:
-			rospy.loginfo('Drone armed')
-		else:
-			rospy.loginfo('Drone disarmed')
-			
-	def __onConnectionChange(self):
-		"""Action to perform if drone connection has changed."""
-		self.__connected = not self.__connected
-		
-		if self.__connected:
-			rospy.loginfo('Drone connected')
-		else:
-			rospy.logwarn('Drone disconnected')
-			
-	def __onModeChange(self):
-		"""Action to perform if drone flight mode has changed."""
-		self.__mode = self.__drone.getFlightMode()
-		rospy.loginfo('New flight mode: %s', self.__mode)
-		
-	def __onTargetTrackingChange(self):
-		"""Action to perform if target has changed."""
-		self.__targetTracked = not self.__targetTracked
-		
-		if self.__targetTracked:
-			rospy.loginfo('Target tracked')
-		else:
-			rospy.logwarn('Target tracking lost')
-	
-	def __onTrackChange(self):
-		"""Action to perform if drone tracking has changed."""
-		self.__tracked = not self.__tracked
-		
-		if self.__tracked:
-			rospy.loginfo('Drone tracked')
-		else:
-			rospy.logwarn('Drone tracking lost')
 	
 	def __sendPWM(self):
 		"""Sends a PWM value from drone pose."""
@@ -220,16 +160,8 @@ class Commander(object):
 		# Overrides wind function
 		if self.__drone.isTracked():
 			gain = rospy.get_param('~control/pwm_gain')
-			min_ = rospy.get_param('~control/min_wind')
-			max_ = rospy.get_param('~control/max_wind')
-			
 			pitch = self.__drone.getPose().getPitch()
 			pwm = int(gain * pitch)
-			
-			if pwm > max_:
-				pwm = max_
-			elif pwm < min_:
-				pwm = min_
 		else:
 			pwm = 0
 		
