@@ -4,7 +4,7 @@ Drone and WindShape fans array control using OptiTrack cameras with ROS.
 
 ## Documentation
 
-Check doxygen documentation [here](https://adrien4193.github.io/windshape/index.html).
+Check doxygen documentation [here](https://adrien4193.github.io/windshape).
 
 ## Getting Started
 
