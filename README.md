@@ -119,11 +119,13 @@ You will have an interface to choose the log file (.txt).
 
 ## Video
 
+Hover using offboard control: [video here](https://drive.google.com/open?id=1RmHsBMmI1-eMWGd4iuTmPswGTIf-fbPF).
+
 Drone control in mode "follow target": [video here](https://drive.google.com/open?id=1739lTYdr3A3ERDlvbINxapeQnbph3eQg).
 
-Drone control using attitude of the target: [video here](https://drive.google.com/open?id=1CpWrYsjDy3I_B_7iK03V-LxNd--XeB8Q).
+Drone control in mode "mimic target": [video here](https://drive.google.com/open?id=1CpWrYsjDy3I_B_7iK03V-LxNd--XeB8Q).
 
-Drone control using a static setpoint: [video here](https://drive.google.com/open?id=1SVKOROsadPDNJ22xZDzd3Sw2hg5H9TJ7).
+Drone control in mode "reach position": [video here](https://drive.google.com/open?id=1Rdp5rcwXBWxsB72oH-5NI5kMpFt8XfK4).
 
 Wind control using drone pitch (better with sound): [video here](https://drive.google.com/open?id=1Drrw3u30u8EaXehTX62B3-S0HLGWBAgt).
 
