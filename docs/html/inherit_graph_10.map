@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classwindshape_1_1gui_1_1widgets_1_1plots_1_1_plot_widget_1_1_plot_widget.html" title="windshape.gui.widgets.plots.\lPlotWidget.PlotWidget" alt="" coords="133,13,324,54"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_attitude_widget_1_1_attitude_widget.html" title="windshape.gui.widgets.tabs.\lAttitudeWidget.AttitudeWidget" alt="" coords="129,78,328,119"/>
+<area shape="rect" id="node5" href="$classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_info_widget_1_1_info_widget.html" title="windshape.gui.widgets.tabs.\lInfoWidget.InfoWidget" alt="" coords="135,143,322,185"/>
+<area shape="rect" id="node6" href="$classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_setpoint_widget_1_1_setpoint_widget.html" title="windshape.gui.widgets.tabs.\lSetpointWidget.SetpointWidget" alt="" coords="127,209,331,250"/>
+<area shape="rect" id="node7" href="$classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_settings_widget_1_1_settings_widget.html" title="windshape.gui.widgets.tabs.\lSettingsWidget.SettingsWidget" alt="" coords="127,274,331,315"/>
+<area shape="rect" id="node8" href="$classwindshape_1_1gui_1_1widgets_1_1tabs_1_1_wind_widget_1_1_wind_widget.html" title="windshape.gui.widgets.tabs.\lWindWidget.WindWidget" alt="" coords="135,339,322,381"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1gui_1_1widgets_1_1plots_1_1_real_time_plot_widget_1_1_real_time_plot_widget.html" title="windshape.gui.widgets.plots.\lRealTimePlotWidget.RealTimePlot\lWidget" alt="" coords="379,5,604,61"/>
+</map>

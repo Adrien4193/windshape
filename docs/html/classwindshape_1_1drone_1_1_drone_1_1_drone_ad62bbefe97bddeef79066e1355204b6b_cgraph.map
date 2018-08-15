@@ -1,0 +1,5 @@
+<map id="windshape.drone.Drone.Drone.isControlled" name="windshape.drone.Drone.Drone.isControlled">
+<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a0d6c9c56fd735733f4a2268896c30d37" title="windshape.drone.Drone.Drone.is\lConnected" alt="" coords="269,5,481,47"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a161d7774319e5de5dd7f13f5c66b64a3" title="windshape.drone.Drone.Drone.is\lArmed" alt="" coords="269,71,481,112"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a05934a953a52558fd19b18435c52cc40" title="windshape.drone.Drone.Drone.get\lFlightMode" alt="" coords="265,136,485,177"/>
+</map>

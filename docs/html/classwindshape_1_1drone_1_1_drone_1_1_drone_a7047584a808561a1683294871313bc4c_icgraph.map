@@ -1,0 +1,5 @@
+<map id="windshape.drone.Drone.Drone.getPose" name="windshape.drone.Drone.Drone.getPose">
+<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a4103f7af2567931b1327f2683f46e3d3" title="windshape.drone.Drone.Drone.get\lEstimate" alt="" coords="304,5,524,47"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1_drone_1_1_drone.html#a76ec9fc58bfe4b6ddb8ab5739bfdd2ea" title="windshape.drone.Drone.Drone.takeoff" alt="" coords="572,42,815,69"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1drone_1_1mocap_1_1_rigid_body_1_1_rigid_body.html#afdba89fb5adee293cf44812c6887dc1a" title="windshape.drone.mocap.Rigid\lBody.RigidBody.__str__" alt="" coords="315,123,513,164"/>
+</map>

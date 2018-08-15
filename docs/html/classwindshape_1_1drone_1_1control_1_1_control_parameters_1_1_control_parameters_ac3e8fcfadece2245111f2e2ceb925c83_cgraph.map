@@ -1,0 +1,5 @@
+<map id="windshape.drone.control.ControlParameters.ControlParameters.useOffboardControl" name="windshape.drone.control.ControlParameters.ControlParameters.useOffboardControl">
+<area shape="rect" id="node2" href="$classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#af13e6505965d33657f24bf0f36397331" title="windshape.drone.control.\lControlParameters.ControlParameters.getError" alt="" coords="323,5,617,47"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#acd6778518062207080b29942b7f4db6d" title="windshape.drone.control.\lControlParameters.ControlParameters.get\lControlInput" alt="" coords="337,70,603,126"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1drone_1_1control_1_1_control_parameters_1_1_control_parameters.html#a13206892c6ed984100cf7fcb0c37180a" title="windshape.drone.control.\lControlParameters.ControlParameters.get\lSeparatedOutputs" alt="" coords="337,150,603,206"/>
+</map>

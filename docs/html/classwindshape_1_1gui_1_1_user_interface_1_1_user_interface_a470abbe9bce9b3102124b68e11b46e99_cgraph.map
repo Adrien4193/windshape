@@ -1,0 +1,9 @@
+<map id="windshape.gui.UserInterface.UserInterface.onTakeoff" name="windshape.gui.UserInterface.UserInterface.onTakeoff">
+<area shape="rect" id="node2" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ad4c1713ba509549d24a75703fbeb6e0c" title="windshape.gui.UserInterface.\lUserInterface.disableToolBar" alt="" coords="505,5,697,47"/>
+<area shape="rect" id="node3" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a0c543aa08f2f27a8c65a3c6de8963f85" title="windshape.gui.UserInterface.\lUserInterface.updateToolBar" alt="" coords="245,136,437,177"/>
+<area shape="rect" id="node4" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a18f90d2c6c5635130e9181facda026c0" title="windshape.gui.UserInterface.\lUserInterface.updateConnectAction" alt="" coords="485,71,716,112"/>
+<area shape="rect" id="node5" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#adaa93924687bf5f63c18839c154a8d6d" title="windshape.gui.UserInterface.\lUserInterface.updateTrackAction" alt="" coords="493,136,708,177"/>
+<area shape="rect" id="node6" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a6eea698663fbc82963d3984b0a9a8ef1" title="windshape.gui.UserInterface.\lUserInterface.updateArmingAction" alt="" coords="489,201,712,243"/>
+<area shape="rect" id="node7" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#a26806922c4bfbbbbbffe85dfcf85e614" title="windshape.gui.UserInterface.\lUserInterface.updateTLAction" alt="" coords="503,267,699,308"/>
+<area shape="rect" id="node8" href="$classwindshape_1_1gui_1_1_user_interface_1_1_user_interface.html#ad5d42b4891098687b296ef6893d7274d" title="windshape.gui.UserInterface.\lUserInterface.updateToggleAction" alt="" coords="491,332,711,373"/>
+</map>
