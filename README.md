@@ -50,7 +50,7 @@ To run this program, you will need:
 
 4. Install vrpn_client_ros (to collect 6DOF data from Motive):
 
-	`sudo apt-get install ros-kinetic-vrpn-client-node`
+	`sudo apt-get install ros-kinetic-vrpn-client-ros`
 
 5. Install MAVROS (to communicate with the flight controller running PX4 autopilot):
 	
