@@ -7,6 +7,6 @@ from catkin_pkg.python_setup import generate_distutils_setup
 setup_args = generate_distutils_setup(
 	packages=['windshape'],
 	package_dir={'': 'src'},
-	install_requires=['numpy', 'python-mysqldb', 'pyqt5']
+	install_requires=['numpy', 'MySQL-python']
 )
 setup(**setup_args)
