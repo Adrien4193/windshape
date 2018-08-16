@@ -14,8 +14,7 @@ catkin_package()
 
 # Tells catkin which files are executables
 catkin_install_python(PROGRAMS
-	nodes/test
-	nodes/gui
+	nodes/windshape_node
 	scripts/replay
 	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
