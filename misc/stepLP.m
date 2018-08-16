@@ -12,7 +12,7 @@ z = tf('z',Ts);
 % It is 0.5 for the derivative of the PIDs and 200 for the assignment.
 a = 0.5;
 
-H = 1/(a+1) * 1 / (1 - a/(a+1) * z^-1);
+H = 1 / (a + 1 - a * z^-1);
 
 step(H)
 stepinfo(H)
