@@ -66,12 +66,16 @@ To run this program, you will need:
 	sudo ./install_geographiclib_datasets.sh
 	```
 
-6. Install the following Python libraries:
+6. Numpy and MySQL Python API are necessary to run the main node. If not installed, it can be done using:
 
 	```
 	pip install numpy
 	pip install MySQL-python
 	```
+	
+	Note: If pip is not installed on your computer, use:
+	
+	`sudo apt-get install python-pip`
 
 7. (Optional) Install QGroundControl to monitor your drone:
 
