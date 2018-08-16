@@ -66,7 +66,14 @@ To run this program, you will need:
 	sudo ./install_geographiclib_datasets.sh
 	```
 
-6. (Optional) Install QGroundControl to monitor your drone:
+6. Install the following Python libraries:
+
+	```
+	pip install numpy
+	pip install MySQL-python
+	```
+
+7. (Optional) Install QGroundControl to monitor your drone:
 
 	First download the AppImage as described [here](https://docs.qgroundcontrol.com/en/getting_started/download_and_install.html).
 	

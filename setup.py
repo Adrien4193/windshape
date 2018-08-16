@@ -6,7 +6,6 @@ from catkin_pkg.python_setup import generate_distutils_setup
 # fetches values from package.xml
 setup_args = generate_distutils_setup(
 	packages=['windshape'],
-	package_dir={'': 'src'},
-	install_requires=['numpy', 'MySQL-python']
+	package_dir={'': 'src'}
 )
 setup(**setup_args)
