@@ -36,7 +36,7 @@ To run this program, you will need:
 
 	Note: You will have to source your catkin workspace at each terminal prompt opening using:
 	
-	`source <path/to/your/catkin_ws>/devel/setup.bash`.
+	`source <path/to/your/catkin_ws>/devel/setup.bash`
 	
 	To avoid that, in a terminal prompt, you can do the following:
 	
@@ -87,6 +87,8 @@ To run this program, you will need:
 	sudo usermod -a -G dialout $USER
 	sudo apt-get remove modemanager
 	```
+	
+	Note: QGC can also be installed on the Windows side.
 
 ### Installing
 
